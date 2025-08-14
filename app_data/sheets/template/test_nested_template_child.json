@@ -1,0 +1,110 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_nested_template_child",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "## childText",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text",
+      "name": "childText",
+      "value": "Child Text",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "childText"
+    },
+    {
+      "type": "text",
+      "value": "## childTextBox",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_4",
+      "_nested_name": "text_4"
+    },
+    {
+      "type": "text_box",
+      "name": "childTextBox",
+      "value": "Default Child Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "childTextBox"
+    },
+    {
+      "type": "template",
+      "name": "grandchildTemplate",
+      "value": "test_nested_template_grandchild",
+      "rows": [
+        {
+          "name": "grandchildText",
+          "value": "@local.childText",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "grandchildTemplate.grandchildText",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.childText",
+                "matchedExpression": "@local.childText",
+                "type": "local",
+                "fieldName": "childText"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.childText": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "grandchildTemplate"
+    },
+    {
+      "type": "text",
+      "value": "## childGrandchildText",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_8",
+      "_nested_name": "text_8"
+    },
+    {
+      "type": "text",
+      "name": "childGrandchildText",
+      "value": "@local.grandchildTemplate.grandchildTextBox",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "childGrandchildText",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.grandchildTemplate.grandchildTextBox",
+            "matchedExpression": "@local.grandchildTemplate.grandchildTextBox",
+            "type": "local",
+            "fieldName": "grandchildTemplate"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.grandchildTemplate.grandchildTextBox": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "nested_template.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+}

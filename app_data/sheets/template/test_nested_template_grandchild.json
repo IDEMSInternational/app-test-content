@@ -1,0 +1,45 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_nested_template_grandchild",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "## grandchildText",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text",
+      "name": "grandchildText",
+      "value": "Grandchild Text",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "grandchildText"
+    },
+    {
+      "type": "text",
+      "value": "## grandchildTextBox",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_4",
+      "_nested_name": "text_4"
+    },
+    {
+      "type": "text_box",
+      "name": "grandchildTextBox",
+      "value": "Default Grandchild Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "grandchildTextBox"
+    }
+  ],
+  "_xlsxPath": "nested_template.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+}
