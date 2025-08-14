@@ -9,11 +9,13 @@ config.google_drive = {
 
 config.git = {
   content_repo: "https://github.com/IDEMSInternational/app-test-content",
-  content_tag_latest: "1.0.1",
+  content_tag_latest: "1.0.3",
 }
 
 // Override any app constants here
 config.app_config.APP_HEADER_DEFAULTS.title = "test"
 config.app_config.APP_SIDEMENU_DEFAULTS.title = "test"
+
+config.useReactiveTemplates = true;
 
 export default config;
