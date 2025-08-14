@@ -1,0 +1,77 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_text_box",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text_box",
+      "name": "defaultTextBox",
+      "value": "Default Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "defaultTextBox"
+    },
+    {
+      "type": "text",
+      "name": "defaultTextBoxValue",
+      "value": "defaultTextBox: @local.defaultTextBox",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "defaultTextBoxValue",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "defaultTextBox: @local.defaultTextBox",
+            "matchedExpression": "@local.defaultTextBox",
+            "type": "local",
+            "fieldName": "defaultTextBox"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.defaultTextBox": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "set_variable",
+      "name": "isDisabled",
+      "value": true,
+      "_nested_name": "isDisabled"
+    },
+    {
+      "type": "text_box",
+      "name": "disabledTextBox",
+      "value": "Default Value",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "disabled": "@local.isDisabled"
+      },
+      "_nested_name": "disabledTextBox",
+      "_dynamicFields": {
+        "parameter_list": {
+          "disabled": [
+            {
+              "fullExpression": "@local.isDisabled",
+              "matchedExpression": "@local.isDisabled",
+              "type": "local",
+              "fieldName": "isDisabled"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.isDisabled": [
+          "parameter_list.disabled"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "text_box.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+}

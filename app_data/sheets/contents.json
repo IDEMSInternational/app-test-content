@@ -1,0 +1,46 @@
+{
+  "asset_pack": {},
+  "data_list": {},
+  "data_pipe": {},
+  "generator": {},
+  "global": {},
+  "template": {
+    "test_nested_template": {
+      "flow_type": "template",
+      "flow_name": "test_nested_template",
+      "_xlsxPath": "nested_template.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    },
+    "test_nested_template_child": {
+      "flow_type": "template",
+      "flow_name": "test_nested_template_child",
+      "_xlsxPath": "nested_template.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    },
+    "test_nested_template_grandchild": {
+      "flow_type": "template",
+      "flow_name": "test_nested_template_grandchild",
+      "_xlsxPath": "nested_template.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    },
+    "test_set_variable": {
+      "flow_type": "template",
+      "flow_name": "test_set_variable",
+      "_xlsxPath": "set_variable.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    },
+    "test_text": {
+      "flow_type": "template",
+      "flow_name": "test_text",
+      "_xlsxPath": "text.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    },
+    "test_text_box": {
+      "flow_type": "template",
+      "flow_name": "test_text_box",
+      "_xlsxPath": "text_box.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    }
+  },
+  "tour": {}
+}

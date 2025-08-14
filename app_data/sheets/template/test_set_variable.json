@@ -1,0 +1,60 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_set_variable",
+  "status": "released",
+  "rows": [
+    {
+      "type": "set_variable",
+      "name": "localVariable",
+      "value": "Test Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "localVariable"
+    },
+    {
+      "type": "text",
+      "value": "# Set VariableTests",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "text",
+      "value": "## localVariableValue",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_4",
+      "_nested_name": "text_4"
+    },
+    {
+      "type": "text",
+      "name": "localVariableText",
+      "value": "@local.localVariable",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "localVariableText",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.localVariable",
+            "matchedExpression": "@local.localVariable",
+            "type": "local",
+            "fieldName": "localVariable"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.localVariable": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "set_variable.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+}

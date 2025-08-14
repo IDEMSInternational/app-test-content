@@ -1,0 +1,134 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_nested_template",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Nested Template Tests",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text",
+      "value": "## parentTextBox",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "text_box",
+      "name": "parentTextBox",
+      "value": "Default Parent Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "parentTextBox"
+    },
+    {
+      "type": "template",
+      "name": "childTemplate",
+      "value": "test_nested_template_child",
+      "rows": [
+        {
+          "name": "childText",
+          "value": "@local.parentTextBox",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "childTemplate.childText",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.parentTextBox",
+                "matchedExpression": "@local.parentTextBox",
+                "type": "local",
+                "fieldName": "parentTextBox"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.parentTextBox": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "childTemplate"
+    },
+    {
+      "type": "text",
+      "value": "## parentChildText",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_7",
+      "_nested_name": "text_7"
+    },
+    {
+      "type": "text",
+      "name": "parentChildText",
+      "value": "@local.childTemplate.childTextBox",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "parentChildText",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.childTemplate.childTextBox",
+            "matchedExpression": "@local.childTemplate.childTextBox",
+            "type": "local",
+            "fieldName": "childTemplate"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.childTemplate.childTextBox": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## parentGrandchildText",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_9",
+      "_nested_name": "text_9"
+    },
+    {
+      "type": "text",
+      "name": "parentGrandchildText",
+      "value": "@local.childTemplate.grandchildTemplate.grandchildTextBox",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "parentGrandchildText",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.childTemplate.grandchildTemplate.grandchildTextBox",
+            "matchedExpression": "@local.childTemplate.grandchildTemplate.grandchildTextBox",
+            "type": "local",
+            "fieldName": "childTemplate"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.childTemplate.grandchildTemplate.grandchildTextBox": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "nested_template.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+}

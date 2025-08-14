@@ -1,0 +1,27 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_text",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "plainText",
+      "value": "Plain text value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "plainText"
+    },
+    {
+      "type": "text",
+      "name": "titleText",
+      "value": "# h1\n## h2\n### h3",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "titleText"
+    }
+  ],
+  "_xlsxPath": "text.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+}
