@@ -5,6 +5,24 @@
   "generator": {},
   "global": {},
   "template": {
+    "app_menu": {
+      "flow_type": "template",
+      "flow_name": "app_menu",
+      "_xlsxPath": "navigation.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    },
+    "home_screen": {
+      "flow_type": "template",
+      "flow_name": "home_screen",
+      "_xlsxPath": "navigation.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    },
+    "test_button": {
+      "flow_type": "template",
+      "flow_name": "test_button",
+      "_xlsxPath": "button.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    },
     "test_nested_template": {
       "flow_type": "template",
       "flow_name": "test_nested_template",
@@ -39,6 +57,18 @@
       "flow_type": "template",
       "flow_name": "test_text_box",
       "_xlsxPath": "text_box.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    },
+    "test_title": {
+      "flow_type": "template",
+      "flow_name": "test_title",
+      "_xlsxPath": "title.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    },
+    "test_toggle_bar": {
+      "flow_type": "template",
+      "flow_name": "test_toggle_bar",
+      "_xlsxPath": "toggle_bar.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
     }
   },

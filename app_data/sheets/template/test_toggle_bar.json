@@ -1,0 +1,65 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_toggle_bar",
+  "status": "released",
+  "rows": [
+    {
+      "type": "toggle_bar",
+      "name": "defaultToggle",
+      "value": true,
+      "_nested_name": "defaultToggle"
+    },
+    {
+      "type": "text",
+      "name": "toggleOnText",
+      "value": "Toggle On",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.defaultToggle",
+      "_nested_name": "toggleOnText",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "@local.defaultToggle",
+            "matchedExpression": "@local.defaultToggle",
+            "type": "local",
+            "fieldName": "defaultToggle"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.defaultToggle": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "toggleOffText",
+      "value": "Toggle Off",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "!@local.defaultToggle",
+      "_nested_name": "toggleOffText",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "!@local.defaultToggle",
+            "matchedExpression": "!@local.defaultToggle",
+            "type": "local",
+            "fieldName": "defaultToggle"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "!@local.defaultToggle": [
+          "condition"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "toggle_bar.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+}

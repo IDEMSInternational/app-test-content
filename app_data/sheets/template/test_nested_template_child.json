@@ -23,12 +23,30 @@
     },
     {
       "type": "text",
-      "value": "## childTextBox",
+      "value": "## childTextStatic",
       "_translations": {
         "value": {}
       },
       "name": "text_4",
       "_nested_name": "text_4"
+    },
+    {
+      "type": "text",
+      "name": "childTextStatic",
+      "value": "Child Static Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "childTextStatic"
+    },
+    {
+      "type": "text",
+      "value": "## childTextBox",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_6",
+      "_nested_name": "text_6"
     },
     {
       "type": "text_box",
@@ -67,6 +85,15 @@
               "value"
             ]
           }
+        },
+        {
+          "name": "staticGrandchildText",
+          "value": "Static Grandchild Value",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "grandchildTemplate.staticGrandchildText"
         }
       ],
       "_nested_name": "grandchildTemplate"
@@ -77,8 +104,8 @@
       "_translations": {
         "value": {}
       },
-      "name": "text_8",
-      "_nested_name": "text_8"
+      "name": "text_10",
+      "_nested_name": "text_10"
     },
     {
       "type": "text",
