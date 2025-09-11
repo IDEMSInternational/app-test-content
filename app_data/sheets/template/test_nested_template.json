@@ -58,6 +58,15 @@
               "value"
             ]
           }
+        },
+        {
+          "name": "childTextStatic",
+          "value": "Parent Static Value",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "childTemplate.childTextStatic"
         }
       ],
       "_nested_name": "childTemplate"

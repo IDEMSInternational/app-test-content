@@ -2,8 +2,20 @@
   "template_components": {
     "data": [
       {
+        "type": "button",
+        "count": 5
+      },
+      {
+        "type": "debug_toggle",
+        "count": 1
+      },
+      {
+        "type": "display_group",
+        "count": 1
+      },
+      {
         "type": "set_variable",
-        "count": 4
+        "count": 9
       },
       {
         "type": "template",
@@ -11,16 +23,33 @@
       },
       {
         "type": "text",
-        "count": 20
+        "count": 34
       },
       {
         "type": "text_box",
-        "count": 5
+        "count": 12
+      },
+      {
+        "type": "title",
+        "count": 6
+      },
+      {
+        "type": "toggle_bar",
+        "count": 2
       }
     ]
   },
   "template_actions": {
-    "data": []
+    "data": [
+      {
+        "type": "reset_app",
+        "count": 1
+      },
+      {
+        "type": "set_local",
+        "count": 4
+      }
+    ]
   },
   "assets_size": {
     "data": [
@@ -55,7 +84,7 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 6
+        "total": 11
       }
     ]
   }

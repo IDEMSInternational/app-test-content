@@ -1,0 +1,232 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_button",
+  "status": "released",
+  "rows": [
+    {
+      "type": "button",
+      "name": "testClickButton",
+      "value": "Click Me",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "set_local",
+          "args": [
+            "buttonClickValue",
+            "Clicked!"
+          ],
+          "_raw": "click | set_local: buttonClickValue: Clicked!",
+          "_cleaned": "click | set_local: buttonClickValue: Clicked!"
+        }
+      ],
+      "_nested_name": "testClickButton"
+    },
+    {
+      "type": "text",
+      "name": "buttonClickValue",
+      "value": "Not clicked yet",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "buttonClickValue"
+    },
+    {
+      "name": "dynamicActionText",
+      "value": "Clicked Dynamically!",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "dynamicActionText"
+    },
+    {
+      "type": "button",
+      "name": "dynamicActionButton",
+      "value": "Click Me",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "set_local",
+          "args": [
+            "dynamicActionValue",
+            "@local.dynamicActionText"
+          ],
+          "_raw": "click | set_local: dynamicActionValue: @local.dynamicActionText",
+          "_cleaned": "click | set_local: dynamicActionValue: @local.dynamicActionText"
+        }
+      ],
+      "_nested_name": "dynamicActionButton",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "1": [
+                {
+                  "fullExpression": "@local.dynamicActionText",
+                  "matchedExpression": "@local.dynamicActionText",
+                  "type": "local",
+                  "fieldName": "dynamicActionText"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | set_local: dynamicActionValue: @local.dynamicActionText",
+                "matchedExpression": "@local.dynamicActionText",
+                "type": "local",
+                "fieldName": "dynamicActionText"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "click | set_local: dynamicActionValue: @local.dynamicActionText",
+                "matchedExpression": "@local.dynamicActionText",
+                "type": "local",
+                "fieldName": "dynamicActionText"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.dynamicActionText": [
+          "action_list.0.args.1",
+          "action_list.0._raw",
+          "action_list.0._cleaned"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "dynamicActionValue",
+      "value": "Not clicked yet",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "dynamicActionValue"
+    },
+    {
+      "name": "dynamicActionText",
+      "value": "Clicked Dynamically!",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "dynamicActionText"
+    },
+    {
+      "type": "display_group",
+      "name": "dg1",
+      "rows": [
+        {
+          "type": "button",
+          "name": "testClickButton",
+          "value": "Click Me",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_local",
+              "args": [
+                "buttonClickValue",
+                "Clicked!"
+              ],
+              "_raw": "click | set_local: buttonClickValue: Clicked!",
+              "_cleaned": "click | set_local: buttonClickValue: Clicked!"
+            }
+          ],
+          "_nested_name": "dg1.testClickButton"
+        },
+        {
+          "type": "text",
+          "name": "buttonClickValue",
+          "value": "Not clicked yet",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "dg1.buttonClickValue"
+        },
+        {
+          "type": "button",
+          "name": "dynamicActionButton",
+          "value": "Click Me",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_local",
+              "args": [
+                "dynamicActionValue",
+                "@local.dynamicActionText"
+              ],
+              "_raw": "click | set_local: dynamicActionValue: @local.dynamicActionText",
+              "_cleaned": "click | set_local: dynamicActionValue: @local.dynamicActionText"
+            }
+          ],
+          "_nested_name": "dg1.dynamicActionButton",
+          "_dynamicFields": {
+            "action_list": {
+              "0": {
+                "args": {
+                  "1": [
+                    {
+                      "fullExpression": "@local.dynamicActionText",
+                      "matchedExpression": "@local.dynamicActionText",
+                      "type": "local",
+                      "fieldName": "dynamicActionText"
+                    }
+                  ]
+                },
+                "_raw": [
+                  {
+                    "fullExpression": "click | set_local: dynamicActionValue: @local.dynamicActionText",
+                    "matchedExpression": "@local.dynamicActionText",
+                    "type": "local",
+                    "fieldName": "dynamicActionText"
+                  }
+                ],
+                "_cleaned": [
+                  {
+                    "fullExpression": "click | set_local: dynamicActionValue: @local.dynamicActionText",
+                    "matchedExpression": "@local.dynamicActionText",
+                    "type": "local",
+                    "fieldName": "dynamicActionText"
+                  }
+                ]
+              }
+            }
+          },
+          "_dynamicDependencies": {
+            "@local.dynamicActionText": [
+              "action_list.0.args.1",
+              "action_list.0._raw",
+              "action_list.0._cleaned"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "dynamicActionValue",
+          "value": "Not clicked yet",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "dg1.dynamicActionValue"
+        }
+      ],
+      "_nested_name": "dg1"
+    }
+  ],
+  "_xlsxPath": "button.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+}

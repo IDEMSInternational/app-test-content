@@ -1,0 +1,66 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_title",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "name": "plainTitle",
+      "value": "Plain title value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "plainTitle"
+    },
+    {
+      "type": "title",
+      "name": "tooltipTitle",
+      "value": "Tooltip Title",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "help": "Hi, I'm a tooltip!"
+      },
+      "_nested_name": "tooltipTitle"
+    },
+    {
+      "type": "title",
+      "name": "headerTitle",
+      "value": "Header Title",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "variant": "header"
+      },
+      "_nested_name": "headerTitle"
+    },
+    {
+      "type": "title",
+      "name": "centerTitle",
+      "value": "Centered Title",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "text_align": "center"
+      },
+      "_nested_name": "centerTitle"
+    },
+    {
+      "type": "title",
+      "name": "rightTitle",
+      "value": "Right Aligned Titile",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "text_align": "right"
+      },
+      "_nested_name": "rightTitle"
+    }
+  ],
+  "_xlsxPath": "title.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+}

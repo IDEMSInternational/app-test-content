@@ -38,6 +38,24 @@
         "value": {}
       },
       "_nested_name": "grandchildTextBox"
+    },
+    {
+      "type": "text",
+      "value": "## staticGrandchildText",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_6",
+      "_nested_name": "text_6"
+    },
+    {
+      "type": "text",
+      "name": "staticGrandchildText",
+      "value": "Grandchild Static Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "staticGrandchildText"
     }
   ],
   "_xlsxPath": "nested_template.xlsx",

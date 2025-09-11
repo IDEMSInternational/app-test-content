@@ -3,17 +3,24 @@
 
 | type | count |
 | --- | --- |
-| set_variable | 4 |
+| button | 5 |
+| debug_toggle | 1 |
+| display_group | 1 |
+| set_variable | 9 |
 | template | 2 |
-| text | 20 |
-| text_box | 5 |
+| text | 34 |
+| text_box | 12 |
+| title | 6 |
+| toggle_bar | 2 |
 </details>
 
 <details >
 <summary><h2>Actions</h2></summary>
 
-|  |
-|  |
+| type | count |
+| --- | --- |
+| reset_app | 1 |
+| set_local | 4 |
 </details>
 
 <details open>
@@ -58,5 +65,5 @@ Assets that are used within sheets and also can be found in the synced asset dat
 
 | type | subtype | total |
 | --- | --- | --- |
-| template |  | 6 |
+| template |  | 11 |
 </details>
