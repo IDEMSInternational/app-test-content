@@ -1,0 +1,150 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_actions",
+  "status": "released",
+  "rows": [
+    {
+      "name": "var_1",
+      "value": 0,
+      "type": "set_variable",
+      "_nested_name": "var_1"
+    },
+    {
+      "name": "var_2",
+      "value": "@local.var_1 + 1",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "var_2",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.var_1 + 1",
+            "matchedExpression": "@local.var_1",
+            "type": "local",
+            "fieldName": "var_1"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.var_1": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "name": "setStaticValuebutton",
+      "value": "Set Static Value",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "set_local",
+          "args": [
+            "resultsText",
+            "Static Value"
+          ],
+          "_raw": "click | set_local: resultsText: Static Value",
+          "_cleaned": "click | set_local: resultsText: Static Value"
+        }
+      ],
+      "_nested_name": "setStaticValuebutton"
+    },
+    {
+      "type": "button",
+      "name": "setDynamicValue",
+      "value": "Set Dynamic Value",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "set_local",
+          "args": [
+            "resultsText",
+            "@local.var_2"
+          ],
+          "_raw": "click | set_local: resultsText: @local.var_2",
+          "_cleaned": "click | set_local: resultsText: @local.var_2"
+        }
+      ],
+      "_nested_name": "setDynamicValue",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "1": [
+                {
+                  "fullExpression": "@local.var_2",
+                  "matchedExpression": "@local.var_2",
+                  "type": "local",
+                  "fieldName": "var_2"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | set_local: resultsText: @local.var_2",
+                "matchedExpression": "@local.var_2",
+                "type": "local",
+                "fieldName": "var_2"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "click | set_local: resultsText: @local.var_2",
+                "matchedExpression": "@local.var_2",
+                "type": "local",
+                "fieldName": "var_2"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.var_2": [
+          "action_list.0.args.1",
+          "action_list.0._raw",
+          "action_list.0._cleaned"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "name": "updateDynamicValue",
+      "value": "Update Dynamic Value",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "set_local",
+          "args": [
+            "var_1",
+            "2"
+          ],
+          "_raw": "click | set_local: var_1: 2",
+          "_cleaned": "click | set_local: var_1: 2"
+        }
+      ],
+      "_nested_name": "updateDynamicValue"
+    },
+    {
+      "type": "text",
+      "name": "resultsText",
+      "value": "Default Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "resultsText"
+    }
+  ],
+  "_xlsxPath": "actions/set_local.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+}
