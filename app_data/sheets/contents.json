@@ -29,6 +29,12 @@
       "_xlsxPath": "components/button.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
     },
+    "test_dropdown": {
+      "flow_type": "template",
+      "flow_name": "test_dropdown",
+      "_xlsxPath": "components/dropdown.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    },
     "test_nested_template": {
       "flow_type": "template",
       "flow_name": "test_nested_template",

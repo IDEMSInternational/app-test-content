@@ -1,0 +1,485 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_dropdown",
+  "status": "released",
+  "rows": [
+    {
+      "name": "defaultDropdownValue",
+      "value": "key_1",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "defaultDropdownValue"
+    },
+    {
+      "name": "defaultOptions",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "defaultOptions"
+    },
+    {
+      "type": "text",
+      "value": "## Default",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_4",
+      "_nested_name": "text_4"
+    },
+    {
+      "type": "dropdown",
+      "name": "defaultDropdown",
+      "value": "@local.defaultDropdownValue",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "changed",
+          "action_id": "set_local",
+          "args": [
+            "defaultDropdownValue",
+            "this.value"
+          ],
+          "_raw": "changed | set_local:defaultDropdownValue: @local.defaultDropdown",
+          "_cleaned": "changed | set_local:defaultDropdownValue: @local.defaultDropdown"
+        }
+      ],
+      "parameter_list": {
+        "options": "@local.defaultOptions",
+        "options_key": "key",
+        "options_value": "value"
+      },
+      "_nested_name": "defaultDropdown",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.defaultDropdownValue",
+            "matchedExpression": "@local.defaultDropdownValue",
+            "type": "local",
+            "fieldName": "defaultDropdownValue"
+          }
+        ],
+        "action_list": {
+          "0": {
+            "_raw": [
+              {
+                "fullExpression": "changed | set_local:defaultDropdownValue: @local.defaultDropdown",
+                "matchedExpression": "@local.defaultDropdown",
+                "type": "local",
+                "fieldName": "defaultDropdown"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "changed | set_local:defaultDropdownValue: @local.defaultDropdown",
+                "matchedExpression": "@local.defaultDropdown",
+                "type": "local",
+                "fieldName": "defaultDropdown"
+              }
+            ]
+          }
+        },
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.defaultOptions",
+              "matchedExpression": "@local.defaultOptions",
+              "type": "local",
+              "fieldName": "defaultOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.defaultDropdownValue": [
+          "value"
+        ],
+        "@local.defaultDropdown": [
+          "action_list.0._raw",
+          "action_list.0._cleaned"
+        ],
+        "@local.defaultOptions": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "defaultDropdownValueText",
+      "value": "## DefaultValue\n@local.defaultDropdownValue",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "defaultDropdownValueText",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "## DefaultValue\n@local.defaultDropdownValue",
+            "matchedExpression": "@local.defaultDropdownValue",
+            "type": "local",
+            "fieldName": "defaultDropdownValue"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.defaultDropdownValue": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## Search",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_7",
+      "_nested_name": "text_7"
+    },
+    {
+      "name": "searchDropdownValue",
+      "value": "key_2",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "searchDropdownValue"
+    },
+    {
+      "type": "dropdown",
+      "name": "searchDropdown",
+      "value": "@local.searchDropdownValue",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "changed",
+          "action_id": "set_local",
+          "args": [
+            "searchDropdownValue",
+            "this.value"
+          ],
+          "_raw": "changed | set_local:searchDropdownValue: @local.searchDropdown",
+          "_cleaned": "changed | set_local:searchDropdownValue: @local.searchDropdown"
+        }
+      ],
+      "parameter_list": {
+        "options": "@local.defaultOptions",
+        "options_key": "key",
+        "options_value": "value",
+        "show_search": "true"
+      },
+      "_nested_name": "searchDropdown",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.searchDropdownValue",
+            "matchedExpression": "@local.searchDropdownValue",
+            "type": "local",
+            "fieldName": "searchDropdownValue"
+          }
+        ],
+        "action_list": {
+          "0": {
+            "_raw": [
+              {
+                "fullExpression": "changed | set_local:searchDropdownValue: @local.searchDropdown",
+                "matchedExpression": "@local.searchDropdown",
+                "type": "local",
+                "fieldName": "searchDropdown"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "changed | set_local:searchDropdownValue: @local.searchDropdown",
+                "matchedExpression": "@local.searchDropdown",
+                "type": "local",
+                "fieldName": "searchDropdown"
+              }
+            ]
+          }
+        },
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.defaultOptions",
+              "matchedExpression": "@local.defaultOptions",
+              "type": "local",
+              "fieldName": "defaultOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.searchDropdownValue": [
+          "value"
+        ],
+        "@local.searchDropdown": [
+          "action_list.0._raw",
+          "action_list.0._cleaned"
+        ],
+        "@local.defaultOptions": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "searchDropdownValueText",
+      "value": "## SearchValue\n@local.searchDropdownValue",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "searchDropdownValueText",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "## SearchValue\n@local.searchDropdownValue",
+            "matchedExpression": "@local.searchDropdownValue",
+            "type": "local",
+            "fieldName": "searchDropdownValue"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.searchDropdownValue": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## Disabled",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_11",
+      "_nested_name": "text_11"
+    },
+    {
+      "type": "dropdown",
+      "name": "disabledDropdown",
+      "value": "@local.defaultDropdownValue",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "options": "@local.defaultOptions",
+        "options_key": "key",
+        "options_value": "value",
+        "show_search": "true",
+        "disabled": "true"
+      },
+      "_nested_name": "disabledDropdown",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.defaultDropdownValue",
+            "matchedExpression": "@local.defaultDropdownValue",
+            "type": "local",
+            "fieldName": "defaultDropdownValue"
+          }
+        ],
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.defaultOptions",
+              "matchedExpression": "@local.defaultOptions",
+              "type": "local",
+              "fieldName": "defaultOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.defaultDropdownValue": [
+          "value"
+        ],
+        "@local.defaultOptions": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## Placeholder Search",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_13",
+      "_nested_name": "text_13"
+    },
+    {
+      "type": "dropdown",
+      "name": "placeholderSearchDropdown",
+      "parameter_list": {
+        "options": "@local.defaultOptions",
+        "options_key": "key",
+        "options_value": "value",
+        "show_search": "true",
+        "placeholder": "Placeholder Search Text"
+      },
+      "_nested_name": "placeholderSearchDropdown",
+      "_dynamicFields": {
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.defaultOptions",
+              "matchedExpression": "@local.defaultOptions",
+              "type": "local",
+              "fieldName": "defaultOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.defaultOptions": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## Placeholder",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_15",
+      "_nested_name": "text_15"
+    },
+    {
+      "type": "dropdown",
+      "name": "placeholderDropdown",
+      "parameter_list": {
+        "placeholder": "Placeholder Text",
+        "options": "@local.defaultOptions"
+      },
+      "_nested_name": "placeholderDropdown",
+      "_dynamicFields": {
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.defaultOptions",
+              "matchedExpression": "@local.defaultOptions",
+              "type": "local",
+              "fieldName": "defaultOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.defaultOptions": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## Search with title",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_17",
+      "_nested_name": "text_17"
+    },
+    {
+      "type": "dropdown",
+      "name": "searchTitleDropdown",
+      "value": "@local.searchDropdownValue",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "changed",
+          "action_id": "set_local",
+          "args": [
+            "searchDropdownValue",
+            "@local.searchDropdown"
+          ],
+          "_raw": "changed | set_local:searchDropdownValue: @local.searchDropdown",
+          "_cleaned": "changed | set_local:searchDropdownValue: @local.searchDropdown"
+        }
+      ],
+      "parameter_list": {
+        "options": "@local.defaultOptions",
+        "options_key": "key",
+        "options_value": "value",
+        "show_search": "true",
+        "title": "This is the title"
+      },
+      "_nested_name": "searchTitleDropdown",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.searchDropdownValue",
+            "matchedExpression": "@local.searchDropdownValue",
+            "type": "local",
+            "fieldName": "searchDropdownValue"
+          }
+        ],
+        "action_list": {
+          "0": {
+            "args": {
+              "1": [
+                {
+                  "fullExpression": "@local.searchDropdown",
+                  "matchedExpression": "@local.searchDropdown",
+                  "type": "local",
+                  "fieldName": "searchDropdown"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "changed | set_local:searchDropdownValue: @local.searchDropdown",
+                "matchedExpression": "@local.searchDropdown",
+                "type": "local",
+                "fieldName": "searchDropdown"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "changed | set_local:searchDropdownValue: @local.searchDropdown",
+                "matchedExpression": "@local.searchDropdown",
+                "type": "local",
+                "fieldName": "searchDropdown"
+              }
+            ]
+          }
+        },
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.defaultOptions",
+              "matchedExpression": "@local.defaultOptions",
+              "type": "local",
+              "fieldName": "defaultOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.searchDropdownValue": [
+          "value"
+        ],
+        "@local.searchDropdown": [
+          "action_list.0.args.1",
+          "action_list.0._raw",
+          "action_list.0._cleaned"
+        ],
+        "@local.defaultOptions": [
+          "parameter_list.options"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "components/dropdown.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+}

@@ -14,8 +14,12 @@
         "count": 1
       },
       {
+        "type": "dropdown",
+        "count": 6
+      },
+      {
         "type": "set_variable",
-        "count": 11
+        "count": 14
       },
       {
         "type": "template",
@@ -23,7 +27,7 @@
       },
       {
         "type": "text",
-        "count": 35
+        "count": 43
       },
       {
         "type": "text_box",
@@ -47,7 +51,7 @@
       },
       {
         "type": "set_local",
-        "count": 7
+        "count": 10
       }
     ]
   },
@@ -84,7 +88,7 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 12
+        "total": 13
       }
     ]
   }
