@@ -1,0 +1,208 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_query",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "value": "Query",
+      "_translations": {
+        "value": {}
+      },
+      "name": "title_2",
+      "_nested_name": "title_2"
+    },
+    {
+      "type": "query",
+      "name": "queriedData",
+      "value": "selector: {active: true},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "data_list": "test_data"
+      },
+      "_nested_name": "queriedData"
+    },
+    {
+      "type": "dropdown",
+      "name": "queriedDataDropdown",
+      "parameter_list": {
+        "options": "@local.queriedData",
+        "options_key": "id",
+        "options_value": "name"
+      },
+      "_nested_name": "queriedDataDropdown",
+      "_dynamicFields": {
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.queriedData",
+              "matchedExpression": "@local.queriedData",
+              "type": "local",
+              "fieldName": "queriedData"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.queriedData": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "queriedOption",
+      "value": "@local.queriedDataDropdown",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "queriedOption",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.queriedDataDropdown",
+            "matchedExpression": "@local.queriedDataDropdown",
+            "type": "local",
+            "fieldName": "queriedDataDropdown"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.queriedDataDropdown": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "value": "Dynamic Query",
+      "_translations": {
+        "value": {}
+      },
+      "name": "title_6",
+      "_nested_name": "title_6"
+    },
+    {
+      "type": "query",
+      "name": "dynamicQueriedData",
+      "value": "selector: {category: '@local.categoryDropdown'},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "data_list": "test_data"
+      },
+      "_nested_name": "dynamicQueriedData",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "selector: {category: '@local.categoryDropdown'},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+            "matchedExpression": "@local.categoryDropdown",
+            "type": "local",
+            "fieldName": "categoryDropdown"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.categoryDropdown": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "dropdown",
+      "name": "dynamicQueriedDataDropdown",
+      "parameter_list": {
+        "options": "@local.dynamicQueriedData",
+        "options_key": "id",
+        "options_value": "name"
+      },
+      "_nested_name": "dynamicQueriedDataDropdown",
+      "_dynamicFields": {
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.dynamicQueriedData",
+              "matchedExpression": "@local.dynamicQueriedData",
+              "type": "local",
+              "fieldName": "dynamicQueriedData"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.dynamicQueriedData": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "name": "categoryOptions",
+      "value": "key: A | value: A; \nkey: B | value: B;",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "categoryOptions"
+    },
+    {
+      "type": "dropdown",
+      "name": "categoryDropdown",
+      "value": "A",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "options": "@local.categoryOptions",
+        "options_key": "key",
+        "options_value": "value"
+      },
+      "_nested_name": "categoryDropdown",
+      "_dynamicFields": {
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.categoryOptions",
+              "matchedExpression": "@local.categoryOptions",
+              "type": "local",
+              "fieldName": "categoryOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.categoryOptions": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "dynamicQueriedOption",
+      "value": "@local.dynamicQueriedDataDropdown",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "dynamicQueriedOption",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.dynamicQueriedDataDropdown",
+            "matchedExpression": "@local.dynamicQueriedDataDropdown",
+            "type": "local",
+            "fieldName": "dynamicQueriedDataDropdown"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.dynamicQueriedDataDropdown": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "components/query.xlsx",
+  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+}

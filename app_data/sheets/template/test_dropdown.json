@@ -13,6 +13,15 @@
       "_nested_name": "defaultDropdownValue"
     },
     {
+      "name": "dynamicDropdownValue",
+      "value": "This is a dynamic value",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "dynamicDropdownValue"
+    },
+    {
       "name": "defaultOptions",
       "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
       "_translations": {
@@ -22,13 +31,37 @@
       "_nested_name": "defaultOptions"
     },
     {
+      "name": "dynamicOptions",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: @local.dynamicDropdownValue;",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "dynamicOptions",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: @local.dynamicDropdownValue;",
+            "matchedExpression": "@local.dynamicDropdownValue",
+            "type": "local",
+            "fieldName": "dynamicDropdownValue"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.dynamicDropdownValue": [
+          "value"
+        ]
+      }
+    },
+    {
       "type": "text",
       "value": "## Default",
       "_translations": {
         "value": {}
       },
-      "name": "text_4",
-      "_nested_name": "text_4"
+      "name": "text_6",
+      "_nested_name": "text_6"
     },
     {
       "type": "dropdown",
@@ -45,8 +78,7 @@
             "defaultDropdownValue",
             "this.value"
           ],
-          "_raw": "changed | set_local:defaultDropdownValue: @local.defaultDropdown",
-          "_cleaned": "changed | set_local:defaultDropdownValue: @local.defaultDropdown"
+          "_raw": "changed | set_local:defaultDropdownValue: @local.defaultDropdown"
         }
       ],
       "parameter_list": {
@@ -73,14 +105,6 @@
                 "type": "local",
                 "fieldName": "defaultDropdown"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "changed | set_local:defaultDropdownValue: @local.defaultDropdown",
-                "matchedExpression": "@local.defaultDropdown",
-                "type": "local",
-                "fieldName": "defaultDropdown"
-              }
             ]
           }
         },
@@ -100,8 +124,7 @@
           "value"
         ],
         "@local.defaultDropdown": [
-          "action_list.0._raw",
-          "action_list.0._cleaned"
+          "action_list.0._raw"
         ],
         "@local.defaultOptions": [
           "parameter_list.options"
@@ -138,8 +161,8 @@
       "_translations": {
         "value": {}
       },
-      "name": "text_7",
-      "_nested_name": "text_7"
+      "name": "text_9",
+      "_nested_name": "text_9"
     },
     {
       "name": "searchDropdownValue",
@@ -165,8 +188,7 @@
             "searchDropdownValue",
             "this.value"
           ],
-          "_raw": "changed | set_local:searchDropdownValue: @local.searchDropdown",
-          "_cleaned": "changed | set_local:searchDropdownValue: @local.searchDropdown"
+          "_raw": "changed | set_local:searchDropdownValue: @local.searchDropdown"
         }
       ],
       "parameter_list": {
@@ -194,14 +216,6 @@
                 "type": "local",
                 "fieldName": "searchDropdown"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "changed | set_local:searchDropdownValue: @local.searchDropdown",
-                "matchedExpression": "@local.searchDropdown",
-                "type": "local",
-                "fieldName": "searchDropdown"
-              }
             ]
           }
         },
@@ -221,8 +235,7 @@
           "value"
         ],
         "@local.searchDropdown": [
-          "action_list.0._raw",
-          "action_list.0._cleaned"
+          "action_list.0._raw"
         ],
         "@local.defaultOptions": [
           "parameter_list.options"
@@ -259,8 +272,8 @@
       "_translations": {
         "value": {}
       },
-      "name": "text_11",
-      "_nested_name": "text_11"
+      "name": "text_13",
+      "_nested_name": "text_13"
     },
     {
       "type": "dropdown",
@@ -312,8 +325,8 @@
       "_translations": {
         "value": {}
       },
-      "name": "text_13",
-      "_nested_name": "text_13"
+      "name": "text_15",
+      "_nested_name": "text_15"
     },
     {
       "type": "dropdown",
@@ -350,8 +363,8 @@
       "_translations": {
         "value": {}
       },
-      "name": "text_15",
-      "_nested_name": "text_15"
+      "name": "text_17",
+      "_nested_name": "text_17"
     },
     {
       "type": "dropdown",
@@ -385,8 +398,8 @@
       "_translations": {
         "value": {}
       },
-      "name": "text_17",
-      "_nested_name": "text_17"
+      "name": "text_19",
+      "_nested_name": "text_19"
     },
     {
       "type": "dropdown",
@@ -403,8 +416,7 @@
             "searchDropdownValue",
             "@local.searchDropdown"
           ],
-          "_raw": "changed | set_local:searchDropdownValue: @local.searchDropdown",
-          "_cleaned": "changed | set_local:searchDropdownValue: @local.searchDropdown"
+          "_raw": "changed | set_local:searchDropdownValue: @local.searchDropdown"
         }
       ],
       "parameter_list": {
@@ -443,14 +455,6 @@
                 "type": "local",
                 "fieldName": "searchDropdown"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "changed | set_local:searchDropdownValue: @local.searchDropdown",
-                "matchedExpression": "@local.searchDropdown",
-                "type": "local",
-                "fieldName": "searchDropdown"
-              }
             ]
           }
         },
@@ -471,13 +475,72 @@
         ],
         "@local.searchDropdown": [
           "action_list.0.args.1",
-          "action_list.0._raw",
-          "action_list.0._cleaned"
+          "action_list.0._raw"
         ],
         "@local.defaultOptions": [
           "parameter_list.options"
         ]
       }
+    },
+    {
+      "type": "text",
+      "value": "## dynamicDropdown",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_21",
+      "_nested_name": "text_21"
+    },
+    {
+      "type": "dropdown",
+      "name": "dynamicDropdown",
+      "value": "key_3",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "options": "@local.dynamicOptions",
+        "options_key": "key",
+        "options_value": "value"
+      },
+      "_nested_name": "dynamicDropdown",
+      "_dynamicFields": {
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.dynamicOptions",
+              "matchedExpression": "@local.dynamicOptions",
+              "type": "local",
+              "fieldName": "dynamicOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.dynamicOptions": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "name": "dynamicValueButton",
+      "value": "Update Dynamic Value",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "set_local",
+          "args": [
+            "dynamicDropdownValue",
+            "New Dynamic Value"
+          ],
+          "_raw": "click | set_local: dynamicDropdownValue: New Dynamic Value"
+        }
+      ],
+      "_nested_name": "dynamicValueButton"
     }
   ],
   "_xlsxPath": "components/dropdown.xlsx",
