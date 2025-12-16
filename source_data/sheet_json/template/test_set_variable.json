@@ -1,0 +1,25 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_set_variable",
+  "status": "released",
+  "rows": [
+    {
+      "type": "set_variable",
+      "name": "localVariable",
+      "value": "Test Value"
+    },
+    {
+      "type": "text",
+      "value": "# Set VariableTests"
+    },
+    {
+      "type": "text",
+      "value": "## localVariableValue"
+    },
+    {
+      "type": "text",
+      "name": "localVariableText",
+      "value": "@local.localVariable"
+    }
+  ]
+}

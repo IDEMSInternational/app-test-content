@@ -1,0 +1,30 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_loop_nested_template",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "**Nested**",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text",
+      "name": "templateText",
+      "value": "Default Template Text",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "templateText"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/loop.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1HE11xkQtlkpErt1Oc2C5NkgErdlz3zSgXij1Jio5nkw"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_loop",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Loop"
+    },
+    {
+      "type": "text",
+      "value": "## List of objects"
+    },
+    {
+      "type": "set_variable",
+      "name": "listData",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;"
+    },
+    {
+      "type": "begin_loop",
+      "name": "listLoop",
+      "value": "@local.listData",
+      "parameter_list": "index: key"
+    },
+    {
+      "type": "text",
+      "name": "loopTitle",
+      "value": "**List item @index**"
+    },
+    {
+      "type": "text",
+      "name": "loopText",
+      "value": "@item.value"
+    },
+    {
+      "type": "text",
+      "name": "plainText",
+      "value": "Plain text"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "text",
+      "value": "## Query Result"
+    },
+    {
+      "type": "query",
+      "name": "queriedData",
+      "value": "selector: {active: true},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+      "parameter_list": "data_list: test_data"
+    },
+    {
+      "type": "begin_loop",
+      "name": "queryLoop",
+      "value": "@local.queriedData",
+      "parameter_list": "index: id"
+    },
+    {
+      "type": "text",
+      "name": "loopTitle",
+      "value": "**Query item @index**"
+    },
+    {
+      "type": "text",
+      "name": "loopText",
+      "value": "@item.value"
+    },
+    {
+      "type": "text",
+      "name": "plainText",
+      "value": "Plain text"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "text",
+      "value": "## Nested Template"
+    },
+    {
+      "type": "set_variable",
+      "name": "nestedListData",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;"
+    },
+    {
+      "type": "begin_loop",
+      "name": "nestedLoop",
+      "value": "@local.nestedListData"
+    },
+    {
+      "type": "text",
+      "name": "loopKey",
+      "value": "key: @item.key"
+    },
+    {
+      "type": "begin_template",
+      "name": "loopTemplate",
+      "value": "test_loop_nested_template"
+    },
+    {
+      "name": "templateText",
+      "value": "value: @item.value"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "text",
+      "name": "countText",
+      "value": "@index of @count"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "text",
+      "value": "## First, Last, Index & Count"
+    },
+    {
+      "type": "set_variable",
+      "name": "firstLastData",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;"
+    },
+    {
+      "type": "begin_loop",
+      "name": "firstLastLoop",
+      "value": "@local.firstLastData",
+      "parameter_list": "index: key"
+    },
+    {
+      "type": "text",
+      "name": "firstText",
+      "value": "first: @first.value"
+    },
+    {
+      "type": "text",
+      "name": "thisText",
+      "value": "item: @item.value"
+    },
+    {
+      "type": "text",
+      "name": "lastText",
+      "value": "last: @last.value"
+    },
+    {
+      "type": "text",
+      "name": "countText",
+      "value": "@index of @count"
+    },
+    {
+      "type": "text",
+      "name": "isFirstText",
+      "value": "Is first: @is_first"
+    },
+    {
+      "type": "text",
+      "name": "isLastText",
+      "value": "Is last: @is_last"
+    },
+    {
+      "type": "end_loop"
+    }
+  ]
+}

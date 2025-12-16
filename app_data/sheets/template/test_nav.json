@@ -1,0 +1,94 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_nav",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Nav",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "button",
+      "name": "navButton",
+      "value": "Go to target",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.goToTargetAction"
+          ],
+          "_raw": "click | action: @local.goToTargetAction"
+        }
+      ],
+      "_nested_name": "navButton",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.goToTargetAction",
+                  "matchedExpression": "@local.goToTargetAction",
+                  "type": "local",
+                  "fieldName": "goToTargetAction"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.goToTargetAction",
+                "matchedExpression": "@local.goToTargetAction",
+                "type": "local",
+                "fieldName": "goToTargetAction"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.goToTargetAction": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "goToTargetAction",
+      "rows": [
+        {
+          "type": "nav",
+          "name": "goToTargetNav",
+          "value": "test_nav_target",
+          "rows": [
+            {
+              "name": "targetTitle",
+              "value": "New Title",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "goToTargetAction.goToTargetNav.targetTitle"
+            }
+          ],
+          "_nested_name": "goToTargetAction.goToTargetNav"
+        }
+      ],
+      "_nested_name": "goToTargetAction"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/nav.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1KqX9CIGJBtt4BJ858oCCWeVf3MWt4qJTWqPhkhr1D3k"
+  }
+}

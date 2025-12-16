@@ -60,6 +60,9 @@
       }
     }
   ],
-  "_xlsxPath": "components/toggle_bar.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/toggle_bar.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1MR4E8lfR5a9PnFF6UEEPeqrV5RpuA3gchkXgvPyD_xA"
+  }
 }

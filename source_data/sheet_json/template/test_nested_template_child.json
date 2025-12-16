@@ -1,0 +1,59 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_nested_template_child",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "## childText"
+    },
+    {
+      "type": "text",
+      "name": "childText",
+      "value": "Child Text"
+    },
+    {
+      "type": "text",
+      "value": "## childTextStatic"
+    },
+    {
+      "type": "text",
+      "name": "childTextStatic",
+      "value": "Child Static Value"
+    },
+    {
+      "type": "text",
+      "value": "## childTextBox"
+    },
+    {
+      "type": "text_box",
+      "name": "childTextBox",
+      "value": "Default Child Value"
+    },
+    {
+      "type": "begin_template",
+      "name": "grandchildTemplate",
+      "value": "test_nested_template_grandchild"
+    },
+    {
+      "name": "grandchildText",
+      "value": "@local.childText"
+    },
+    {
+      "name": "staticGrandchildText",
+      "value": "Static Grandchild Value"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "text",
+      "value": "## childGrandchildText"
+    },
+    {
+      "type": "text",
+      "name": "childGrandchildText",
+      "value": "@local.grandchildTemplate.grandchildTextBox"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_nav_target",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "name": "targetTitle",
+      "value": "Default Title"
+    },
+    {
+      "type": "text",
+      "value": "Navigation successful"
+    }
+  ]
+}

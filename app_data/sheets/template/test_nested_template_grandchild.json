@@ -58,6 +58,9 @@
       "_nested_name": "staticGrandchildText"
     }
   ],
-  "_xlsxPath": "components/nested_template.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/nested_template.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1_GWkyNkvjWlnh9ZkqdTLlrLjYJK54rgps6nadO1zgZc"
+  }
 }

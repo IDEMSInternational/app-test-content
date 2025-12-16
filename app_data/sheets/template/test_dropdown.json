@@ -543,6 +543,9 @@
       "_nested_name": "dynamicValueButton"
     }
   ],
-  "_xlsxPath": "components/dropdown.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/dropdown.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1yDcml2qWeW9ULYEHW_aFWR61p2eNSct5BTDo-EarG1Y"
+  }
 }

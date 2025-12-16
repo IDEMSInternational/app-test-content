@@ -1,0 +1,114 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_dropdown",
+  "status": "released",
+  "rows": [
+    {
+      "name": "defaultDropdownValue",
+      "value": "key_1"
+    },
+    {
+      "name": "dynamicDropdownValue",
+      "value": "This is a dynamic value"
+    },
+    {
+      "name": "defaultOptions",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;"
+    },
+    {
+      "name": "dynamicOptions",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: @local.dynamicDropdownValue;"
+    },
+    {
+      "type": "text",
+      "value": "## Default"
+    },
+    {
+      "type": "dropdown",
+      "name": "defaultDropdown",
+      "value": "@local.defaultDropdownValue",
+      "action_list": "changed | set_local:defaultDropdownValue: @local.defaultDropdown;",
+      "parameter_list": "options: @local.defaultOptions;\noptions_key: key;\noptions_value: value;"
+    },
+    {
+      "type": "text",
+      "name": "defaultDropdownValueText",
+      "value": "## DefaultValue\n@local.defaultDropdownValue"
+    },
+    {
+      "type": "text",
+      "value": "## Search"
+    },
+    {
+      "name": "searchDropdownValue",
+      "value": "key_2"
+    },
+    {
+      "type": "dropdown",
+      "name": "searchDropdown",
+      "value": "@local.searchDropdownValue",
+      "action_list": "changed | set_local:searchDropdownValue: @local.searchDropdown;",
+      "parameter_list": "options: @local.defaultOptions;\noptions_key: key;\noptions_value: value;\nshow_search: true;"
+    },
+    {
+      "type": "text",
+      "name": "searchDropdownValueText",
+      "value": "## SearchValue\n@local.searchDropdownValue"
+    },
+    {
+      "type": "text",
+      "value": "## Disabled"
+    },
+    {
+      "type": "dropdown",
+      "name": "disabledDropdown",
+      "value": "@local.defaultDropdownValue",
+      "parameter_list": "options: @local.defaultOptions;\noptions_key: key;\noptions_value: value;\nshow_search: true;\ndisabled: true;"
+    },
+    {
+      "type": "text",
+      "value": "## Placeholder Search"
+    },
+    {
+      "type": "dropdown",
+      "name": "placeholderSearchDropdown",
+      "parameter_list": "options: @local.defaultOptions;\noptions_key: key;\noptions_value: value;\nshow_search: true;\nplaceholder: Placeholder Search Text"
+    },
+    {
+      "type": "text",
+      "value": "## Placeholder"
+    },
+    {
+      "type": "dropdown",
+      "name": "placeholderDropdown",
+      "parameter_list": "placeholder: Placeholder Text;\noptions: @local.defaultOptions;"
+    },
+    {
+      "type": "text",
+      "value": "## Search with title"
+    },
+    {
+      "type": "dropdown",
+      "name": "searchTitleDropdown",
+      "value": "@local.searchDropdownValue",
+      "action_list": "changed | set_local:searchDropdownValue: @local.searchDropdown;",
+      "parameter_list": "options: @local.defaultOptions;\noptions_key: key;\noptions_value: value;\nshow_search: true;\ntitle: This is the title;"
+    },
+    {
+      "type": "text",
+      "value": "## dynamicDropdown"
+    },
+    {
+      "type": "dropdown",
+      "name": "dynamicDropdown",
+      "value": "key_3",
+      "parameter_list": "options: @local.dynamicOptions;\noptions_key: key;\noptions_value: value;"
+    },
+    {
+      "type": "button",
+      "name": "dynamicValueButton",
+      "value": "Update Dynamic Value",
+      "action_list": "click | set_local: dynamicDropdownValue: New Dynamic Value;"
+    }
+  ]
+}

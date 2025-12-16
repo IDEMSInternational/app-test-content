@@ -1,0 +1,38 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_actions",
+  "status": "released",
+  "rows": [
+    {
+      "name": "var_1",
+      "value": 0
+    },
+    {
+      "name": "var_2",
+      "value": "@local.var_1 + 1"
+    },
+    {
+      "type": "button",
+      "name": "setStaticValuebutton",
+      "value": "Set Static Value",
+      "action_list": "click | set_local: resultsText: Static Value"
+    },
+    {
+      "type": "button",
+      "name": "setDynamicValue",
+      "value": "Set Dynamic Value",
+      "action_list": "click | set_local: resultsText: @local.var_2"
+    },
+    {
+      "type": "button ",
+      "name": "updateDynamicValue",
+      "value": "Update Dynamic Value",
+      "action_list": "click | set_local: var_1: 2"
+    },
+    {
+      "type": "text",
+      "name": "resultsText",
+      "value": "Default Value"
+    }
+  ]
+}

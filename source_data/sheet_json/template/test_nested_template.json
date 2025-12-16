@@ -1,0 +1,126 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_nested_template",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Nested Template Tests"
+    },
+    {
+      "type": "text",
+      "value": "## parentTextBox"
+    },
+    {
+      "type": "text_box",
+      "name": "parentTextBox",
+      "value": "Default Parent Value"
+    },
+    {
+      "type": "begin_template",
+      "name": "childTemplate",
+      "value": "test_nested_template_child"
+    },
+    {
+      "name": "childText",
+      "value": "@local.parentTextBox"
+    },
+    {
+      "name": "childTextStatic",
+      "value": "Parent Static Value"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "text",
+      "value": "## parentChildText"
+    },
+    {
+      "type": "text",
+      "name": "parentChildText",
+      "value": "@local.childTemplate.childTextBox"
+    },
+    {
+      "type": "text",
+      "value": "## parentGrandchildText"
+    },
+    {
+      "type": "text",
+      "name": "parentGrandchildText",
+      "value": "@local.childTemplate.grandchildTemplate.grandchildTextBox"
+    },
+    {
+      "action_list": "click | go_to: childTemplate"
+    },
+    {
+      "type": "render_template",
+      "value": "test_nested_template_child",
+      "parameter_list": "childText: @local.parentTextBox;\nchildTextStatic: Parent Static Value;"
+    },
+    {
+      "type": "begin_action"
+    },
+    {
+      "type": "begin_go_to",
+      "value": "test_nested_template_child"
+    },
+    {
+      "name": "childText",
+      "value": "@local.parentTextBox"
+    },
+    {
+      "name": "childTextStatic",
+      "value": "Parent Static Value"
+    },
+    {
+      "type": "end_go_to"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "begin_action"
+    },
+    {
+      "type": "begin_pop_up",
+      "value": "test_nested_template_child"
+    },
+    {
+      "name": "childText",
+      "value": "@local.parentTextBox"
+    },
+    {
+      "name": "childTextStatic",
+      "value": "Parent Static Value"
+    },
+    {
+      "type": "end_pop_up"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "begin_action"
+    },
+    {
+      "type": "begin_nav",
+      "value": "test_nested_template_child",
+      "parameter_list": "type: @local.nav_is_pop_up;"
+    },
+    {
+      "name": "childText",
+      "value": "@local.parentTextBox"
+    },
+    {
+      "name": "childTextStatic",
+      "value": "Parent Static Value"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "end_action"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_action",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Action"
+    },
+    {
+      "type": "text",
+      "name": "actionExecuted",
+      "value": "Not Executed"
+    },
+    {
+      "type": "button",
+      "name": "executeButton",
+      "value": "Execute Action 1",
+      "action_list": "click | action: @local.action1"
+    },
+    {
+      "type": "begin_action",
+      "name": "action1"
+    },
+    {
+      "type": "set_variable",
+      "name": "actionExecuted",
+      "value": "Action 1 Executed"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "name": "action2Text",
+      "value": "Action 2 Executed"
+    },
+    {
+      "type": "button",
+      "name": "executeButton2",
+      "value": "Execute Action 2",
+      "action_list": "click | action: @local.action2"
+    },
+    {
+      "type": "begin_action",
+      "name": "action2"
+    },
+    {
+      "type": "set_variable",
+      "name": "actionExecuted",
+      "value": "@local.action2Text"
+    },
+    {
+      "type": "end_action"
+    }
+  ]
+}

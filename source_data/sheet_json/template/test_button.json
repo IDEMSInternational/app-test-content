@@ -1,0 +1,66 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_button",
+  "status": "released",
+  "rows": [
+    {
+      "type": "button",
+      "name": "testClickButton",
+      "value": "Click Me",
+      "action_list": "click | set_local: buttonClickValue: Clicked!;"
+    },
+    {
+      "type": "text",
+      "name": "buttonClickValue",
+      "value": "Not clicked yet"
+    },
+    {
+      "name": "dynamicActionText",
+      "value": "Clicked Dynamically!"
+    },
+    {
+      "type": "button",
+      "name": "dynamicActionButton",
+      "value": "Click Me",
+      "action_list": "click | set_local: dynamicActionValue: @local.dynamicActionText;"
+    },
+    {
+      "type": "text",
+      "name": "dynamicActionValue",
+      "value": "Not clicked yet"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "dg1"
+    },
+    {
+      "type": "button",
+      "name": "testClickButton",
+      "value": "Click Me",
+      "action_list": "click | set_local: buttonClickValue: Clicked!;"
+    },
+    {
+      "type": "text",
+      "name": "buttonClickValue",
+      "value": "Not clicked yet"
+    },
+    {
+      "name": "dynamicActionText",
+      "value": "Clicked Dynamically!"
+    },
+    {
+      "type": "button",
+      "name": "dynamicActionButton",
+      "value": "Click Me",
+      "action_list": "click | set_local: dynamicActionValue: @local.dynamicActionText;"
+    },
+    {
+      "type": "text",
+      "name": "dynamicActionValue",
+      "value": "Not clicked yet"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

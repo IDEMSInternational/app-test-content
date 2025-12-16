@@ -1,0 +1,34 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_nested_template_grandchild",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "## grandchildText"
+    },
+    {
+      "type": "text",
+      "name": "grandchildText",
+      "value": "Grandchild Text"
+    },
+    {
+      "type": "text",
+      "value": "## grandchildTextBox"
+    },
+    {
+      "type": "text_box",
+      "name": "grandchildTextBox",
+      "value": "Default Grandchild Value"
+    },
+    {
+      "type": "text",
+      "value": "## staticGrandchildText"
+    },
+    {
+      "type": "text",
+      "name": "staticGrandchildText",
+      "value": "Grandchild Static Value"
+    }
+  ]
+}

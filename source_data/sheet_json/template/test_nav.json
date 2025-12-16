@@ -1,0 +1,36 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_nav",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Nav"
+    },
+    {
+      "type": "button",
+      "name": "navButton",
+      "value": "Go to target",
+      "action_list": "click | action: @local.goToTargetAction"
+    },
+    {
+      "type": "begin_action",
+      "name": "goToTargetAction"
+    },
+    {
+      "type": "begin_nav",
+      "name": "goToTargetNav",
+      "value": "test_nav_target"
+    },
+    {
+      "name": "targetTitle",
+      "value": "New Title"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "end_action"
+    }
+  ]
+}

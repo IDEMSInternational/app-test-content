@@ -1,0 +1,57 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_query",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "value": "Query"
+    },
+    {
+      "type": "query",
+      "name": "queriedData",
+      "value": "selector: {active: true},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+      "parameter_list": "data_list: test_data;"
+    },
+    {
+      "type": "dropdown",
+      "name": "queriedDataDropdown",
+      "parameter_list": "options: @local.queriedData;\noptions_key: id;\noptions_value: name;"
+    },
+    {
+      "type": "text",
+      "name": "queriedOption",
+      "value": "@local.queriedDataDropdown"
+    },
+    {
+      "type": "title",
+      "value": "Dynamic Query"
+    },
+    {
+      "type": "query",
+      "name": "dynamicQueriedData",
+      "value": "selector: {category: '@local.categoryDropdown'},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+      "parameter_list": "data_list: test_data"
+    },
+    {
+      "type": "dropdown",
+      "name": "dynamicQueriedDataDropdown",
+      "parameter_list": "options: @local.dynamicQueriedData;\noptions_key: id;\noptions_value: name;"
+    },
+    {
+      "name": "categoryOptions",
+      "value": "key: A | value: A; \nkey: B | value: B;  "
+    },
+    {
+      "type": "dropdown",
+      "name": "categoryDropdown",
+      "value": "A",
+      "parameter_list": "options: @local.categoryOptions;\noptions_key: key;\noptions_value: value;"
+    },
+    {
+      "type": "text",
+      "name": "dynamicQueriedOption",
+      "value": "@local.dynamicQueriedDataDropdown"
+    }
+  ]
+}
