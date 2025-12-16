@@ -1,6 +1,25 @@
 {
   "asset_pack": {},
-  "data_list": {},
+  "data_list": {
+    "test_data": {
+      "flow_type": "data_list",
+      "flow_name": "test_data",
+      "data_list_name": "testData",
+      "_xlsxPath": "components/query.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "_metadata": {
+        "quantity": {
+          "type": "number"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "date": {
+          "type": "number"
+        }
+      }
+    }
+  },
   "data_pipe": {},
   "generator": {},
   "global": {},
@@ -51,6 +70,12 @@
       "flow_type": "template",
       "flow_name": "test_nested_template_grandchild",
       "_xlsxPath": "components/nested_template.xlsx",
+      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+    },
+    "test_query": {
+      "flow_type": "template",
+      "flow_name": "test_query",
+      "_xlsxPath": "components/query.xlsx",
       "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
     },
     "test_set_variable": {

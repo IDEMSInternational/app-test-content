@@ -18,8 +18,7 @@
             "buttonClickValue",
             "Clicked!"
           ],
-          "_raw": "click | set_local: buttonClickValue: Clicked!",
-          "_cleaned": "click | set_local: buttonClickValue: Clicked!"
+          "_raw": "click | set_local: buttonClickValue: Clicked!"
         }
       ],
       "_nested_name": "testClickButton"
@@ -57,8 +56,7 @@
             "dynamicActionValue",
             "@local.dynamicActionText"
           ],
-          "_raw": "click | set_local: dynamicActionValue: @local.dynamicActionText",
-          "_cleaned": "click | set_local: dynamicActionValue: @local.dynamicActionText"
+          "_raw": "click | set_local: dynamicActionValue: @local.dynamicActionText"
         }
       ],
       "_nested_name": "dynamicActionButton",
@@ -82,14 +80,6 @@
                 "type": "local",
                 "fieldName": "dynamicActionText"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "click | set_local: dynamicActionValue: @local.dynamicActionText",
-                "matchedExpression": "@local.dynamicActionText",
-                "type": "local",
-                "fieldName": "dynamicActionText"
-              }
             ]
           }
         }
@@ -97,8 +87,7 @@
       "_dynamicDependencies": {
         "@local.dynamicActionText": [
           "action_list.0.args.1",
-          "action_list.0._raw",
-          "action_list.0._cleaned"
+          "action_list.0._raw"
         ]
       }
     },
@@ -139,8 +128,7 @@
                 "buttonClickValue",
                 "Clicked!"
               ],
-              "_raw": "click | set_local: buttonClickValue: Clicked!",
-              "_cleaned": "click | set_local: buttonClickValue: Clicked!"
+              "_raw": "click | set_local: buttonClickValue: Clicked!"
             }
           ],
           "_nested_name": "dg1.testClickButton"
@@ -169,8 +157,7 @@
                 "dynamicActionValue",
                 "@local.dynamicActionText"
               ],
-              "_raw": "click | set_local: dynamicActionValue: @local.dynamicActionText",
-              "_cleaned": "click | set_local: dynamicActionValue: @local.dynamicActionText"
+              "_raw": "click | set_local: dynamicActionValue: @local.dynamicActionText"
             }
           ],
           "_nested_name": "dg1.dynamicActionButton",
@@ -194,14 +181,6 @@
                     "type": "local",
                     "fieldName": "dynamicActionText"
                   }
-                ],
-                "_cleaned": [
-                  {
-                    "fullExpression": "click | set_local: dynamicActionValue: @local.dynamicActionText",
-                    "matchedExpression": "@local.dynamicActionText",
-                    "type": "local",
-                    "fieldName": "dynamicActionText"
-                  }
                 ]
               }
             }
@@ -209,8 +188,7 @@
           "_dynamicDependencies": {
             "@local.dynamicActionText": [
               "action_list.0.args.1",
-              "action_list.0._raw",
-              "action_list.0._cleaned"
+              "action_list.0._raw"
             ]
           }
         },

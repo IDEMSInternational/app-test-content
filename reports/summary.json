@@ -3,7 +3,7 @@
     "data": [
       {
         "type": "button",
-        "count": 8
+        "count": 9
       },
       {
         "type": "debug_toggle",
@@ -15,11 +15,15 @@
       },
       {
         "type": "dropdown",
-        "count": 6
+        "count": 10
+      },
+      {
+        "type": "query",
+        "count": 2
       },
       {
         "type": "set_variable",
-        "count": 14
+        "count": 17
       },
       {
         "type": "template",
@@ -27,7 +31,7 @@
       },
       {
         "type": "text",
-        "count": 43
+        "count": 46
       },
       {
         "type": "text_box",
@@ -35,7 +39,7 @@
       },
       {
         "type": "title",
-        "count": 6
+        "count": 8
       },
       {
         "type": "toggle_bar",
@@ -51,7 +55,7 @@
       },
       {
         "type": "set_local",
-        "count": 10
+        "count": 11
       }
     ]
   },
@@ -86,9 +90,14 @@
   "flows_by_type": {
     "data": [
       {
+        "type": "data_list",
+        "subtype": null,
+        "total": 1
+      },
+      {
         "type": "template",
         "subtype": null,
-        "total": 13
+        "total": 14
       }
     ]
   }

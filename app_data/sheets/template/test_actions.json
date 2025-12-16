@@ -48,8 +48,7 @@
             "resultsText",
             "Static Value"
           ],
-          "_raw": "click | set_local: resultsText: Static Value",
-          "_cleaned": "click | set_local: resultsText: Static Value"
+          "_raw": "click | set_local: resultsText: Static Value"
         }
       ],
       "_nested_name": "setStaticValuebutton"
@@ -69,8 +68,7 @@
             "resultsText",
             "@local.var_2"
           ],
-          "_raw": "click | set_local: resultsText: @local.var_2",
-          "_cleaned": "click | set_local: resultsText: @local.var_2"
+          "_raw": "click | set_local: resultsText: @local.var_2"
         }
       ],
       "_nested_name": "setDynamicValue",
@@ -94,14 +92,6 @@
                 "type": "local",
                 "fieldName": "var_2"
               }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "click | set_local: resultsText: @local.var_2",
-                "matchedExpression": "@local.var_2",
-                "type": "local",
-                "fieldName": "var_2"
-              }
             ]
           }
         }
@@ -109,8 +99,7 @@
       "_dynamicDependencies": {
         "@local.var_2": [
           "action_list.0.args.1",
-          "action_list.0._raw",
-          "action_list.0._cleaned"
+          "action_list.0._raw"
         ]
       }
     },
@@ -129,8 +118,7 @@
             "var_1",
             "2"
           ],
-          "_raw": "click | set_local: var_1: 2",
-          "_cleaned": "click | set_local: var_1: 2"
+          "_raw": "click | set_local: var_1: 2"
         }
       ],
       "_nested_name": "updateDynamicValue"
