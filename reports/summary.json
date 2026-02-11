@@ -2,8 +2,12 @@
   "template_components": {
     "data": [
       {
+        "type": "action",
+        "count": 6
+      },
+      {
         "type": "button",
-        "count": 9
+        "count": 12
       },
       {
         "type": "debug_toggle",
@@ -18,20 +22,40 @@
         "count": 10
       },
       {
-        "type": "query",
+        "type": "go_to",
+        "count": 1
+      },
+      {
+        "type": "loop",
+        "count": 4
+      },
+      {
+        "type": "nav",
         "count": 2
+      },
+      {
+        "type": "pop_up",
+        "count": 1
+      },
+      {
+        "type": "query",
+        "count": 3
+      },
+      {
+        "type": "render_template",
+        "count": 1
       },
       {
         "type": "set_variable",
-        "count": 17
+        "count": 32
       },
       {
         "type": "template",
-        "count": 2
+        "count": 3
       },
       {
         "type": "text",
-        "count": 46
+        "count": 71
       },
       {
         "type": "text_box",
@@ -39,7 +63,7 @@
       },
       {
         "type": "title",
-        "count": 8
+        "count": 9
       },
       {
         "type": "toggle_bar",
@@ -49,6 +73,14 @@
   },
   "template_actions": {
     "data": [
+      {
+        "type": "action",
+        "count": 3
+      },
+      {
+        "type": "go_to",
+        "count": 1
+      },
       {
         "type": "reset_app",
         "count": 1
@@ -92,12 +124,12 @@
       {
         "type": "data_list",
         "subtype": null,
-        "total": 1
+        "total": 2
       },
       {
         "type": "template",
         "subtype": null,
-        "total": 14
+        "total": 19
       }
     ]
   }

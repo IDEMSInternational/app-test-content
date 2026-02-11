@@ -1,0 +1,24 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_toggle_bar",
+  "status": "released",
+  "rows": [
+    {
+      "type": "toggle_bar",
+      "name": "defaultToggle",
+      "value": true
+    },
+    {
+      "type": "text",
+      "name": "toggleOnText",
+      "value": "Toggle On",
+      "condition": "@local.defaultToggle"
+    },
+    {
+      "type": "text",
+      "name": "toggleOffText",
+      "value": "Toggle Off",
+      "condition": "!@local.defaultToggle"
+    }
+  ]
+}

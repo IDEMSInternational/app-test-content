@@ -5,8 +5,32 @@
       "flow_type": "data_list",
       "flow_name": "test_data",
       "data_list_name": "testData",
-      "_xlsxPath": "components/query.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/query.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1cDndPmELXtmx65GfoBKVnp-JxD21wxMMVWGeJUryuL0"
+      },
+      "_metadata": {
+        "quantity": {
+          "type": "number"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "date": {
+          "type": "number"
+        }
+      }
+    },
+    "test_loop_data": {
+      "flow_type": "data_list",
+      "flow_name": "test_loop_data",
+      "data_list_name": "testData",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/loop.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1HE11xkQtlkpErt1Oc2C5NkgErdlz3zSgXij1Jio5nkw"
+      },
       "_metadata": {
         "quantity": {
           "type": "number"
@@ -27,86 +51,173 @@
     "app_menu": {
       "flow_type": "template",
       "flow_name": "app_menu",
-      "_xlsxPath": "components/navigation.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/navigation.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1YC7Ar0n99C978PA_-wPXxefHRAEGtyeT5aA3jTL9RMw"
+      }
     },
     "home_screen": {
       "flow_type": "template",
       "flow_name": "home_screen",
-      "_xlsxPath": "components/navigation.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/navigation.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1YC7Ar0n99C978PA_-wPXxefHRAEGtyeT5aA3jTL9RMw"
+      }
+    },
+    "test_action": {
+      "flow_type": "template",
+      "flow_name": "test_action",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/action.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1mcWf5ab95aTj7L8bIfvAak28ELCgd4g9u2jFhZklk80"
+      }
     },
     "test_actions": {
       "flow_type": "template",
       "flow_name": "test_actions",
-      "_xlsxPath": "actions/set_local.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "actions/set_local.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1BhlIa0t3z2yv6zVqA56vXAeF7E21Em91fR8BlhP4qTo"
+      }
     },
     "test_button": {
       "flow_type": "template",
       "flow_name": "test_button",
-      "_xlsxPath": "components/button.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/button.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1ZKvL9e38Tpi89cifX5DsKunMNxRvIn6WCDvcgo7b_TU"
+      }
     },
     "test_dropdown": {
       "flow_type": "template",
       "flow_name": "test_dropdown",
-      "_xlsxPath": "components/dropdown.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/dropdown.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1yDcml2qWeW9ULYEHW_aFWR61p2eNSct5BTDo-EarG1Y"
+      }
+    },
+    "test_loop": {
+      "flow_type": "template",
+      "flow_name": "test_loop",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/loop.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1HE11xkQtlkpErt1Oc2C5NkgErdlz3zSgXij1Jio5nkw"
+      }
+    },
+    "test_loop_nested_template": {
+      "flow_type": "template",
+      "flow_name": "test_loop_nested_template",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/loop.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1HE11xkQtlkpErt1Oc2C5NkgErdlz3zSgXij1Jio5nkw"
+      }
+    },
+    "test_nav": {
+      "flow_type": "template",
+      "flow_name": "test_nav",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/nav.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1KqX9CIGJBtt4BJ858oCCWeVf3MWt4qJTWqPhkhr1D3k"
+      }
+    },
+    "test_nav_target": {
+      "flow_type": "template",
+      "flow_name": "test_nav_target",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/nav.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1KqX9CIGJBtt4BJ858oCCWeVf3MWt4qJTWqPhkhr1D3k"
+      }
     },
     "test_nested_template": {
       "flow_type": "template",
       "flow_name": "test_nested_template",
-      "_xlsxPath": "components/nested_template.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/nested_template.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1_GWkyNkvjWlnh9ZkqdTLlrLjYJK54rgps6nadO1zgZc"
+      }
     },
     "test_nested_template_child": {
       "flow_type": "template",
       "flow_name": "test_nested_template_child",
-      "_xlsxPath": "components/nested_template.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/nested_template.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1_GWkyNkvjWlnh9ZkqdTLlrLjYJK54rgps6nadO1zgZc"
+      }
     },
     "test_nested_template_grandchild": {
       "flow_type": "template",
       "flow_name": "test_nested_template_grandchild",
-      "_xlsxPath": "components/nested_template.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/nested_template.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1_GWkyNkvjWlnh9ZkqdTLlrLjYJK54rgps6nadO1zgZc"
+      }
     },
     "test_query": {
       "flow_type": "template",
       "flow_name": "test_query",
-      "_xlsxPath": "components/query.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/query.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1cDndPmELXtmx65GfoBKVnp-JxD21wxMMVWGeJUryuL0"
+      }
     },
     "test_set_variable": {
       "flow_type": "template",
       "flow_name": "test_set_variable",
-      "_xlsxPath": "components/set_variable.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/set_variable.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1V6IlJPawbCZsxHd9sR6RuafTtGCvX-x15qlDNzYoht0"
+      }
     },
     "test_text": {
       "flow_type": "template",
       "flow_name": "test_text",
-      "_xlsxPath": "components/text.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/text.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1Ygpn3zg8QaPzGtQLcpDJ9L1fqEmchsPEotdJ1WLpuLE"
+      }
     },
     "test_text_box": {
       "flow_type": "template",
       "flow_name": "test_text_box",
-      "_xlsxPath": "components/text_box.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/text_box.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1nJZRfIYFnZBCfDhCVLsALHcr5lR0eWPUqBjhKzK1bPI"
+      }
     },
     "test_title": {
       "flow_type": "template",
       "flow_name": "test_title",
-      "_xlsxPath": "components/title.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/title.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/14z0OOurDv____8ytRJTeQljD_aKVZZ19li7N_C9pqgY"
+      }
     },
     "test_toggle_bar": {
       "flow_type": "template",
       "flow_name": "test_toggle_bar",
-      "_xlsxPath": "components/toggle_bar.xlsx",
-      "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/toggle_bar.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1MR4E8lfR5a9PnFF6UEEPeqrV5RpuA3gchkXgvPyD_xA"
+      }
     }
   },
   "tour": {}

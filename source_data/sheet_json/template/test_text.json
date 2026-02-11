@@ -1,0 +1,17 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_text",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "plainText",
+      "value": "Plain text value"
+    },
+    {
+      "type": "text",
+      "name": "titleText",
+      "value": "# h1\n## h2\n### h3"
+    }
+  ]
+}

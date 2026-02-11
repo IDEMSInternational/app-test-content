@@ -1,0 +1,184 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_action",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Action",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text",
+      "name": "actionExecuted",
+      "value": "Not Executed",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "actionExecuted"
+    },
+    {
+      "type": "button",
+      "name": "executeButton",
+      "value": "Execute Action 1",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.action1"
+          ],
+          "_raw": "click | action: @local.action1"
+        }
+      ],
+      "_nested_name": "executeButton",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.action1",
+                  "matchedExpression": "@local.action1",
+                  "type": "local",
+                  "fieldName": "action1"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.action1",
+                "matchedExpression": "@local.action1",
+                "type": "local",
+                "fieldName": "action1"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.action1": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "action1",
+      "rows": [
+        {
+          "type": "set_variable",
+          "name": "actionExecuted",
+          "value": "Action 1 Executed",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "action1.actionExecuted"
+        }
+      ],
+      "_nested_name": "action1"
+    },
+    {
+      "name": "action2Text",
+      "value": "Action 2 Executed",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "action2Text"
+    },
+    {
+      "type": "button",
+      "name": "executeButton2",
+      "value": "Execute Action 2",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.action2"
+          ],
+          "_raw": "click | action: @local.action2"
+        }
+      ],
+      "_nested_name": "executeButton2",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.action2",
+                  "matchedExpression": "@local.action2",
+                  "type": "local",
+                  "fieldName": "action2"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.action2",
+                "matchedExpression": "@local.action2",
+                "type": "local",
+                "fieldName": "action2"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.action2": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "action2",
+      "rows": [
+        {
+          "type": "set_variable",
+          "name": "actionExecuted",
+          "value": "@local.action2Text",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "action2.actionExecuted",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.action2Text",
+                "matchedExpression": "@local.action2Text",
+                "type": "local",
+                "fieldName": "action2Text"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.action2Text": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "action2"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/action.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1mcWf5ab95aTj7L8bIfvAak28ELCgd4g9u2jFhZklk80"
+  }
+}

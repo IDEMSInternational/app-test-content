@@ -55,6 +55,9 @@
       }
     }
   ],
-  "_xlsxPath": "components/set_variable.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/set_variable.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1V6IlJPawbCZsxHd9sR6RuafTtGCvX-x15qlDNzYoht0"
+  }
 }

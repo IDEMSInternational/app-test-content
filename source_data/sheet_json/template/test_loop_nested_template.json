@@ -1,0 +1,16 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_loop_nested_template",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "**Nested**"
+    },
+    {
+      "type": "text",
+      "name": "templateText",
+      "value": "Default Template Text"
+    }
+  ]
+}

@@ -133,6 +133,9 @@
       "_nested_name": "resultsText"
     }
   ],
-  "_xlsxPath": "actions/set_local.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "actions/set_local.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1BhlIa0t3z2yv6zVqA56vXAeF7E21Em91fR8BlhP4qTo"
+  }
 }

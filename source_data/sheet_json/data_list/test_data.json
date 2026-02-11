@@ -49,21 +49,5 @@
       "date": 46942,
       "category": "B"
     }
-  ],
-  "_source": {
-    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
-    "path": "components/query.xlsx",
-    "url": "https://docs.google.com/spreadsheets/d/1cDndPmELXtmx65GfoBKVnp-JxD21wxMMVWGeJUryuL0"
-  },
-  "_metadata": {
-    "quantity": {
-      "type": "number"
-    },
-    "active": {
-      "type": "boolean"
-    },
-    "date": {
-      "type": "number"
-    }
-  }
+  ]
 }

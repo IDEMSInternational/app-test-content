@@ -61,6 +61,9 @@
       "_nested_name": "rightTitle"
     }
   ],
-  "_xlsxPath": "components/title.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/title.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/14z0OOurDv____8ytRJTeQljD_aKVZZ19li7N_C9pqgY"
+  }
 }

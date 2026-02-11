@@ -1,6 +1,6 @@
 {
   "flow_type": "data_list",
-  "flow_name": "test_data",
+  "flow_name": "test_loop_data",
   "status": "released",
   "data_list_name": "testData",
   "rows": [
@@ -52,8 +52,8 @@
   ],
   "_source": {
     "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
-    "path": "components/query.xlsx",
-    "url": "https://docs.google.com/spreadsheets/d/1cDndPmELXtmx65GfoBKVnp-JxD21wxMMVWGeJUryuL0"
+    "path": "components/loop.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1HE11xkQtlkpErt1Oc2C5NkgErdlz3zSgXij1Jio5nkw"
   },
   "_metadata": {
     "quantity": {

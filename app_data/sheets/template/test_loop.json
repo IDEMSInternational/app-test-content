@@ -1,0 +1,415 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_loop",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Loop",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text",
+      "value": "## List of objects",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "set_variable",
+      "name": "listData",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "listData"
+    },
+    {
+      "type": "loop",
+      "name": "listLoop",
+      "value": "@local.listData",
+      "parameter_list": {
+        "index": "key"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "name": "loopTitle",
+          "value": "**List item @index**",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "listLoop.loopTitle"
+        },
+        {
+          "type": "text",
+          "name": "loopText",
+          "value": "@item.value",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "listLoop.loopText",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.value",
+                "matchedExpression": "@item.value",
+                "type": "item",
+                "fieldName": "value"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.value": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "plainText",
+          "value": "Plain text",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "listLoop.plainText"
+        }
+      ],
+      "_nested_name": "listLoop",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.listData",
+            "matchedExpression": "@local.listData",
+            "type": "local",
+            "fieldName": "listData"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.listData": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## Query Result",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_7",
+      "_nested_name": "text_7"
+    },
+    {
+      "type": "query",
+      "name": "queriedData",
+      "value": "selector: {active: true},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "data_list": "test_data"
+      },
+      "_nested_name": "queriedData"
+    },
+    {
+      "type": "loop",
+      "name": "queryLoop",
+      "value": "@local.queriedData",
+      "parameter_list": {
+        "index": "id"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "name": "loopTitle",
+          "value": "**Query item @index**",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "queryLoop.loopTitle"
+        },
+        {
+          "type": "text",
+          "name": "loopText",
+          "value": "@item.value",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "queryLoop.loopText",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.value",
+                "matchedExpression": "@item.value",
+                "type": "item",
+                "fieldName": "value"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.value": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "plainText",
+          "value": "Plain text",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "queryLoop.plainText"
+        }
+      ],
+      "_nested_name": "queryLoop",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.queriedData",
+            "matchedExpression": "@local.queriedData",
+            "type": "local",
+            "fieldName": "queriedData"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.queriedData": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## Nested Template",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_11",
+      "_nested_name": "text_11"
+    },
+    {
+      "type": "set_variable",
+      "name": "nestedListData",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "nestedListData"
+    },
+    {
+      "type": "loop",
+      "name": "nestedLoop",
+      "value": "@local.nestedListData",
+      "rows": [
+        {
+          "type": "text",
+          "name": "loopKey",
+          "value": "key: @item.key",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "nestedLoop.loopKey",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "key: @item.key",
+                "matchedExpression": "@item.key",
+                "type": "item",
+                "fieldName": "key"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.key": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "template",
+          "name": "loopTemplate",
+          "value": "test_loop_nested_template",
+          "rows": [
+            {
+              "name": "templateText",
+              "value": "value: @item.value",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "nestedLoop.loopTemplate.templateText",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "value: @item.value",
+                    "matchedExpression": "@item.value",
+                    "type": "item",
+                    "fieldName": "value"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.value": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "nestedLoop.loopTemplate"
+        },
+        {
+          "type": "text",
+          "name": "countText",
+          "value": "@index of @count",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "nestedLoop.countText"
+        }
+      ],
+      "_nested_name": "nestedLoop",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.nestedListData",
+            "matchedExpression": "@local.nestedListData",
+            "type": "local",
+            "fieldName": "nestedListData"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.nestedListData": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## First, Last, Index & Count",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_15",
+      "_nested_name": "text_15"
+    },
+    {
+      "type": "set_variable",
+      "name": "firstLastData",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "firstLastData"
+    },
+    {
+      "type": "loop",
+      "name": "firstLastLoop",
+      "value": "@local.firstLastData",
+      "parameter_list": {
+        "index": "key"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "name": "firstText",
+          "value": "first: @first.value",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "firstLastLoop.firstText"
+        },
+        {
+          "type": "text",
+          "name": "thisText",
+          "value": "item: @item.value",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "firstLastLoop.thisText",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "item: @item.value",
+                "matchedExpression": "@item.value",
+                "type": "item",
+                "fieldName": "value"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.value": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "lastText",
+          "value": "last: @last.value",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "firstLastLoop.lastText"
+        },
+        {
+          "type": "text",
+          "name": "countText",
+          "value": "@index of @count",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "firstLastLoop.countText"
+        },
+        {
+          "type": "text",
+          "name": "isFirstText",
+          "value": "Is first: @is_first",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "firstLastLoop.isFirstText"
+        },
+        {
+          "type": "text",
+          "name": "isLastText",
+          "value": "Is last: @is_last",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "firstLastLoop.isLastText"
+        }
+      ],
+      "_nested_name": "firstLastLoop",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.firstLastData",
+            "matchedExpression": "@local.firstLastData",
+            "type": "local",
+            "fieldName": "firstLastData"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.firstLastData": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/loop.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1HE11xkQtlkpErt1Oc2C5NkgErdlz3zSgXij1Jio5nkw"
+  }
+}

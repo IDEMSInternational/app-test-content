@@ -1,0 +1,36 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_title",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "name": "plainTitle",
+      "value": "Plain title value"
+    },
+    {
+      "type": "title",
+      "name": "tooltipTitle",
+      "value": "Tooltip Title",
+      "parameter_list": "help: Hi, I'm a tooltip!"
+    },
+    {
+      "type": "title",
+      "name": "headerTitle",
+      "value": "Header Title",
+      "parameter_list": "variant: header"
+    },
+    {
+      "type": "title",
+      "name": "centerTitle",
+      "value": "Centered Title",
+      "parameter_list": "text_align: center"
+    },
+    {
+      "type": "title",
+      "name": "rightTitle",
+      "value": "Right Aligned Titile",
+      "parameter_list": "text_align: right"
+    }
+  ]
+}

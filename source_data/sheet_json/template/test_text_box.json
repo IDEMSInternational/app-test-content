@@ -1,0 +1,89 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_text_box",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text_box",
+      "name": "defaultTextBox",
+      "value": "Default Value"
+    },
+    {
+      "type": "text",
+      "name": "defaultTextBoxValue",
+      "value": "defaultTextBox: @local.defaultTextBox"
+    },
+    {
+      "type": "set_variable",
+      "name": "isDisabled",
+      "value": true
+    },
+    {
+      "type": "text_box",
+      "name": "disabledTextBox",
+      "value": "Default Value",
+      "parameter_list": "disabled: @local.isDisabled"
+    },
+    {
+      "type": "toggle_bar",
+      "name": "toggle_enabled",
+      "value": true
+    },
+    {
+      "type": "text_box",
+      "name": "dynamicallyDisabledTextBox",
+      "parameter_list": "disabled: !@local.toggle_enabled"
+    },
+    {
+      "type": "text",
+      "value": "## Placeholder"
+    },
+    {
+      "name": "placeholder",
+      "value": "Placeholder text"
+    },
+    {
+      "type": "text_box",
+      "name": "placeholderTextBox",
+      "parameter_list": "placeholder: @local.placeholder"
+    },
+    {
+      "type": "text",
+      "name": "title_1",
+      "value": "## Maximum length"
+    },
+    {
+      "type": "text_box",
+      "name": "maxLengthTextBox",
+      "parameter_list": "max_length: 30"
+    },
+    {
+      "type": "text",
+      "value": "## Text alignment"
+    },
+    {
+      "type": "text_box",
+      "name": "alignLeftTextBox",
+      "parameter_list": "text_align: left"
+    },
+    {
+      "type": "text_box",
+      "name": "alignCenterTextBox",
+      "parameter_list": "text_align: center"
+    },
+    {
+      "type": "text_box",
+      "name": "alignRightTextBox",
+      "parameter_list": "text_align: right"
+    },
+    {
+      "type": "text",
+      "value": "## Number input"
+    },
+    {
+      "type": "text_box",
+      "name": "numberTextBox",
+      "parameter_list": "number_input: true"
+    }
+  ]
+}

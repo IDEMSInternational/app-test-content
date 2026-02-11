@@ -136,8 +136,220 @@
           "value"
         ]
       }
+    },
+    {
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "go_to",
+          "args": [
+            "childTemplate"
+          ],
+          "_raw": "click | go_to: childTemplate"
+        }
+      ],
+      "type": "set_variable",
+      "name": "set_variable_11",
+      "_nested_name": "set_variable_11"
+    },
+    {
+      "type": "render_template",
+      "value": "test_nested_template_child",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "childText": "@local.parentTextBox",
+        "childTextStatic": "Parent Static Value"
+      },
+      "name": "render_template_12",
+      "_nested_name": "render_template_12",
+      "_dynamicFields": {
+        "parameter_list": {
+          "childText": [
+            {
+              "fullExpression": "@local.parentTextBox",
+              "matchedExpression": "@local.parentTextBox",
+              "type": "local",
+              "fieldName": "parentTextBox"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.parentTextBox": [
+          "parameter_list.childText"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "rows": [
+        {
+          "type": "go_to",
+          "value": "test_nested_template_child",
+          "rows": [
+            {
+              "name": "childText",
+              "value": "@local.parentTextBox",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "action_13.go_to_1.childText",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.parentTextBox",
+                    "matchedExpression": "@local.parentTextBox",
+                    "type": "local",
+                    "fieldName": "parentTextBox"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.parentTextBox": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "childTextStatic",
+              "value": "Parent Static Value",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "action_13.go_to_1.childTextStatic"
+            }
+          ],
+          "name": "go_to_1",
+          "_nested_name": "action_13.go_to_1"
+        }
+      ],
+      "name": "action_13",
+      "_nested_name": "action_13"
+    },
+    {
+      "type": "action",
+      "rows": [
+        {
+          "type": "pop_up",
+          "value": "test_nested_template_child",
+          "rows": [
+            {
+              "name": "childText",
+              "value": "@local.parentTextBox",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "action_15.pop_up_1.childText",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.parentTextBox",
+                    "matchedExpression": "@local.parentTextBox",
+                    "type": "local",
+                    "fieldName": "parentTextBox"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.parentTextBox": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "childTextStatic",
+              "value": "Parent Static Value",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "action_15.pop_up_1.childTextStatic"
+            }
+          ],
+          "name": "pop_up_1",
+          "_nested_name": "action_15.pop_up_1"
+        }
+      ],
+      "name": "action_15",
+      "_nested_name": "action_15"
+    },
+    {
+      "type": "action",
+      "rows": [
+        {
+          "type": "nav",
+          "value": "test_nested_template_child",
+          "parameter_list": {
+            "type": "@local.nav_is_pop_up"
+          },
+          "rows": [
+            {
+              "name": "childText",
+              "value": "@local.parentTextBox",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "action_17.nav_1.childText",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.parentTextBox",
+                    "matchedExpression": "@local.parentTextBox",
+                    "type": "local",
+                    "fieldName": "parentTextBox"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.parentTextBox": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "name": "childTextStatic",
+              "value": "Parent Static Value",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "action_17.nav_1.childTextStatic"
+            }
+          ],
+          "name": "nav_1",
+          "_nested_name": "action_17.nav_1",
+          "_dynamicFields": {
+            "parameter_list": {
+              "type": [
+                {
+                  "fullExpression": "@local.nav_is_pop_up",
+                  "matchedExpression": "@local.nav_is_pop_up",
+                  "type": "local",
+                  "fieldName": "nav_is_pop_up"
+                }
+              ]
+            }
+          },
+          "_dynamicDependencies": {
+            "@local.nav_is_pop_up": [
+              "parameter_list.type"
+            ]
+          }
+        }
+      ],
+      "name": "action_17",
+      "_nested_name": "action_17"
     }
   ],
-  "_xlsxPath": "components/nested_template.xlsx",
-  "_sheetsFolderUrl": "https://drive.google.com/drive/u/0/folders/15StZK4ejasGm2ce5c2aULwROnOP_zBsQ"
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/nested_template.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1_GWkyNkvjWlnh9ZkqdTLlrLjYJK54rgps6nadO1zgZc"
+  }
 }
