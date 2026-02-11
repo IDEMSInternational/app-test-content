@@ -1,0 +1,12 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_action_nav_target",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "theTitle",
+      "value": "# Navigated from external action"
+    }
+  ]
+}

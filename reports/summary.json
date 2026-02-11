@@ -2,12 +2,16 @@
   "template_components": {
     "data": [
       {
+        "type": "JSON",
+        "count": 1
+      },
+      {
         "type": "action",
-        "count": 6
+        "count": 15
       },
       {
         "type": "button",
-        "count": 12
+        "count": 19
       },
       {
         "type": "debug_toggle",
@@ -27,11 +31,11 @@
       },
       {
         "type": "loop",
-        "count": 4
+        "count": 8
       },
       {
         "type": "nav",
-        "count": 2
+        "count": 4
       },
       {
         "type": "pop_up",
@@ -39,7 +43,7 @@
       },
       {
         "type": "query",
-        "count": 3
+        "count": 5
       },
       {
         "type": "render_template",
@@ -47,15 +51,15 @@
       },
       {
         "type": "set_variable",
-        "count": 32
+        "count": 43
       },
       {
         "type": "template",
-        "count": 3
+        "count": 4
       },
       {
         "type": "text",
-        "count": 71
+        "count": 83
       },
       {
         "type": "text_box",
@@ -68,6 +72,10 @@
       {
         "type": "toggle_bar",
         "count": 2
+      },
+      {
+        "type": "update",
+        "count": 5
       }
     ]
   },
@@ -75,7 +83,7 @@
     "data": [
       {
         "type": "action",
-        "count": 3
+        "count": 10
       },
       {
         "type": "go_to",
@@ -124,12 +132,12 @@
       {
         "type": "data_list",
         "subtype": null,
-        "total": 2
+        "total": 3
       },
       {
         "type": "template",
         "subtype": null,
-        "total": 19
+        "total": 22
       }
     ]
   }

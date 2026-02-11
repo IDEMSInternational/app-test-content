@@ -1,0 +1,45 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_external_actions",
+  "status": "released",
+  "rows": [
+    {
+      "type": "begin_action",
+      "name": "action1"
+    },
+    {
+      "type": "begin_nav",
+      "name": "goToTargetNav",
+      "value": "test_action_nav_target"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "begin_action",
+      "name": "action2"
+    },
+    {
+      "name": "theTitle",
+      "value": "# Default Title"
+    },
+    {
+      "type": "begin_nav",
+      "name": "goToTargetNav",
+      "value": "test_action_nav_target"
+    },
+    {
+      "name": "theTitle",
+      "value": "@local.theTitle"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "end_nav"
+    }
+  ]
+}

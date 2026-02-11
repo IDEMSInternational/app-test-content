@@ -1,0 +1,121 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_update",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Update"
+    },
+    {
+      "type": "text",
+      "value": "## Insert"
+    },
+    {
+      "type": "begin_action",
+      "name": "insertAction"
+    },
+    {
+      "type": "update",
+      "name": "insertRow",
+      "value": "{\n id: 'id6',\n name: 'Name 6',\n value: 'Value 6',\n quantity: 5,\n active: true,\n date: '01/01/2026',\n category: 'C'\n}"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "button",
+      "name": "insertButton",
+      "value": "Insert",
+      "action_list": "click | action: @local.insertAction"
+    },
+    {
+      "type": "query",
+      "name": "insertResults",
+      "parameter_list": "data_list: test_update_data;"
+    },
+    {
+      "type": "begin_loop",
+      "name": "itemLoop",
+      "value": "@local.insertResults"
+    },
+    {
+      "type": "text",
+      "name": "checkInsertedName",
+      "value": "@item.name"
+    },
+    {
+      "type": "text",
+      "name": "checkInsertedValue",
+      "value": "@item.value"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "text",
+      "value": "## Insert"
+    },
+    {
+      "type": "begin_action",
+      "name": "insertAction"
+    },
+    {
+      "type": "update",
+      "name": "insertRow",
+      "value": "{\n id: 'id6',\n name: 'Name 6',\n value: 'Value 6',\n quantity: 5,\n active: true,\n date: '01/01/2026',\n category: 'C'\n}"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "button",
+      "name": "insertButton",
+      "value": "Insert",
+      "action_list": "click | action: @local.insertAction"
+    },
+    {
+      "type": "query",
+      "name": "insertResults",
+      "parameter_list": "data_list: test_update_data;"
+    },
+    {
+      "type": "begin_loop",
+      "name": "itemLoop",
+      "value": "@local.insertResults"
+    },
+    {
+      "value": "@local.var.value = true"
+    },
+    {
+      "type": "update",
+      "value": "{\n id: 'id6',\nname: @local.name\n}"
+    },
+    {
+      "type": "update",
+      "value": "{\n id: 'id6',\nvalue: @local.value\n}"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "update",
+      "value": "@local.query_1"
+    },
+    {
+      "name": "name",
+      "value": "name: @local.value1,",
+      "condition": "@local.value1"
+    },
+    {
+      "name": "name",
+      "value": " ",
+      "condition": "!@local.value1"
+    },
+    {
+      "type": "JSON",
+      "name": "query_1",
+      "value": "{\n id: 'id6',\n@local.name,\n value: 'Value 6',\n quantity: 5,\n active: true,\n date: '01/01/2026',\n category: 'C'\n}"
+    }
+  ]
+}
