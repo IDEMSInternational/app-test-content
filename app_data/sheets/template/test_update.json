@@ -1,0 +1,458 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_update",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Update",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text",
+      "value": "## Insert",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "action",
+      "name": "insertAction",
+      "rows": [
+        {
+          "type": "update",
+          "name": "insertRow",
+          "value": "{\n id: 'id6',\n name: 'Name 6',\n value: 'Value 6',\n quantity: 5,\n active: true,\n date: '01/01/2026',\n category: 'C'\n}",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "insertAction.insertRow"
+        }
+      ],
+      "_nested_name": "insertAction"
+    },
+    {
+      "type": "button",
+      "name": "insertButton",
+      "value": "Insert",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.insertAction"
+          ],
+          "_raw": "click | action: @local.insertAction"
+        }
+      ],
+      "_nested_name": "insertButton",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.insertAction",
+                  "matchedExpression": "@local.insertAction",
+                  "type": "local",
+                  "fieldName": "insertAction"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.insertAction",
+                "matchedExpression": "@local.insertAction",
+                "type": "local",
+                "fieldName": "insertAction"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.insertAction": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "query",
+      "name": "insertResults",
+      "parameter_list": {
+        "data_list": "test_update_data"
+      },
+      "_nested_name": "insertResults"
+    },
+    {
+      "type": "loop",
+      "name": "itemLoop",
+      "value": "@local.insertResults",
+      "rows": [
+        {
+          "type": "text",
+          "name": "checkInsertedName",
+          "value": "@item.name",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "itemLoop.checkInsertedName",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.name",
+                "matchedExpression": "@item.name",
+                "type": "item",
+                "fieldName": "name"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.name": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "checkInsertedValue",
+          "value": "@item.value",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "itemLoop.checkInsertedValue",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.value",
+                "matchedExpression": "@item.value",
+                "type": "item",
+                "fieldName": "value"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.value": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "itemLoop",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.insertResults",
+            "matchedExpression": "@local.insertResults",
+            "type": "local",
+            "fieldName": "insertResults"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.insertResults": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## Insert",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_10",
+      "_nested_name": "text_10"
+    },
+    {
+      "type": "action",
+      "name": "insertAction",
+      "rows": [
+        {
+          "type": "update",
+          "name": "insertRow",
+          "value": "{\n id: 'id6',\n name: 'Name 6',\n value: 'Value 6',\n quantity: 5,\n active: true,\n date: '01/01/2026',\n category: 'C'\n}",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "insertAction.insertRow"
+        }
+      ],
+      "_nested_name": "insertAction"
+    },
+    {
+      "type": "button",
+      "name": "insertButton",
+      "value": "Insert",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.insertAction"
+          ],
+          "_raw": "click | action: @local.insertAction"
+        }
+      ],
+      "_nested_name": "insertButton",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.insertAction",
+                  "matchedExpression": "@local.insertAction",
+                  "type": "local",
+                  "fieldName": "insertAction"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.insertAction",
+                "matchedExpression": "@local.insertAction",
+                "type": "local",
+                "fieldName": "insertAction"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.insertAction": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "query",
+      "name": "insertResults",
+      "parameter_list": {
+        "data_list": "test_update_data"
+      },
+      "_nested_name": "insertResults"
+    },
+    {
+      "type": "loop",
+      "name": "itemLoop",
+      "value": "@local.insertResults",
+      "rows": [
+        {
+          "value": "@local.var.value = true",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "name": "set_variable_1",
+          "_nested_name": "itemLoop.set_variable_1",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.var.value = true",
+                "matchedExpression": "@local.var.value",
+                "type": "local",
+                "fieldName": "var"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.var.value": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "update",
+          "value": "{\n id: 'id6',\nname: @local.name\n}",
+          "_translations": {
+            "value": {}
+          },
+          "name": "update_2",
+          "_nested_name": "itemLoop.update_2",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "{\n id: 'id6',\nname: @local.name\n}",
+                "matchedExpression": "@local.name",
+                "type": "local",
+                "fieldName": "name"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.name": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "update",
+          "value": "{\n id: 'id6',\nvalue: @local.value\n}",
+          "_translations": {
+            "value": {}
+          },
+          "name": "update_3",
+          "_nested_name": "itemLoop.update_3",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "{\n id: 'id6',\nvalue: @local.value\n}",
+                "matchedExpression": "@local.value",
+                "type": "local",
+                "fieldName": "value"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.value": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "itemLoop",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.insertResults",
+            "matchedExpression": "@local.insertResults",
+            "type": "local",
+            "fieldName": "insertResults"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.insertResults": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "update",
+      "value": "@local.query_1",
+      "_translations": {
+        "value": {}
+      },
+      "name": "update_17",
+      "_nested_name": "update_17",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.query_1",
+            "matchedExpression": "@local.query_1",
+            "type": "local",
+            "fieldName": "query_1"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.query_1": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "name",
+      "value": "name: @local.value1,",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "@local.value1",
+      "type": "set_variable",
+      "_nested_name": "name",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "name: @local.value1,",
+            "matchedExpression": "@local.value1",
+            "type": "local",
+            "fieldName": "value1"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@local.value1",
+            "matchedExpression": "@local.value1",
+            "type": "local",
+            "fieldName": "value1"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.value1": [
+          "value",
+          "condition"
+        ]
+      }
+    },
+    {
+      "name": "name",
+      "value": "",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "!@local.value1",
+      "type": "set_variable",
+      "_nested_name": "name",
+      "_dynamicFields": {
+        "condition": [
+          {
+            "fullExpression": "!@local.value1",
+            "matchedExpression": "!@local.value1",
+            "type": "local",
+            "fieldName": "value1"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "!@local.value1": [
+          "condition"
+        ]
+      }
+    },
+    {
+      "type": "JSON",
+      "name": "query_1",
+      "value": "{\n id: 'id6',\n@local.name,\n value: 'Value 6',\n quantity: 5,\n active: true,\n date: '01/01/2026',\n category: 'C'\n}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "query_1",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "{\n id: 'id6',\n@local.name,\n value: 'Value 6',\n quantity: 5,\n active: true,\n date: '01/01/2026',\n category: 'C'\n}",
+            "matchedExpression": "@local.name",
+            "type": "local",
+            "fieldName": "name"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.name": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/update.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1A9069mQQ2_1IW_HXo5C1eWe8lkc3RXNS7YR_wLLZX5Y"
+  }
+}

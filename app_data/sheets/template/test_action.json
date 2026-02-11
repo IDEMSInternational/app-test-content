@@ -174,6 +174,412 @@
         }
       ],
       "_nested_name": "action2"
+    },
+    {
+      "type": "button",
+      "name": "executeButton3",
+      "value": "Execute Action 1 From Action 3",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.action3"
+          ],
+          "_raw": "click | action: @local.action3"
+        }
+      ],
+      "_nested_name": "executeButton3",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.action3",
+                  "matchedExpression": "@local.action3",
+                  "type": "local",
+                  "fieldName": "action3"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.action3",
+                "matchedExpression": "@local.action3",
+                "type": "local",
+                "fieldName": "action3"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.action3": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "action3",
+      "value": "@local.action1",
+      "rows": [],
+      "_nested_name": "action3",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.action1",
+            "matchedExpression": "@local.action1",
+            "type": "local",
+            "fieldName": "action1"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.action1": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "clickCount",
+      "value": 0,
+      "type": "set_variable",
+      "_nested_name": "clickCount"
+    },
+    {
+      "type": "text",
+      "name": "clickCountText",
+      "value": "Times clicked: @local.clickCount",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "clickCountText",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "Times clicked: @local.clickCount",
+            "matchedExpression": "@local.clickCount",
+            "type": "local",
+            "fieldName": "clickCount"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.clickCount": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "name": "clickButton",
+      "value": "Click Count ++",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.incrementClickCount"
+          ],
+          "_raw": "click | action: @local.incrementClickCount"
+        }
+      ],
+      "_nested_name": "clickButton",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.incrementClickCount",
+                  "matchedExpression": "@local.incrementClickCount",
+                  "type": "local",
+                  "fieldName": "incrementClickCount"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.incrementClickCount",
+                "matchedExpression": "@local.incrementClickCount",
+                "type": "local",
+                "fieldName": "incrementClickCount"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.incrementClickCount": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "incrementClickCount",
+      "rows": [
+        {
+          "type": "set_variable",
+          "name": "clickCount",
+          "value": "@local.clickCount + 1",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "incrementClickCount.clickCount",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.clickCount + 1",
+                "matchedExpression": "@local.clickCount",
+                "type": "local",
+                "fieldName": "clickCount"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.clickCount": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "incrementClickCount"
+    },
+    {
+      "type": "template",
+      "name": "externalActions",
+      "value": "test_external_actions",
+      "rows": [],
+      "_nested_name": "externalActions"
+    },
+    {
+      "type": "button",
+      "name": "callExternalAction",
+      "value": "Execute External Action",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.externalActions.action1"
+          ],
+          "_raw": "click | action: @local.externalActions.action1"
+        }
+      ],
+      "_nested_name": "callExternalAction",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.externalActions.action1",
+                  "matchedExpression": "@local.externalActions.action1",
+                  "type": "local",
+                  "fieldName": "externalActions"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.externalActions.action1",
+                "matchedExpression": "@local.externalActions.action1",
+                "type": "local",
+                "fieldName": "externalActions"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.externalActions.action1": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "name": "callExternalActionWithParams",
+      "value": "Execute External Action (with params)",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.action4"
+          ],
+          "_raw": "click | action: @local.action4"
+        }
+      ],
+      "_nested_name": "callExternalActionWithParams",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.action4",
+                  "matchedExpression": "@local.action4",
+                  "type": "local",
+                  "fieldName": "action4"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.action4",
+                "matchedExpression": "@local.action4",
+                "type": "local",
+                "fieldName": "action4"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.action4": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "action4",
+      "value": "@local.externalActions.action2",
+      "rows": [
+        {
+          "type": "set_variable",
+          "name": "theTitle",
+          "value": "# Navigated by external action with param",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "action4.theTitle"
+        }
+      ],
+      "_nested_name": "action4",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.externalActions.action2",
+            "matchedExpression": "@local.externalActions.action2",
+            "type": "local",
+            "fieldName": "externalActions"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.externalActions.action2": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "name": "callExternalActionWithParams2",
+      "value": "Execute External Action (with params via sub action)",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.action5"
+          ],
+          "_raw": "click | action: @local.action5"
+        }
+      ],
+      "_nested_name": "callExternalActionWithParams2",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.action5",
+                  "matchedExpression": "@local.action5",
+                  "type": "local",
+                  "fieldName": "action5"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.action5",
+                "matchedExpression": "@local.action5",
+                "type": "local",
+                "fieldName": "action5"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.action5": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "action5",
+      "rows": [
+        {
+          "type": "action",
+          "name": "action5SubAction",
+          "value": "@local.externalActions.action2",
+          "rows": [
+            {
+              "type": "set_variable",
+              "name": "theTitle",
+              "value": "# Navigated by external action with param via a sub action",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "action5.action5SubAction.theTitle"
+            }
+          ],
+          "_nested_name": "action5.action5SubAction",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.externalActions.action2",
+                "matchedExpression": "@local.externalActions.action2",
+                "type": "local",
+                "fieldName": "externalActions"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.externalActions.action2": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "action5"
     }
   ],
   "_source": {

@@ -1,0 +1,21 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_action_nav_target",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "theTitle",
+      "value": "# Navigated from external action",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "theTitle"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/action.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1mcWf5ab95aTj7L8bIfvAak28ELCgd4g9u2jFhZklk80"
+  }
+}

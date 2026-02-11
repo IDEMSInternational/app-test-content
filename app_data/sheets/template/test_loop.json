@@ -405,6 +405,151 @@
           "value"
         ]
       }
+    },
+    {
+      "type": "text",
+      "value": "## Nested Loop",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_19",
+      "_nested_name": "text_19"
+    },
+    {
+      "type": "set_variable",
+      "name": "outerLoopData",
+      "value": "key: key_1 | value: This is value 1;\nkey: key_2 | value: This is value 2;\nkey: key_3 | value: This is value 3;",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "outerLoopData"
+    },
+    {
+      "type": "loop",
+      "name": "outerLoop",
+      "value": "@local.outerLoopData",
+      "parameter_list": {
+        "index": "key"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "value": "Outer Looping",
+          "_translations": {
+            "value": {}
+          },
+          "name": "text_1",
+          "_nested_name": "outerLoop.text_1"
+        },
+        {
+          "type": "text",
+          "name": "outerKeyText",
+          "value": "key: @item.key",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "outerLoop.outerKeyText",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "key: @item.key",
+                "matchedExpression": "@item.key",
+                "type": "item",
+                "fieldName": "key"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.key": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "set_variable",
+          "name": "innerLoopData",
+          "value": "key: inner_key_1 | value: Inner this is value 1;\nkey: inner_key_2 | value: Inner this is value 2;",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "outerLoop.innerLoopData"
+        },
+        {
+          "type": "loop",
+          "name": "innerLoop",
+          "value": "@local.innerLoopData",
+          "parameter_list": {
+            "index": "key"
+          },
+          "rows": [
+            {
+              "type": "text",
+              "value": "Inner Looping",
+              "_translations": {
+                "value": {}
+              },
+              "name": "text_1",
+              "_nested_name": "outerLoop.innerLoop.text_1"
+            },
+            {
+              "type": "text",
+              "name": "innerKeyText",
+              "value": "key: @item.key",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "outerLoop.innerLoop.innerKeyText",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "key: @item.key",
+                    "matchedExpression": "@item.key",
+                    "type": "item",
+                    "fieldName": "key"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.key": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "outerLoop.innerLoop",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.innerLoopData",
+                "matchedExpression": "@local.innerLoopData",
+                "type": "local",
+                "fieldName": "innerLoopData"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.innerLoopData": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "outerLoop",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.outerLoopData",
+            "matchedExpression": "@local.outerLoopData",
+            "type": "local",
+            "fieldName": "outerLoopData"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.outerLoopData": [
+          "value"
+        ]
+      }
     }
   ],
   "_source": {

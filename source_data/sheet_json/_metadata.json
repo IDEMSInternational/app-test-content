@@ -18,6 +18,15 @@
     }
   },
   {
+    "flow_type": "data_list",
+    "flow_name": "test_update_data",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/update.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1A9069mQQ2_1IW_HXo5C1eWe8lkc3RXNS7YR_wLLZX5Y"
+    }
+  },
+  {
     "flow_type": "template",
     "flow_name": "app_menu",
     "_source": {
@@ -38,6 +47,15 @@
   {
     "flow_type": "template",
     "flow_name": "test_action",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/action.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1mcWf5ab95aTj7L8bIfvAak28ELCgd4g9u2jFhZklk80"
+    }
+  },
+  {
+    "flow_type": "template",
+    "flow_name": "test_action_nav_target",
     "_source": {
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
       "path": "components/action.xlsx",
@@ -69,6 +87,15 @@
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
       "path": "components/dropdown.xlsx",
       "url": "https://docs.google.com/spreadsheets/d/1yDcml2qWeW9ULYEHW_aFWR61p2eNSct5BTDo-EarG1Y"
+    }
+  },
+  {
+    "flow_type": "template",
+    "flow_name": "test_external_actions",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/action.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1mcWf5ab95aTj7L8bIfvAak28ELCgd4g9u2jFhZklk80"
     }
   },
   {
@@ -186,6 +213,15 @@
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
       "path": "components/toggle_bar.xlsx",
       "url": "https://docs.google.com/spreadsheets/d/1MR4E8lfR5a9PnFF6UEEPeqrV5RpuA3gchkXgvPyD_xA"
+    }
+  },
+  {
+    "flow_type": "template",
+    "flow_name": "test_update",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/update.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1A9069mQQ2_1IW_HXo5C1eWe8lkc3RXNS7YR_wLLZX5Y"
     }
   }
 ]

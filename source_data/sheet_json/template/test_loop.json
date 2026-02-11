@@ -160,6 +160,56 @@
     },
     {
       "type": "end_loop"
+    },
+    {
+      "type": "text",
+      "value": "## Nested Loop"
+    },
+    {
+      "type": "set_variable",
+      "name": "outerLoopData",
+      "value": "key: key_1 | value: This is value 1;\nkey: key_2 | value: This is value 2;\nkey: key_3 | value: This is value 3;"
+    },
+    {
+      "type": "begin_loop",
+      "name": "outerLoop",
+      "value": "@local.outerLoopData",
+      "parameter_list": "index: key"
+    },
+    {
+      "type": "text",
+      "value": "Outer Looping"
+    },
+    {
+      "type": "text",
+      "name": "outerKeyText",
+      "value": "key: @item.key"
+    },
+    {
+      "type": "set_variable",
+      "name": "innerLoopData",
+      "value": "key: inner_key_1 | value: Inner this is value 1;\nkey: inner_key_2 | value: Inner this is value 2;"
+    },
+    {
+      "type": "begin_loop",
+      "name": "innerLoop",
+      "value": "@local.innerLoopData",
+      "parameter_list": "index: key"
+    },
+    {
+      "type": "text",
+      "value": "Inner Looping"
+    },
+    {
+      "type": "text",
+      "name": "innerKeyText",
+      "value": "key: @item.key"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "end_loop"
     }
   ]
 }

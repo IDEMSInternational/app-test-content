@@ -1,0 +1,74 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_external_actions",
+  "status": "released",
+  "rows": [
+    {
+      "type": "action",
+      "name": "action1",
+      "rows": [
+        {
+          "type": "nav",
+          "name": "goToTargetNav",
+          "value": "test_action_nav_target",
+          "rows": [],
+          "_nested_name": "action1.goToTargetNav"
+        }
+      ],
+      "_nested_name": "action1"
+    },
+    {
+      "type": "action",
+      "name": "action2",
+      "rows": [
+        {
+          "name": "theTitle",
+          "value": "# Default Title",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "action2.theTitle"
+        },
+        {
+          "type": "nav",
+          "name": "goToTargetNav",
+          "value": "test_action_nav_target",
+          "rows": [
+            {
+              "name": "theTitle",
+              "value": "@local.theTitle",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "action2.goToTargetNav.theTitle",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.theTitle",
+                    "matchedExpression": "@local.theTitle",
+                    "type": "local",
+                    "fieldName": "theTitle"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.theTitle": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "action2.goToTargetNav"
+        }
+      ],
+      "_nested_name": "action2"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/action.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1mcWf5ab95aTj7L8bIfvAak28ELCgd4g9u2jFhZklk80"
+  }
+}

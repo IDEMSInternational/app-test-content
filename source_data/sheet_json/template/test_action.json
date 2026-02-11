@@ -51,6 +51,106 @@
     },
     {
       "type": "end_action"
+    },
+    {
+      "type": "button",
+      "name": "executeButton3",
+      "value": "Execute Action 1 From Action 3",
+      "action_list": "click | action: @local.action3"
+    },
+    {
+      "type": "begin_action",
+      "name": "action3",
+      "value": "@local.action1"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "name": "clickCount",
+      "value": 0
+    },
+    {
+      "type": "text",
+      "name": "clickCountText",
+      "value": "Times clicked: @local.clickCount"
+    },
+    {
+      "type": "button",
+      "name": "clickButton",
+      "value": "Click Count ++",
+      "action_list": "click | action: @local.incrementClickCount"
+    },
+    {
+      "type": "begin_action",
+      "name": "incrementClickCount"
+    },
+    {
+      "type": "set_variable",
+      "name": "clickCount",
+      "value": "@local.clickCount + 1"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "begin_template",
+      "name": "externalActions",
+      "value": "test_external_actions"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "button",
+      "name": "callExternalAction",
+      "value": "Execute External Action",
+      "action_list": "click | action: @local.externalActions.action1"
+    },
+    {
+      "type": "button",
+      "name": "callExternalActionWithParams",
+      "value": "Execute External Action (with params)",
+      "action_list": "click | action: @local.action4"
+    },
+    {
+      "type": "begin_action",
+      "name": "action4",
+      "value": "@local.externalActions.action2"
+    },
+    {
+      "type": "set_variable",
+      "name": "theTitle",
+      "value": "# Navigated by external action with param"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "button",
+      "name": "callExternalActionWithParams2",
+      "value": "Execute External Action (with params via sub action)",
+      "action_list": "click | action: @local.action5"
+    },
+    {
+      "type": "begin_action",
+      "name": "action5"
+    },
+    {
+      "type": "begin_action",
+      "name": "action5SubAction",
+      "value": "@local.externalActions.action2"
+    },
+    {
+      "type": "set_variable",
+      "name": "theTitle",
+      "value": "# Navigated by external action with param via a sub action"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "end_action"
     }
   ]
 }
