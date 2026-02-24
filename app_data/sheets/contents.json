@@ -265,6 +265,15 @@
         "path": "components/update.xlsx",
         "url": "https://docs.google.com/spreadsheets/d/1A9069mQQ2_1IW_HXo5C1eWe8lkc3RXNS7YR_wLLZX5Y"
       }
+    },
+    "test_variable_scope": {
+      "flow_type": "template",
+      "flow_name": "test_variable_scope",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "scenarios/variable_scope.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1osihb1-v_yOkPbjvRCEaHGHoEtiIaCUmanJhFtywE3s"
+      }
     }
   },
   "tour": {}

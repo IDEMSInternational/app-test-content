@@ -1,0 +1,136 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_variable_scope",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Variable Scope"
+    },
+    {
+      "type": "text",
+      "value": "## 1st level scope"
+    },
+    {
+      "type": "set_variable",
+      "name": "loopData",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;"
+    },
+    {
+      "type": "text_box",
+      "name": "buttonText",
+      "value": "Root Text"
+    },
+    {
+      "type": "button",
+      "name": "rootButton",
+      "value": "@local.buttonText"
+    },
+    {
+      "type": "begin_loop",
+      "name": "outerLoop",
+      "value": "@local.loopData",
+      "parameter_list": "index: key"
+    },
+    {
+      "type": "text",
+      "name": "loopTitle",
+      "value": "**List item @index**"
+    },
+    {
+      "type": "text",
+      "name": "loopText",
+      "value": "@item.value"
+    },
+    {
+      "type": "button",
+      "name": "loopButton",
+      "value": "@local.buttonText"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "text",
+      "value": "## 2nd level scope"
+    },
+    {
+      "type": "begin_loop",
+      "name": "outerLoop2",
+      "value": "@local.loopData",
+      "parameter_list": "index: key"
+    },
+    {
+      "type": "begin_loop",
+      "name": "innnerLoop",
+      "value": "@local.loopData"
+    },
+    {
+      "type": "text",
+      "name": "loopTitle",
+      "value": "**List item @index**"
+    },
+    {
+      "type": "text",
+      "name": "loopText",
+      "value": "@item.value"
+    },
+    {
+      "type": "button",
+      "name": "loopButton",
+      "value": "@local.buttonText"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "text",
+      "value": "## Variable Priority"
+    },
+    {
+      "type": "begin_loop",
+      "name": "outerLoop3",
+      "value": "@local.loopData",
+      "parameter_list": "index: key"
+    },
+    {
+      "type": "text",
+      "name": "outerLoopTitle",
+      "value": "### Outer Loop @index"
+    },
+    {
+      "type": "button",
+      "name": "loopButton",
+      "value": "@local.buttonText"
+    },
+    {
+      "type": "begin_loop",
+      "name": "innnerLoop",
+      "value": "@local.loopData"
+    },
+    {
+      "type": "text",
+      "name": "innerloopTitle",
+      "value": "**Inner list item @index**"
+    },
+    {
+      "type": "text_box",
+      "name": "buttonText",
+      "value": "Inner Text"
+    },
+    {
+      "type": "button",
+      "name": "loopButton",
+      "value": "@local.buttonText"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "end_loop"
+    }
+  ]
+}
