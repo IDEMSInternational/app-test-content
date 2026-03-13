@@ -62,7 +62,7 @@
     },
     {
       "type": "begin_loop",
-      "name": "innnerLoop",
+      "name": "innerLoop",
       "value": "@local.loopData"
     },
     {
@@ -108,7 +108,7 @@
     },
     {
       "type": "begin_loop",
-      "name": "innnerLoop",
+      "name": "innerLoop",
       "value": "@local.loopData"
     },
     {

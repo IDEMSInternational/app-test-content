@@ -278,7 +278,7 @@
         },
         {
           "type": "update",
-          "value": "{\n id: 'id6',\nname: @local.name\n}",
+          "value": "{\n id: '@item.id',\nname: @local.name\n}",
           "_translations": {
             "value": {}
           },
@@ -287,7 +287,13 @@
           "_dynamicFields": {
             "value": [
               {
-                "fullExpression": "{\n id: 'id6',\nname: @local.name\n}",
+                "fullExpression": "{\n id: '@item.id',\nname: @local.name\n}",
+                "matchedExpression": "@item.id",
+                "type": "item",
+                "fieldName": "id"
+              },
+              {
+                "fullExpression": "{\n id: '@item.id',\nname: @local.name\n}",
                 "matchedExpression": "@local.name",
                 "type": "local",
                 "fieldName": "name"
@@ -295,6 +301,9 @@
             ]
           },
           "_dynamicDependencies": {
+            "@item.id": [
+              "value"
+            ],
             "@local.name": [
               "value"
             ]

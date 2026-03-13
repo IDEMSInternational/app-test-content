@@ -1,0 +1,137 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_set_global",
+  "status": "released",
+  "rows": [
+    {
+      "type": "set_global",
+      "name": "globalVariable",
+      "value": "Test Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "globalVariable"
+    },
+    {
+      "type": "text",
+      "value": "# Set Global Tests",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "text",
+      "value": "## globalVariableValue",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_4",
+      "_nested_name": "text_4"
+    },
+    {
+      "type": "text",
+      "name": "globalVariableValue",
+      "value": "@global.globalVariable",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "globalVariableValue",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.globalVariable",
+            "matchedExpression": "@global.globalVariable",
+            "type": "global",
+            "fieldName": "globalVariable"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.globalVariable": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "# Set Via Action",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_6",
+      "_nested_name": "text_6"
+    },
+    {
+      "type": "button",
+      "name": "executeButton",
+      "value": "Execute Action 1",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.action1"
+          ],
+          "_raw": "click | action: @local.action1"
+        }
+      ],
+      "_nested_name": "executeButton",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.action1",
+                  "matchedExpression": "@local.action1",
+                  "type": "local",
+                  "fieldName": "action1"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.action1",
+                "matchedExpression": "@local.action1",
+                "type": "local",
+                "fieldName": "action1"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.action1": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "action1",
+      "rows": [
+        {
+          "type": "set_global",
+          "name": "globalVariable",
+          "value": "Action Test Value",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "action1.globalVariable"
+        }
+      ],
+      "_nested_name": "action1"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/set_global.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1rEsoMTyCcGLwLHVTXXqWMNAqygunS5TOsCHhJweP_fg"
+  }
+}

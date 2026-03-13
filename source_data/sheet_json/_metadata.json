@@ -10,6 +10,15 @@
   },
   {
     "flow_type": "data_list",
+    "flow_name": "test_data_alt",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/query.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1cDndPmELXtmx65GfoBKVnp-JxD21wxMMVWGeJUryuL0"
+    }
+  },
+  {
+    "flow_type": "data_list",
     "flow_name": "test_loop_data",
     "_source": {
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
@@ -168,6 +177,15 @@
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
       "path": "components/query.xlsx",
       "url": "https://docs.google.com/spreadsheets/d/1cDndPmELXtmx65GfoBKVnp-JxD21wxMMVWGeJUryuL0"
+    }
+  },
+  {
+    "flow_type": "template",
+    "flow_name": "test_set_global",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/set_global.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1rEsoMTyCcGLwLHVTXXqWMNAqygunS5TOsCHhJweP_fg"
     }
   },
   {
