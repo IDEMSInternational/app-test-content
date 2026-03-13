@@ -89,7 +89,7 @@
     },
     {
       "type": "update",
-      "value": "{\n id: 'id6',\nname: @local.name\n}"
+      "value": "{\n id: '@item.id',\nname: @local.name\n}"
     },
     {
       "type": "update",

@@ -1,0 +1,47 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_set_global",
+  "status": "released",
+  "rows": [
+    {
+      "type": "set_global",
+      "name": "globalVariable",
+      "value": "Test Value"
+    },
+    {
+      "type": "text",
+      "value": "# Set Global Tests"
+    },
+    {
+      "type": "text",
+      "value": "## globalVariableValue"
+    },
+    {
+      "type": "text",
+      "name": "globalVariableValue",
+      "value": "@global.globalVariable"
+    },
+    {
+      "type": "text",
+      "value": "# Set Via Action"
+    },
+    {
+      "type": "button",
+      "name": "executeButton",
+      "value": "Execute Action 1",
+      "action_list": "click | action: @local.action1"
+    },
+    {
+      "type": "begin_action",
+      "name": "action1"
+    },
+    {
+      "type": "set_global",
+      "name": "globalVariable",
+      "value": "Action Test Value"
+    },
+    {
+      "type": "end_action"
+    }
+  ]
+}

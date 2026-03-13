@@ -201,6 +201,131 @@
           "value"
         ]
       }
+    },
+    {
+      "type": "title",
+      "value": "Dynamic data_list",
+      "_translations": {
+        "value": {}
+      },
+      "name": "title_12",
+      "_nested_name": "title_12"
+    },
+    {
+      "name": "dataListOptions",
+      "value": "key: test_data | value: test_data; \nkey: test_data_alt | value: test_data_alt;",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "dataListOptions"
+    },
+    {
+      "type": "dropdown",
+      "name": "dataListDropdown",
+      "value": "test_data",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "options": "@local.dataListOptions",
+        "options_key": "key",
+        "options_value": "value"
+      },
+      "_nested_name": "dataListDropdown",
+      "_dynamicFields": {
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.dataListOptions",
+              "matchedExpression": "@local.dataListOptions",
+              "type": "local",
+              "fieldName": "dataListOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.dataListOptions": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "type": "query",
+      "name": "dynamicListQueriedData",
+      "parameter_list": {
+        "data_list": "@local.dataListDropdown"
+      },
+      "_nested_name": "dynamicListQueriedData",
+      "_dynamicFields": {
+        "parameter_list": {
+          "data_list": [
+            {
+              "fullExpression": "@local.dataListDropdown",
+              "matchedExpression": "@local.dataListDropdown",
+              "type": "local",
+              "fieldName": "dataListDropdown"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.dataListDropdown": [
+          "parameter_list.data_list"
+        ]
+      }
+    },
+    {
+      "type": "dropdown",
+      "name": "dynamicListQueriedDataDropdown",
+      "parameter_list": {
+        "options": "@local.dynamicListQueriedData",
+        "options_key": "id",
+        "options_value": "name"
+      },
+      "_nested_name": "dynamicListQueriedDataDropdown",
+      "_dynamicFields": {
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.dynamicListQueriedData",
+              "matchedExpression": "@local.dynamicListQueriedData",
+              "type": "local",
+              "fieldName": "dynamicListQueriedData"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.dynamicListQueriedData": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "dynamicListQueriedOption",
+      "value": "@local.dynamicListQueriedDataDropdown",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "dynamicListQueriedOption",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.dynamicListQueriedDataDropdown",
+            "matchedExpression": "@local.dynamicListQueriedDataDropdown",
+            "type": "local",
+            "fieldName": "dynamicListQueriedDataDropdown"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.dynamicListQueriedDataDropdown": [
+          "value"
+        ]
+      }
     }
   ],
   "_source": {

@@ -52,6 +52,35 @@
       "type": "text",
       "name": "dynamicQueriedOption",
       "value": "@local.dynamicQueriedDataDropdown"
+    },
+    {
+      "type": "title",
+      "value": "Dynamic data_list"
+    },
+    {
+      "name": "dataListOptions",
+      "value": "key: test_data | value: test_data; \nkey: test_data_alt | value: test_data_alt;  "
+    },
+    {
+      "type": "dropdown",
+      "name": "dataListDropdown",
+      "value": "test_data",
+      "parameter_list": "options: @local.dataListOptions;\noptions_key: key;\noptions_value: value;"
+    },
+    {
+      "type": "query",
+      "name": "dynamicListQueriedData",
+      "parameter_list": "data_list: @local.dataListDropdown"
+    },
+    {
+      "type": "dropdown",
+      "name": "dynamicListQueriedDataDropdown",
+      "parameter_list": "options: @local.dynamicListQueriedData;\noptions_key: id;\noptions_value: name;"
+    },
+    {
+      "type": "text",
+      "name": "dynamicListQueriedOption",
+      "value": "@local.dynamicListQueriedDataDropdown"
     }
   ]
 }
