@@ -1,0 +1,403 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_variable_scope",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Variable Scope",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text",
+      "value": "## 1st level scope",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "set_variable",
+      "name": "loopData",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "loopData"
+    },
+    {
+      "type": "text_box",
+      "name": "buttonText",
+      "value": "Root Text",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "buttonText"
+    },
+    {
+      "type": "button",
+      "name": "rootButton",
+      "value": "@local.buttonText",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "rootButton",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.buttonText",
+            "matchedExpression": "@local.buttonText",
+            "type": "local",
+            "fieldName": "buttonText"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.buttonText": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "loop",
+      "name": "outerLoop",
+      "value": "@local.loopData",
+      "parameter_list": {
+        "index": "key"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "name": "loopTitle",
+          "value": "**List item @index**",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "outerLoop.loopTitle"
+        },
+        {
+          "type": "text",
+          "name": "loopText",
+          "value": "@item.value",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "outerLoop.loopText",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@item.value",
+                "matchedExpression": "@item.value",
+                "type": "item",
+                "fieldName": "value"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@item.value": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "button",
+          "name": "loopButton",
+          "value": "@local.buttonText",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "outerLoop.loopButton",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.buttonText",
+                "matchedExpression": "@local.buttonText",
+                "type": "local",
+                "fieldName": "buttonText"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.buttonText": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "outerLoop",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.loopData",
+            "matchedExpression": "@local.loopData",
+            "type": "local",
+            "fieldName": "loopData"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.loopData": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## 2nd level scope",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_9",
+      "_nested_name": "text_9"
+    },
+    {
+      "type": "loop",
+      "name": "outerLoop2",
+      "value": "@local.loopData",
+      "parameter_list": {
+        "index": "key"
+      },
+      "rows": [
+        {
+          "type": "loop",
+          "name": "innnerLoop",
+          "value": "@local.loopData",
+          "rows": [
+            {
+              "type": "text",
+              "name": "loopTitle",
+              "value": "**List item @index**",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "outerLoop2.innnerLoop.loopTitle"
+            },
+            {
+              "type": "text",
+              "name": "loopText",
+              "value": "@item.value",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "outerLoop2.innnerLoop.loopText",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.value",
+                    "matchedExpression": "@item.value",
+                    "type": "item",
+                    "fieldName": "value"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.value": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "type": "button",
+              "name": "loopButton",
+              "value": "@local.buttonText",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "outerLoop2.innnerLoop.loopButton",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.buttonText",
+                    "matchedExpression": "@local.buttonText",
+                    "type": "local",
+                    "fieldName": "buttonText"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.buttonText": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "outerLoop2.innnerLoop",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.loopData",
+                "matchedExpression": "@local.loopData",
+                "type": "local",
+                "fieldName": "loopData"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.loopData": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "outerLoop2",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.loopData",
+            "matchedExpression": "@local.loopData",
+            "type": "local",
+            "fieldName": "loopData"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.loopData": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## Variable Priority",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_12",
+      "_nested_name": "text_12"
+    },
+    {
+      "type": "loop",
+      "name": "outerLoop3",
+      "value": "@local.loopData",
+      "parameter_list": {
+        "index": "key"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "name": "outerLoopTitle",
+          "value": "### Outer Loop @index",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "outerLoop3.outerLoopTitle"
+        },
+        {
+          "type": "button",
+          "name": "loopButton",
+          "value": "@local.buttonText",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "outerLoop3.loopButton",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.buttonText",
+                "matchedExpression": "@local.buttonText",
+                "type": "local",
+                "fieldName": "buttonText"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.buttonText": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "loop",
+          "name": "innnerLoop",
+          "value": "@local.loopData",
+          "rows": [
+            {
+              "type": "text",
+              "name": "innerloopTitle",
+              "value": "**Inner list item @index**",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "outerLoop3.innnerLoop.innerloopTitle"
+            },
+            {
+              "type": "text_box",
+              "name": "buttonText",
+              "value": "Inner Text",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "outerLoop3.innnerLoop.buttonText"
+            },
+            {
+              "type": "button",
+              "name": "loopButton",
+              "value": "@local.buttonText",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "outerLoop3.innnerLoop.loopButton",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.buttonText",
+                    "matchedExpression": "@local.buttonText",
+                    "type": "local",
+                    "fieldName": "buttonText"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.buttonText": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "outerLoop3.innnerLoop",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.loopData",
+                "matchedExpression": "@local.loopData",
+                "type": "local",
+                "fieldName": "loopData"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.loopData": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "outerLoop3",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.loopData",
+            "matchedExpression": "@local.loopData",
+            "type": "local",
+            "fieldName": "loopData"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.loopData": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "scenarios/variable_scope.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1osihb1-v_yOkPbjvRCEaHGHoEtiIaCUmanJhFtywE3s"
+  }
+}

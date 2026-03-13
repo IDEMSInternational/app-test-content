@@ -11,7 +11,7 @@
       },
       {
         "type": "button",
-        "count": 19
+        "count": 24
       },
       {
         "type": "debug_toggle",
@@ -31,7 +31,7 @@
       },
       {
         "type": "loop",
-        "count": 8
+        "count": 13
       },
       {
         "type": "nav",
@@ -51,7 +51,7 @@
       },
       {
         "type": "set_variable",
-        "count": 43
+        "count": 44
       },
       {
         "type": "template",
@@ -59,11 +59,11 @@
       },
       {
         "type": "text",
-        "count": 83
+        "count": 93
       },
       {
         "type": "text_box",
-        "count": 12
+        "count": 14
       },
       {
         "type": "title",
@@ -137,7 +137,7 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 22
+        "total": 23
       }
     ]
   }
