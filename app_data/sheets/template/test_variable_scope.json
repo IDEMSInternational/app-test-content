@@ -165,7 +165,7 @@
       "rows": [
         {
           "type": "loop",
-          "name": "innnerLoop",
+          "name": "innerLoop",
           "value": "@local.loopData",
           "rows": [
             {
@@ -175,7 +175,7 @@
               "_translations": {
                 "value": {}
               },
-              "_nested_name": "outerLoop2.innnerLoop.loopTitle"
+              "_nested_name": "outerLoop2.innerLoop.loopTitle"
             },
             {
               "type": "text",
@@ -184,7 +184,7 @@
               "_translations": {
                 "value": {}
               },
-              "_nested_name": "outerLoop2.innnerLoop.loopText",
+              "_nested_name": "outerLoop2.innerLoop.loopText",
               "_dynamicFields": {
                 "value": [
                   {
@@ -208,7 +208,7 @@
               "_translations": {
                 "value": {}
               },
-              "_nested_name": "outerLoop2.innnerLoop.loopButton",
+              "_nested_name": "outerLoop2.innerLoop.loopButton",
               "_dynamicFields": {
                 "value": [
                   {
@@ -226,7 +226,7 @@
               }
             }
           ],
-          "_nested_name": "outerLoop2.innnerLoop",
+          "_nested_name": "outerLoop2.innerLoop",
           "_dynamicFields": {
             "value": [
               {
@@ -313,7 +313,7 @@
         },
         {
           "type": "loop",
-          "name": "innnerLoop",
+          "name": "innerLoop",
           "value": "@local.loopData",
           "rows": [
             {
@@ -323,7 +323,7 @@
               "_translations": {
                 "value": {}
               },
-              "_nested_name": "outerLoop3.innnerLoop.innerloopTitle"
+              "_nested_name": "outerLoop3.innerLoop.innerloopTitle"
             },
             {
               "type": "text_box",
@@ -332,7 +332,7 @@
               "_translations": {
                 "value": {}
               },
-              "_nested_name": "outerLoop3.innnerLoop.buttonText"
+              "_nested_name": "outerLoop3.innerLoop.buttonText"
             },
             {
               "type": "button",
@@ -341,7 +341,7 @@
               "_translations": {
                 "value": {}
               },
-              "_nested_name": "outerLoop3.innnerLoop.loopButton",
+              "_nested_name": "outerLoop3.innerLoop.loopButton",
               "_dynamicFields": {
                 "value": [
                   {
@@ -359,7 +359,7 @@
               }
             }
           ],
-          "_nested_name": "outerLoop3.innnerLoop",
+          "_nested_name": "outerLoop3.innerLoop",
           "_dynamicFields": {
             "value": [
               {
