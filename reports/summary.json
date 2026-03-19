@@ -11,7 +11,7 @@
       },
       {
         "type": "button",
-        "count": 25
+        "count": 28
       },
       {
         "type": "debug_toggle",
@@ -51,7 +51,7 @@
       },
       {
         "type": "set_global",
-        "count": 2
+        "count": 5
       },
       {
         "type": "set_variable",
@@ -63,7 +63,7 @@
       },
       {
         "type": "text",
-        "count": 98
+        "count": 100
       },
       {
         "type": "text_box",
@@ -96,6 +96,10 @@
       {
         "type": "reset_app",
         "count": 1
+      },
+      {
+        "type": "set_global",
+        "count": 3
       },
       {
         "type": "set_local",
@@ -141,7 +145,7 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 24
+        "total": 25
       }
     ]
   }

@@ -1,0 +1,159 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_set_global_action",
+  "status": "released",
+  "rows": [
+    {
+      "type": "set_global",
+      "name": "globalText",
+      "value": "Default Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "globalText"
+    },
+    {
+      "type": "set_global",
+      "name": "var_1",
+      "value": 0,
+      "_nested_name": "var_1"
+    },
+    {
+      "type": "set_global",
+      "name": "var_2",
+      "value": "@global.var_1 + 1",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "var_2",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.var_1 + 1",
+            "matchedExpression": "@global.var_1",
+            "type": "global",
+            "fieldName": "var_1"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.var_1": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "name": "setStaticValuebutton",
+      "value": "Set Static Value",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "set_global",
+          "args": [
+            "globalText",
+            "Static Value"
+          ],
+          "_raw": "click | set_global: globalText: Static Value"
+        }
+      ],
+      "_nested_name": "setStaticValuebutton"
+    },
+    {
+      "type": "button",
+      "name": "setDynamicValue",
+      "value": "Set Dynamic Value",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "set_global",
+          "args": [
+            "var_1",
+            "1"
+          ],
+          "_raw": "click | set_global: var_1: 1"
+        }
+      ],
+      "_nested_name": "setDynamicValue"
+    },
+    {
+      "type": "button",
+      "name": "updateDynamicValue",
+      "value": "Update Dynamic Value",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "set_global",
+          "args": [
+            "var_1",
+            "2"
+          ],
+          "_raw": "click | set_global: var_1: 2"
+        }
+      ],
+      "_nested_name": "updateDynamicValue"
+    },
+    {
+      "type": "text",
+      "name": "resultsText",
+      "value": "@global.globalText",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "resultsText",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.globalText",
+            "matchedExpression": "@global.globalText",
+            "type": "global",
+            "fieldName": "globalText"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.globalText": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "dynamicResultText",
+      "value": "@global.var_2",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "dynamicResultText",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.var_2",
+            "matchedExpression": "@global.var_2",
+            "type": "global",
+            "fieldName": "var_2"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.var_2": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "actions/set_global.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/18Pfet4RWOBGnoMpmiZycSKwbFX-mcnaykvLwgCSTDDU"
+  }
+}

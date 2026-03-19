@@ -1,0 +1,50 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_set_global_action",
+  "status": "released",
+  "rows": [
+    {
+      "type": "set_global",
+      "name": "globalText",
+      "value": "Default Value"
+    },
+    {
+      "type": "set_global",
+      "name": "var_1",
+      "value": 0
+    },
+    {
+      "type": "set_global",
+      "name": "var_2",
+      "value": "@global.var_1 + 1"
+    },
+    {
+      "type": "button",
+      "name": "setStaticValuebutton",
+      "value": "Set Static Value",
+      "action_list": "click | set_global: globalText: Static Value"
+    },
+    {
+      "type": "button",
+      "name": "setDynamicValue",
+      "value": "Set Dynamic Value",
+      "action_list": "click | set_global: var_1: 1"
+    },
+    {
+      "type": "button ",
+      "name": "updateDynamicValue",
+      "value": "Update Dynamic Value",
+      "action_list": "click | set_global: var_1: 2"
+    },
+    {
+      "type": "text",
+      "name": "resultsText",
+      "value": "@global.globalText"
+    },
+    {
+      "type": "text",
+      "name": "dynamicResultText",
+      "value": "@global.var_2"
+    }
+  ]
+}

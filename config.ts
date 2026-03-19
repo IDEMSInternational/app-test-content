@@ -9,7 +9,7 @@ config.google_drive = {
 
 config.git = {
   content_repo: "https://github.com/IDEMSInternational/app-test-content",
-  content_tag_latest: "1.0.12",
+  content_tag_latest: "1.0.13",
 }
 
 // Override any app constants here
