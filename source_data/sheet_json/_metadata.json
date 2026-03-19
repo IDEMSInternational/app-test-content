@@ -190,6 +190,15 @@
   },
   {
     "flow_type": "template",
+    "flow_name": "test_set_global_action",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "actions/set_global.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/18Pfet4RWOBGnoMpmiZycSKwbFX-mcnaykvLwgCSTDDU"
+    }
+  },
+  {
+    "flow_type": "template",
     "flow_name": "test_set_variable",
     "_source": {
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
