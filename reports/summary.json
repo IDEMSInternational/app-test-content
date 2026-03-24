@@ -19,7 +19,7 @@
       },
       {
         "type": "dropdown",
-        "count": 13
+        "count": 12
       },
       {
         "type": "go_to",
@@ -39,7 +39,7 @@
       },
       {
         "type": "query",
-        "count": 6
+        "count": 5
       },
       {
         "type": "render_template",
@@ -59,7 +59,7 @@
       },
       {
         "type": "text",
-        "count": 126
+        "count": 125
       },
       {
         "type": "text_box",
@@ -67,7 +67,7 @@
       },
       {
         "type": "title",
-        "count": 11
+        "count": 10
       },
       {
         "type": "toggle_bar",
