@@ -7,19 +7,19 @@
 | button | 28 |
 | debug_toggle | 1 |
 | display_group | 1 |
-| dropdown | 13 |
+| dropdown | 12 |
 | go_to | 1 |
 | loop | 12 |
 | nav | 4 |
 | pop_up | 1 |
-| query | 6 |
+| query | 5 |
 | render_template | 1 |
 | set_global | 5 |
 | set_variable | 42 |
 | template | 4 |
-| text | 126 |
+| text | 125 |
 | text_box | 18 |
-| title | 11 |
+| title | 10 |
 | toggle_bar | 2 |
 | update | 1 |
 </details>
