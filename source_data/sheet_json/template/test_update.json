@@ -12,13 +12,50 @@
       "value": "## Insert"
     },
     {
+      "type": "text",
+      "value": "### ID"
+    },
+    {
+      "type": "text_box",
+      "name": "recordId",
+      "value": "ID 2"
+    },
+    {
+      "type": "text",
+      "value": "### Name"
+    },
+    {
+      "type": "text_box",
+      "name": "recordName",
+      "value": "Name 2"
+    },
+    {
+      "type": "text",
+      "value": "### Value"
+    },
+    {
+      "type": "text_box",
+      "name": "recordValue",
+      "value": "Value 2"
+    },
+    {
+      "type": "text",
+      "value": "### Quantity"
+    },
+    {
+      "type": "text_box",
+      "name": "recordQuantity",
+      "value": 2
+    },
+    {
       "type": "begin_action",
       "name": "insertAction"
     },
     {
       "type": "update",
       "name": "insertRow",
-      "value": "{\n id: 'id6',\n name: 'Name 6',\n value: 'Value 6',\n quantity: 5,\n active: true,\n date: '01/01/2026',\n category: 'C'\n}"
+      "value": "id: '@local.recordId',\nname:'@local.recordName',\nvalue: '@local.recordValue',\nquantity:@local.recordQuantity",
+      "parameter_list": "data_list: test_update_data;"
     },
     {
       "type": "end_action"
@@ -26,96 +63,41 @@
     {
       "type": "button",
       "name": "insertButton",
-      "value": "Insert",
+      "value": "Add Record",
       "action_list": "click | action: @local.insertAction"
+    },
+    {
+      "type": "button",
+      "name": "refreshButton",
+      "value": "Refresh",
+      "action_list": "click | action: @local.refreshAction"
+    },
+    {
+      "type": "begin_action",
+      "name": "refreshAction"
     },
     {
       "type": "query",
       "name": "insertResults",
+      "value": "sort: [ {name: 'asc'} ],",
       "parameter_list": "data_list: test_update_data;"
+    },
+    {
+      "type": "end_action"
     },
     {
       "type": "begin_loop",
       "name": "itemLoop",
-      "value": "@local.insertResults"
-    },
-    {
-      "type": "text",
-      "name": "checkInsertedName",
-      "value": "@item.name"
+      "value": "@local.refreshAction.insertResults",
+      "parameter_list": "index: id"
     },
     {
       "type": "text",
       "name": "checkInsertedValue",
-      "value": "@item.value"
+      "value": "* **ID:** @item.id  \n* **Name:** @item.name  \n* **Value:** @item.value  \n* **Quantity:** @item.quantity  "
     },
     {
       "type": "end_loop"
-    },
-    {
-      "type": "text",
-      "value": "## Insert"
-    },
-    {
-      "type": "begin_action",
-      "name": "insertAction"
-    },
-    {
-      "type": "update",
-      "name": "insertRow",
-      "value": "{\n id: 'id6',\n name: 'Name 6',\n value: 'Value 6',\n quantity: 5,\n active: true,\n date: '01/01/2026',\n category: 'C'\n}"
-    },
-    {
-      "type": "end_action"
-    },
-    {
-      "type": "button",
-      "name": "insertButton",
-      "value": "Insert",
-      "action_list": "click | action: @local.insertAction"
-    },
-    {
-      "type": "query",
-      "name": "insertResults",
-      "parameter_list": "data_list: test_update_data;"
-    },
-    {
-      "type": "begin_loop",
-      "name": "itemLoop",
-      "value": "@local.insertResults"
-    },
-    {
-      "value": "@local.var.value = true"
-    },
-    {
-      "type": "update",
-      "value": "{\n id: '@item.id',\nname: @local.name\n}"
-    },
-    {
-      "type": "update",
-      "value": "{\n id: 'id6',\nvalue: @local.value\n}"
-    },
-    {
-      "type": "end_loop"
-    },
-    {
-      "type": "update",
-      "value": "@local.query_1"
-    },
-    {
-      "name": "name",
-      "value": "name: @local.value1,",
-      "condition": "@local.value1"
-    },
-    {
-      "name": "name",
-      "value": " ",
-      "condition": "!@local.value1"
-    },
-    {
-      "type": "JSON",
-      "name": "query_1",
-      "value": "{\n id: 'id6',\n@local.name,\n value: 'Value 6',\n quantity: 5,\n active: true,\n date: '01/01/2026',\n category: 'C'\n}"
     }
   ]
 }

@@ -1,0 +1,384 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_system_variables",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# System Variables",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text",
+      "value": "## DEPLOYMENT_NAME",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "text",
+      "name": "deploymentName",
+      "value": "@system.DEPLOYMENT_NAME",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "deploymentName",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@system.DEPLOYMENT_NAME",
+            "matchedExpression": "@system.DEPLOYMENT_NAME",
+            "type": "system",
+            "fieldName": "DEPLOYMENT_NAME"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@system.DEPLOYMENT_NAME": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## APP_VERSION",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_5",
+      "_nested_name": "text_5"
+    },
+    {
+      "type": "text",
+      "name": "appVersion",
+      "value": "@system.APP_VERSION",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "appVersion",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@system.APP_VERSION",
+            "matchedExpression": "@system.APP_VERSION",
+            "type": "system",
+            "fieldName": "APP_VERSION"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@system.APP_VERSION": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## CONTENT_VERSION",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_7",
+      "_nested_name": "text_7"
+    },
+    {
+      "type": "text",
+      "name": "contentVersion",
+      "value": "@system.CONTENT_VERSION",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "contentVersion",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@system.CONTENT_VERSION",
+            "matchedExpression": "@system.CONTENT_VERSION",
+            "type": "system",
+            "fieldName": "CONTENT_VERSION"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@system.CONTENT_VERSION": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## PLATFORM",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_9",
+      "_nested_name": "text_9"
+    },
+    {
+      "type": "text",
+      "name": "platform",
+      "value": "@system.PLATFORM",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "platform",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@system.PLATFORM",
+            "matchedExpression": "@system.PLATFORM",
+            "type": "system",
+            "fieldName": "PLATFORM"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@system.PLATFORM": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## OPERATING_SYSTEM",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_11",
+      "_nested_name": "text_11"
+    },
+    {
+      "type": "text",
+      "name": "operatingSystem",
+      "value": "@system.OPERATING_SYSTEM",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "operatingSystem",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@system.OPERATING_SYSTEM",
+            "matchedExpression": "@system.OPERATING_SYSTEM",
+            "type": "system",
+            "fieldName": "OPERATING_SYSTEM"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@system.OPERATING_SYSTEM": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## APP_ENVIRONMENT",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_13",
+      "_nested_name": "text_13"
+    },
+    {
+      "type": "text",
+      "name": "appEnvironment",
+      "value": "@system.APP_ENVIRONMENT",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "appEnvironment",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@system.APP_ENVIRONMENT",
+            "matchedExpression": "@system.APP_ENVIRONMENT",
+            "type": "system",
+            "fieldName": "APP_ENVIRONMENT"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@system.APP_ENVIRONMENT": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## APP_HOSTNAME",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_15",
+      "_nested_name": "text_15"
+    },
+    {
+      "type": "text",
+      "name": "appHostname",
+      "value": "@system.APP_HOSTNAME",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "appHostname",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@system.APP_HOSTNAME",
+            "matchedExpression": "@system.APP_HOSTNAME",
+            "type": "system",
+            "fieldName": "APP_HOSTNAME"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@system.APP_HOSTNAME": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## APP_THEME",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_17",
+      "_nested_name": "text_17"
+    },
+    {
+      "type": "text",
+      "name": "appTheme",
+      "value": "@system.APP_THEME",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "appTheme",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@system.APP_THEME",
+            "matchedExpression": "@system.APP_THEME",
+            "type": "system",
+            "fieldName": "APP_THEME"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@system.APP_THEME": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## APP_LANGUAGE_DIRECTION",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_19",
+      "_nested_name": "text_19"
+    },
+    {
+      "type": "text",
+      "name": "appLanguageDirection",
+      "value": "@system.APP_LANGUAGE_DIRECTION",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "appLanguageDirection",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@system.APP_LANGUAGE_DIRECTION",
+            "matchedExpression": "@system.APP_LANGUAGE_DIRECTION",
+            "type": "system",
+            "fieldName": "APP_LANGUAGE_DIRECTION"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@system.APP_LANGUAGE_DIRECTION": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## APP_LANGUAGE",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_21",
+      "_nested_name": "text_21"
+    },
+    {
+      "type": "text",
+      "name": "appLanguage",
+      "value": "@system.APP_LANGUAGE",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "appLanguage",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@system.APP_LANGUAGE",
+            "matchedExpression": "@system.APP_LANGUAGE",
+            "type": "system",
+            "fieldName": "APP_LANGUAGE"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@system.APP_LANGUAGE": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## APP_LANGUAGE",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_23",
+      "_nested_name": "text_23"
+    },
+    {
+      "type": "text",
+      "name": "appLanguage",
+      "value": "@system.APP_LANGUAGE",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "appLanguage",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@system.APP_LANGUAGE",
+            "matchedExpression": "@system.APP_LANGUAGE",
+            "type": "system",
+            "fieldName": "APP_LANGUAGE"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@system.APP_LANGUAGE": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "scenarios/system_variables.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1odecVqlxlSeLOr0Id3i9a5XyAA29MVsFze1L_mScABg"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_system_variables",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# System Variables"
+    },
+    {
+      "type": "text",
+      "value": "## DEPLOYMENT_NAME"
+    },
+    {
+      "type": "text",
+      "name": "deploymentName",
+      "value": "@system.DEPLOYMENT_NAME"
+    },
+    {
+      "type": "text",
+      "value": "## APP_VERSION"
+    },
+    {
+      "type": "text",
+      "name": "appVersion",
+      "value": "@system.APP_VERSION"
+    },
+    {
+      "type": "text",
+      "value": "## CONTENT_VERSION"
+    },
+    {
+      "type": "text",
+      "name": "contentVersion",
+      "value": "@system.CONTENT_VERSION"
+    },
+    {
+      "type": "text",
+      "value": "## PLATFORM"
+    },
+    {
+      "type": "text",
+      "name": "platform",
+      "value": "@system.PLATFORM"
+    },
+    {
+      "type": "text",
+      "value": "## OPERATING_SYSTEM"
+    },
+    {
+      "type": "text",
+      "name": "operatingSystem",
+      "value": "@system.OPERATING_SYSTEM"
+    },
+    {
+      "type": "text",
+      "value": "## APP_ENVIRONMENT"
+    },
+    {
+      "type": "text",
+      "name": "appEnvironment",
+      "value": "@system.APP_ENVIRONMENT"
+    },
+    {
+      "type": "text",
+      "value": "## APP_HOSTNAME"
+    },
+    {
+      "type": "text",
+      "name": "appHostname",
+      "value": "@system.APP_HOSTNAME"
+    },
+    {
+      "type": "text",
+      "value": "## APP_THEME"
+    },
+    {
+      "type": "text",
+      "name": "appTheme",
+      "value": "@system.APP_THEME"
+    },
+    {
+      "type": "text",
+      "value": "## APP_LANGUAGE_DIRECTION"
+    },
+    {
+      "type": "text",
+      "name": "appLanguageDirection",
+      "value": "@system.APP_LANGUAGE_DIRECTION"
+    },
+    {
+      "type": "text",
+      "value": "## APP_LANGUAGE"
+    },
+    {
+      "type": "text",
+      "name": "appLanguage",
+      "value": "@system.APP_LANGUAGE"
+    },
+    {
+      "type": "text",
+      "value": "## APP_LANGUAGE"
+    },
+    {
+      "type": "text",
+      "name": "appLanguage",
+      "value": "@system.APP_LANGUAGE"
+    }
+  ]
+}

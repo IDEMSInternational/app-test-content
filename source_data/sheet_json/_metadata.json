@@ -208,6 +208,15 @@
   },
   {
     "flow_type": "template",
+    "flow_name": "test_system_variables",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "scenarios/system_variables.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1odecVqlxlSeLOr0Id3i9a5XyAA29MVsFze1L_mScABg"
+    }
+  },
+  {
+    "flow_type": "template",
     "flow_name": "test_text",
     "_source": {
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
