@@ -75,12 +75,6 @@
       "_metadata": {
         "quantity": {
           "type": "number"
-        },
-        "active": {
-          "type": "boolean"
-        },
-        "date": {
-          "type": "number"
         }
       }
     }
@@ -258,6 +252,15 @@
         "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
         "path": "components/set_variable.xlsx",
         "url": "https://docs.google.com/spreadsheets/d/1V6IlJPawbCZsxHd9sR6RuafTtGCvX-x15qlDNzYoht0"
+      }
+    },
+    "test_system_variables": {
+      "flow_type": "template",
+      "flow_name": "test_system_variables",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "scenarios/system_variables.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1odecVqlxlSeLOr0Id3i9a5XyAA29MVsFze1L_mScABg"
       }
     },
     "test_text": {

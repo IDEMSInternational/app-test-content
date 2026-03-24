@@ -326,6 +326,78 @@
           "value"
         ]
       }
+    },
+    {
+      "type": "title",
+      "value": "Query as an action",
+      "_translations": {
+        "value": {}
+      },
+      "name": "title_18",
+      "_nested_name": "title_18"
+    },
+    {
+      "type": "query",
+      "name": "queriedData",
+      "value": "selector: {active: true},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "data_list": "test_data"
+      },
+      "_nested_name": "queriedData"
+    },
+    {
+      "type": "dropdown",
+      "name": "queriedDataDropdown",
+      "parameter_list": {
+        "options": "@local.queriedData",
+        "options_key": "id",
+        "options_value": "name"
+      },
+      "_nested_name": "queriedDataDropdown",
+      "_dynamicFields": {
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.queriedData",
+              "matchedExpression": "@local.queriedData",
+              "type": "local",
+              "fieldName": "queriedData"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.queriedData": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "queriedOption",
+      "value": "@local.queriedDataDropdown",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "queriedOption",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.queriedDataDropdown",
+            "matchedExpression": "@local.queriedDataDropdown",
+            "type": "local",
+            "fieldName": "queriedDataDropdown"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.queriedDataDropdown": [
+          "value"
+        ]
+      }
     }
   ],
   "_source": {

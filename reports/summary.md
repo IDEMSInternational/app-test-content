@@ -3,26 +3,25 @@
 
 | type | count |
 | --- | --- |
-| JSON | 1 |
 | action | 16 |
 | button | 28 |
 | debug_toggle | 1 |
 | display_group | 1 |
-| dropdown | 12 |
+| dropdown | 13 |
 | go_to | 1 |
-| loop | 13 |
+| loop | 12 |
 | nav | 4 |
 | pop_up | 1 |
 | query | 6 |
 | render_template | 1 |
 | set_global | 5 |
-| set_variable | 45 |
+| set_variable | 42 |
 | template | 4 |
-| text | 100 |
-| text_box | 14 |
-| title | 10 |
+| text | 126 |
+| text_box | 18 |
+| title | 11 |
 | toggle_bar | 2 |
-| update | 5 |
+| update | 1 |
 </details>
 
 <details >
@@ -80,5 +79,5 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | type | subtype | total |
 | --- | --- | --- |
 | data_list |  | 4 |
-| template |  | 25 |
+| template |  | 26 |
 </details>

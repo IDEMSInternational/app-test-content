@@ -2,10 +2,6 @@
   "template_components": {
     "data": [
       {
-        "type": "JSON",
-        "count": 1
-      },
-      {
         "type": "action",
         "count": 16
       },
@@ -23,7 +19,7 @@
       },
       {
         "type": "dropdown",
-        "count": 12
+        "count": 13
       },
       {
         "type": "go_to",
@@ -31,7 +27,7 @@
       },
       {
         "type": "loop",
-        "count": 13
+        "count": 12
       },
       {
         "type": "nav",
@@ -55,7 +51,7 @@
       },
       {
         "type": "set_variable",
-        "count": 45
+        "count": 42
       },
       {
         "type": "template",
@@ -63,15 +59,15 @@
       },
       {
         "type": "text",
-        "count": 100
+        "count": 126
       },
       {
         "type": "text_box",
-        "count": 14
+        "count": 18
       },
       {
         "type": "title",
-        "count": 10
+        "count": 11
       },
       {
         "type": "toggle_bar",
@@ -79,7 +75,7 @@
       },
       {
         "type": "update",
-        "count": 5
+        "count": 1
       }
     ]
   },
@@ -145,7 +141,7 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 25
+        "total": 26
       }
     ]
   }
