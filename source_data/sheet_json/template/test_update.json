@@ -54,8 +54,8 @@
     {
       "type": "update",
       "name": "insertRow",
-      "value": "id: '@local.recordId',\nname:'@local.recordName',\nvalue: '@local.recordValue',\nquantity:@local.recordQuantity",
-      "parameter_list": "data_list: test_update_data;"
+      "value": "id: @local.recordId,\nname:@local.recordName,\nvalue: @local.recordValue,\nquantity:@local.recordQuantity",
+      "parameter_list": "data_list: test_update_data;\nvalue_type: script"
     },
     {
       "type": "end_action"
@@ -80,7 +80,7 @@
       "type": "query",
       "name": "insertResults",
       "value": "sort: [ {name: 'asc'} ],",
-      "parameter_list": "data_list: test_update_data;"
+      "parameter_list": "data_list: test_update_data;\nvalue_type: script"
     },
     {
       "type": "end_action"
@@ -89,7 +89,7 @@
       "type": "begin_loop",
       "name": "itemLoop",
       "value": "@local.refreshAction.insertResults",
-      "parameter_list": "index: id"
+      "parameter_list": "index: id;\nvalue_type: script"
     },
     {
       "type": "text",

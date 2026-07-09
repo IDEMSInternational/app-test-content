@@ -1,0 +1,130 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_accordion",
+  "status": "released",
+  "rows": [
+    {
+      "name": "defaultDropdownValue",
+      "value": "key_1"
+    },
+    {
+      "name": "dynamicDropdownValue",
+      "value": "This is a dynamic value"
+    },
+    {
+      "name": "defaultOptions",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "parameter_list": "value_type: list;"
+    },
+    {
+      "type": "text",
+      "value": "# Accordion"
+    },
+    {
+      "type": "text",
+      "value": "## Basic "
+    },
+    {
+      "type": "begin_accordion",
+      "name": "basic_accordion"
+    },
+    {
+      "type": "begin_accordion_section",
+      "name": "first_section",
+      "value": "Section title 1"
+    },
+    {
+      "type": "text",
+      "name": "first_section_text",
+      "value": "This text appears in the first accordion section"
+    },
+    {
+      "type": "end_accordion_section"
+    },
+    {
+      "type": "begin_accordion_section",
+      "name": "second_section",
+      "value": "Section title 2"
+    },
+    {
+      "type": "text",
+      "name": "second_section_text",
+      "value": "This text appears in the second accordion section"
+    },
+    {
+      "type": "end_accordion_section"
+    },
+    {
+      "type": "end_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## With a loop"
+    },
+    {
+      "type": "begin_accordion",
+      "name": "loop_accordion"
+    },
+    {
+      "type": "begin_loop",
+      "value": "local.defaultOptions"
+    },
+    {
+      "type": "begin_accordion_section",
+      "name": "loop_section",
+      "value": "${item.key}"
+    },
+    {
+      "type": "text",
+      "value": "${item.value}"
+    },
+    {
+      "type": "end_accordion_section"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "end_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## Custom Icon"
+    },
+    {
+      "type": "begin_accordion",
+      "name": "custom_icon_accordion"
+    },
+    {
+      "type": "begin_accordion_section",
+      "name": "first_custom_icon_section",
+      "value": "Section title 1",
+      "parameter_list": "icon_name: arrow-down-circle"
+    },
+    {
+      "type": "text",
+      "name": "first_custom_icon_section_text",
+      "value": "This text appears in the first accordion section"
+    },
+    {
+      "type": "end_accordion_section"
+    },
+    {
+      "type": "begin_accordion_section",
+      "name": "second_custom_icon_section",
+      "value": "Section title 2",
+      "parameter_list": "icon_name: chevron-expand-outline"
+    },
+    {
+      "type": "text",
+      "name": "second_custom_icon_section_text",
+      "value": "This text appears in the second accordion section"
+    },
+    {
+      "type": "end_accordion_section"
+    },
+    {
+      "type": "end_accordion"
+    }
+  ]
+}

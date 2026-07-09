@@ -1,0 +1,61 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_radio_list",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "value": "# Radio List"
+    },
+    {
+      "name": "defaultValue",
+      "value": "key_1"
+    },
+    {
+      "name": "dynamicValue",
+      "value": "This is a dynamic value"
+    },
+    {
+      "name": "defaultOptions",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "parameter_list": "value_type: list;"
+    },
+    {
+      "name": "dynamicOptions",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: local.dynamicValue;",
+      "parameter_list": "value_type: list;"
+    },
+    {
+      "type": "radio_list",
+      "name": "radioList1",
+      "value": "${local.defaultValue}",
+      "parameter_list": "options: local.defaultOptions;\noptions_key: key;\noptions_value: value;"
+    },
+    {
+      "type": "text",
+      "name": "radioList1SelectedValue",
+      "value": "${local.radioList1}"
+    },
+    {
+      "type": "text",
+      "value": "## With dynamic option text"
+    },
+    {
+      "type": "text_box",
+      "name": "newDynamicValue",
+      "value": "${local.dynamicValue}",
+      "action_list": "changed | set_local:dynamicValue: @local.newDynamicValue;"
+    },
+    {
+      "type": "radio_list",
+      "name": "radioList2",
+      "value": "${local.defaultValue}",
+      "parameter_list": "options: local.dynamicOptions;\noptions_key: key;\noptions_value: value;"
+    },
+    {
+      "type": "text",
+      "name": "radioList2SelectedValue",
+      "value": "${local.radioList2}"
+    }
+  ]
+}

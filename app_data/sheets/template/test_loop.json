@@ -24,16 +24,19 @@
     {
       "type": "set_variable",
       "name": "listData",
-      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "value": "[{key: \"key_1\", value: \"This is value 1\"}, \n{key: \"key_2\", value: \"This is value 2\"},  \n{key: \"key_3\", value: \"This is value 3\"}]",
       "_translations": {
         "value": {}
+      },
+      "parameter_list": {
+        "value_type": "script"
       },
       "_nested_name": "listData"
     },
     {
       "type": "loop",
       "name": "listLoop",
-      "value": "@local.listData",
+      "value": "local.listData",
       "parameter_list": {
         "index": "key"
       },
@@ -41,7 +44,7 @@
         {
           "type": "text",
           "name": "loopTitle",
-          "value": "**List item @index**",
+          "value": "**List item ${loop.index}**",
           "_translations": {
             "value": {}
           },
@@ -50,26 +53,11 @@
         {
           "type": "text",
           "name": "loopText",
-          "value": "@item.value",
+          "value": "${loop.item.value}",
           "_translations": {
             "value": {}
           },
-          "_nested_name": "listLoop.loopText",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "@item.value",
-                "matchedExpression": "@item.value",
-                "type": "item",
-                "fieldName": "value"
-              }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@item.value": [
-              "value"
-            ]
-          }
+          "_nested_name": "listLoop.loopText"
         },
         {
           "type": "text",
@@ -81,22 +69,7 @@
           "_nested_name": "listLoop.plainText"
         }
       ],
-      "_nested_name": "listLoop",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@local.listData",
-            "matchedExpression": "@local.listData",
-            "type": "local",
-            "fieldName": "listData"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@local.listData": [
-          "value"
-        ]
-      }
+      "_nested_name": "listLoop"
     },
     {
       "type": "text",
@@ -122,7 +95,7 @@
     {
       "type": "loop",
       "name": "queryLoop",
-      "value": "@local.queriedData",
+      "value": "local.queriedData",
       "parameter_list": {
         "index": "id"
       },
@@ -130,7 +103,7 @@
         {
           "type": "text",
           "name": "loopTitle",
-          "value": "**Query item @index**",
+          "value": "**Query item ${loop.index}**",
           "_translations": {
             "value": {}
           },
@@ -139,26 +112,11 @@
         {
           "type": "text",
           "name": "loopText",
-          "value": "@item.value",
+          "value": "${loop.item.value}",
           "_translations": {
             "value": {}
           },
-          "_nested_name": "queryLoop.loopText",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "@item.value",
-                "matchedExpression": "@item.value",
-                "type": "item",
-                "fieldName": "value"
-              }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@item.value": [
-              "value"
-            ]
-          }
+          "_nested_name": "queryLoop.loopText"
         },
         {
           "type": "text",
@@ -170,22 +128,7 @@
           "_nested_name": "queryLoop.plainText"
         }
       ],
-      "_nested_name": "queryLoop",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@local.queriedData",
-            "matchedExpression": "@local.queriedData",
-            "type": "local",
-            "fieldName": "queriedData"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@local.queriedData": [
-          "value"
-        ]
-      }
+      "_nested_name": "queryLoop"
     },
     {
       "type": "text",
@@ -203,36 +146,24 @@
       "_translations": {
         "value": {}
       },
+      "parameter_list": {
+        "value_type": "list"
+      },
       "_nested_name": "nestedListData"
     },
     {
       "type": "loop",
       "name": "nestedLoop",
-      "value": "@local.nestedListData",
+      "value": "local.nestedListData",
       "rows": [
         {
           "type": "text",
           "name": "loopKey",
-          "value": "key: @item.key",
+          "value": "key: ${item.key}",
           "_translations": {
             "value": {}
           },
-          "_nested_name": "nestedLoop.loopKey",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "key: @item.key",
-                "matchedExpression": "@item.key",
-                "type": "item",
-                "fieldName": "key"
-              }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@item.key": [
-              "value"
-            ]
-          }
+          "_nested_name": "nestedLoop.loopKey"
         },
         {
           "type": "template",
@@ -241,27 +172,12 @@
           "rows": [
             {
               "name": "templateText",
-              "value": "value: @item.value",
+              "value": "value: ${item.value}",
               "_translations": {
                 "value": {}
               },
               "type": "set_variable",
-              "_nested_name": "nestedLoop.loopTemplate.templateText",
-              "_dynamicFields": {
-                "value": [
-                  {
-                    "fullExpression": "value: @item.value",
-                    "matchedExpression": "@item.value",
-                    "type": "item",
-                    "fieldName": "value"
-                  }
-                ]
-              },
-              "_dynamicDependencies": {
-                "@item.value": [
-                  "value"
-                ]
-              }
+              "_nested_name": "nestedLoop.loopTemplate.templateText"
             }
           ],
           "_nested_name": "nestedLoop.loopTemplate"
@@ -269,29 +185,14 @@
         {
           "type": "text",
           "name": "countText",
-          "value": "@index of @count",
+          "value": "${loop.index} of ${loop.count} item",
           "_translations": {
             "value": {}
           },
           "_nested_name": "nestedLoop.countText"
         }
       ],
-      "_nested_name": "nestedLoop",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@local.nestedListData",
-            "matchedExpression": "@local.nestedListData",
-            "type": "local",
-            "fieldName": "nestedListData"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@local.nestedListData": [
-          "value"
-        ]
-      }
+      "_nested_name": "nestedLoop"
     },
     {
       "type": "text",
@@ -308,6 +209,9 @@
       "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
       "_translations": {
         "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
       },
       "_nested_name": "firstLastData"
     },
@@ -422,6 +326,9 @@
       "_translations": {
         "value": {}
       },
+      "parameter_list": {
+        "value_type": "list"
+      },
       "_nested_name": "outerLoopData"
     },
     {
@@ -429,7 +336,8 @@
       "name": "outerLoop",
       "value": "@local.outerLoopData",
       "parameter_list": {
-        "index": "key"
+        "index": "key",
+        "value_type": "script"
       },
       "rows": [
         {
@@ -471,6 +379,9 @@
           "value": "key: inner_key_1 | value: Inner this is value 1;\nkey: inner_key_2 | value: Inner this is value 2;",
           "_translations": {
             "value": {}
+          },
+          "parameter_list": {
+            "value_type": "list"
           },
           "_nested_name": "outerLoop.innerLoopData"
         },
@@ -550,6 +461,139 @@
           "value"
         ]
       }
+    },
+    {
+      "type": "text",
+      "value": "# Loop Action",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_23",
+      "_nested_name": "text_23"
+    },
+    {
+      "type": "button",
+      "name": "executeLoopActionButton",
+      "value": "Execute Loop Action",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.loopAction"
+          ],
+          "_raw": "click | action: @local.loopAction"
+        }
+      ],
+      "_nested_name": "executeLoopActionButton",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.loopAction",
+                  "matchedExpression": "@local.loopAction",
+                  "type": "local",
+                  "fieldName": "loopAction"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.loopAction",
+                "matchedExpression": "@local.loopAction",
+                "type": "local",
+                "fieldName": "loopAction"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.loopAction": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "loopAction",
+      "rows": [
+        {
+          "type": "loop",
+          "name": "actionLoop",
+          "value": "local.listData",
+          "parameter_list": {
+            "index": "key"
+          },
+          "rows": [
+            {
+              "type": "set_variable",
+              "name": "loopAction1Executed",
+              "value": "Loop action ${loop.index} executed",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "loop.index === \"key_1\"",
+              "_nested_name": "loopAction.actionLoop.loopAction1Executed"
+            },
+            {
+              "type": "set_variable",
+              "name": "loopAction2Executed",
+              "value": "Loop action ${loop.index} executed",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "loop.index === \"key_2\"",
+              "_nested_name": "loopAction.actionLoop.loopAction2Executed"
+            },
+            {
+              "type": "set_variable",
+              "name": "loopAction3Executed",
+              "value": "Loop action ${loop.index} executed",
+              "_translations": {
+                "value": {}
+              },
+              "condition": "loop.index === \"key_3\"",
+              "_nested_name": "loopAction.actionLoop.loopAction3Executed"
+            }
+          ],
+          "_nested_name": "loopAction.actionLoop"
+        }
+      ],
+      "_nested_name": "loopAction"
+    },
+    {
+      "type": "text",
+      "name": "loopAction1Text",
+      "value": "${local.actionLoop.key_1.loopAction1Executed}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "loopAction1Text"
+    },
+    {
+      "type": "text",
+      "name": "loopAction2Text",
+      "value": "${local.actionLoop.key_2.loopAction2Executed}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "loopAction2Text"
+    },
+    {
+      "type": "text",
+      "name": "loopAction3Text",
+      "value": "${local.actionLoop.key_3.loopAction3Executed}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "loopAction3Text"
     }
   ],
   "_source": {

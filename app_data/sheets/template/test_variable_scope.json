@@ -28,6 +28,9 @@
       "_translations": {
         "value": {}
       },
+      "parameter_list": {
+        "value_type": "list"
+      },
       "_nested_name": "loopData"
     },
     {

@@ -1,0 +1,198 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_accordion",
+  "status": "released",
+  "rows": [
+    {
+      "name": "defaultDropdownValue",
+      "value": "key_1",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "defaultDropdownValue"
+    },
+    {
+      "name": "dynamicDropdownValue",
+      "value": "This is a dynamic value",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "dynamicDropdownValue"
+    },
+    {
+      "name": "defaultOptions",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
+      },
+      "type": "set_variable",
+      "_nested_name": "defaultOptions"
+    },
+    {
+      "type": "text",
+      "value": "# Accordion",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_5",
+      "_nested_name": "text_5"
+    },
+    {
+      "type": "text",
+      "value": "## Basic",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_6",
+      "_nested_name": "text_6"
+    },
+    {
+      "type": "accordion",
+      "name": "basic_accordion",
+      "rows": [
+        {
+          "type": "accordion_section",
+          "name": "first_section",
+          "value": "Section title 1",
+          "rows": [
+            {
+              "type": "text",
+              "name": "first_section_text",
+              "value": "This text appears in the first accordion section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "basic_accordion.first_section.first_section_text"
+            }
+          ],
+          "_nested_name": "basic_accordion.first_section"
+        },
+        {
+          "type": "accordion_section",
+          "name": "second_section",
+          "value": "Section title 2",
+          "rows": [
+            {
+              "type": "text",
+              "name": "second_section_text",
+              "value": "This text appears in the second accordion section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "basic_accordion.second_section.second_section_text"
+            }
+          ],
+          "_nested_name": "basic_accordion.second_section"
+        }
+      ],
+      "_nested_name": "basic_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## With a loop",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_9",
+      "_nested_name": "text_9"
+    },
+    {
+      "type": "accordion",
+      "name": "loop_accordion",
+      "rows": [
+        {
+          "type": "loop",
+          "value": "local.defaultOptions",
+          "rows": [
+            {
+              "type": "accordion_section",
+              "name": "loop_section",
+              "value": "${item.key}",
+              "rows": [
+                {
+                  "type": "text",
+                  "value": "${item.value}",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "name": "text_1",
+                  "_nested_name": "loop_accordion.loop_1.loop_section.text_1"
+                }
+              ],
+              "_nested_name": "loop_accordion.loop_1.loop_section"
+            }
+          ],
+          "name": "loop_1",
+          "_nested_name": "loop_accordion.loop_1"
+        }
+      ],
+      "_nested_name": "loop_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## Custom Icon",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_12",
+      "_nested_name": "text_12"
+    },
+    {
+      "type": "accordion",
+      "name": "custom_icon_accordion",
+      "rows": [
+        {
+          "type": "accordion_section",
+          "name": "first_custom_icon_section",
+          "value": "Section title 1",
+          "parameter_list": {
+            "icon_name": "arrow-down-circle"
+          },
+          "rows": [
+            {
+              "type": "text",
+              "name": "first_custom_icon_section_text",
+              "value": "This text appears in the first accordion section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "custom_icon_accordion.first_custom_icon_section.first_custom_icon_section_text"
+            }
+          ],
+          "_nested_name": "custom_icon_accordion.first_custom_icon_section"
+        },
+        {
+          "type": "accordion_section",
+          "name": "second_custom_icon_section",
+          "value": "Section title 2",
+          "parameter_list": {
+            "icon_name": "chevron-expand-outline"
+          },
+          "rows": [
+            {
+              "type": "text",
+              "name": "second_custom_icon_section_text",
+              "value": "This text appears in the second accordion section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "custom_icon_accordion.second_custom_icon_section.second_custom_icon_section_text"
+            }
+          ],
+          "_nested_name": "custom_icon_accordion.second_custom_icon_section"
+        }
+      ],
+      "_nested_name": "custom_icon_accordion"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/accordion.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1dpoc7gcYWiDsElHZmZOwfP1ffI5drZ_IzhdSVGc76a8"
+  }
+}

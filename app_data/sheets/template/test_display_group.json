@@ -1,0 +1,341 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_display_group",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Display Groups",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text",
+      "value": "## Row",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "display_group",
+      "name": "group1",
+      "parameter_list": {
+        "direction": "row"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "name": "group1text1",
+          "value": "Text A",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "border: 1px solid black",
+            "padding: 0px 12px",
+            "border-radius: 4px"
+          ],
+          "_nested_name": "group1.group1text1"
+        },
+        {
+          "type": "text",
+          "name": "group1text2",
+          "value": "Text B",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "border: 1px solid black",
+            "padding: 0px 12px",
+            "border-radius: 4px"
+          ],
+          "_nested_name": "group1.group1text2"
+        }
+      ],
+      "_nested_name": "group1"
+    },
+    {
+      "type": "text",
+      "value": "## Row with equal columns",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_6",
+      "_nested_name": "text_6"
+    },
+    {
+      "type": "display_group",
+      "name": "group2",
+      "parameter_list": {
+        "direction": "row",
+        "child_sizing": "equal"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "name": "group2text1",
+          "value": "Text A",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "border: 1px solid black",
+            "padding: 0px 12px",
+            "border-radius: 4px"
+          ],
+          "_nested_name": "group2.group2text1"
+        },
+        {
+          "type": "text",
+          "name": "group2text2",
+          "value": "Text B",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "border: 1px solid black",
+            "padding: 0px 12px",
+            "border-radius: 4px"
+          ],
+          "_nested_name": "group2.group2text2"
+        }
+      ],
+      "_nested_name": "group2"
+    },
+    {
+      "type": "text",
+      "value": "## Column",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_9",
+      "_nested_name": "text_9"
+    },
+    {
+      "type": "display_group",
+      "name": "group3",
+      "parameter_list": {
+        "direction": "column"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "name": "group3text1",
+          "value": "Text A",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "border: 1px solid black",
+            "padding: 0px 12px",
+            "border-radius: 4px"
+          ],
+          "_nested_name": "group3.group3text1"
+        },
+        {
+          "type": "text",
+          "name": "group3text2",
+          "value": "Text B",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "border: 1px solid black",
+            "padding: 0px 12px",
+            "border-radius: 4px"
+          ],
+          "_nested_name": "group3.group3text2"
+        }
+      ],
+      "_nested_name": "group3"
+    },
+    {
+      "type": "text",
+      "value": "## Nested Column in a Row",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_12",
+      "_nested_name": "text_12"
+    },
+    {
+      "type": "display_group",
+      "name": "group4",
+      "parameter_list": {
+        "direction": "row",
+        "gap": "16px",
+        "align": "center",
+        "padding": "1px",
+        "justify": "space-around"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "name": "group4text1",
+          "value": "Text A",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "border: 1px solid black",
+            "padding: 0px 12px",
+            "border-radius: 4px"
+          ],
+          "_nested_name": "group4.group4text1"
+        },
+        {
+          "type": "display_group",
+          "name": "group4Inner",
+          "parameter_list": {
+            "direction": "column",
+            "gap": "16px",
+            "align": "center",
+            "padding": "1px",
+            "justify": "space-around"
+          },
+          "rows": [
+            {
+              "type": "text",
+              "name": "group4text2",
+              "value": "Text B",
+              "_translations": {
+                "value": {}
+              },
+              "style_list": [
+                "border: 1px solid black",
+                "padding: 0px 12px",
+                "border-radius: 4px"
+              ],
+              "_nested_name": "group4.group4Inner.group4text2"
+            },
+            {
+              "type": "text",
+              "name": "group4text3",
+              "value": "Text C",
+              "_translations": {
+                "value": {}
+              },
+              "style_list": [
+                "border: 1px solid black",
+                "padding: 0px 12px",
+                "border-radius: 4px"
+              ],
+              "_nested_name": "group4.group4Inner.group4text3"
+            }
+          ],
+          "_nested_name": "group4.group4Inner"
+        }
+      ],
+      "_nested_name": "group4"
+    },
+    {
+      "type": "text",
+      "value": "## Nested Row in a Column",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_15",
+      "_nested_name": "text_15"
+    },
+    {
+      "type": "display_group",
+      "name": "group5",
+      "parameter_list": {
+        "direction": "column",
+        "gap": "16px",
+        "align": "center",
+        "padding": "1px",
+        "justify": "space-around"
+      },
+      "style_list": [
+        "border: 1px solid black",
+        "padding: 12px",
+        "border-radius: 4px",
+        "background-color: #888"
+      ],
+      "rows": [
+        {
+          "type": "text",
+          "name": "group5text1",
+          "value": "Text A",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "border: 1px solid black",
+            "padding: 0px 12px",
+            "border-radius: 4px"
+          ],
+          "_nested_name": "group5.group5text1"
+        },
+        {
+          "type": "display_group",
+          "name": "group5Inner",
+          "parameter_list": {
+            "direction": "row",
+            "gap": "16px",
+            "align": "center",
+            "padding": "1px",
+            "justify": "space-between"
+          },
+          "rows": [
+            {
+              "type": "text",
+              "name": "group5InnerText1",
+              "value": "Text B",
+              "_translations": {
+                "value": {}
+              },
+              "style_list": [
+                "border: 1px solid black",
+                "padding: 0px 12px",
+                "border-radius: 4px"
+              ],
+              "_nested_name": "group5.group5Inner.group5InnerText1"
+            },
+            {
+              "type": "text",
+              "name": "group5InnerText2",
+              "value": "Text C",
+              "_translations": {
+                "value": {}
+              },
+              "style_list": [
+                "border: 1px solid black",
+                "padding: 0px 12px",
+                "border-radius: 4px"
+              ],
+              "_nested_name": "group5.group5Inner.group5InnerText2"
+            }
+          ],
+          "_nested_name": "group5.group5Inner"
+        },
+        {
+          "type": "text",
+          "name": "group5text2",
+          "value": "Text D",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "border: 1px solid black",
+            "padding: 0px 12px",
+            "border-radius: 4px"
+          ],
+          "_nested_name": "group5.group5text2"
+        }
+      ],
+      "_nested_name": "group5"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/display_group.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1nDJ2NER1W97ELRbm98PGMxp4Qku9hpvmu3lMiHEdTJE"
+  }
+}
