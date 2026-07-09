@@ -84,6 +84,136 @@
         }
       ],
       "_nested_name": "goToTargetAction"
+    },
+    {
+      "type": "text",
+      "value": "# Dynamic Nav",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_6",
+      "_nested_name": "text_6"
+    },
+    {
+      "type": "button",
+      "name": "dynamicNavButton",
+      "value": "Go to target",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.goToDynamicTargetAction"
+          ],
+          "_raw": "click | action: @local.goToDynamicTargetAction"
+        }
+      ],
+      "_nested_name": "dynamicNavButton",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.goToDynamicTargetAction",
+                  "matchedExpression": "@local.goToDynamicTargetAction",
+                  "type": "local",
+                  "fieldName": "goToDynamicTargetAction"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.goToDynamicTargetAction",
+                "matchedExpression": "@local.goToDynamicTargetAction",
+                "type": "local",
+                "fieldName": "goToDynamicTargetAction"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.goToDynamicTargetAction": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "name": "navTarget",
+      "value": "test_nav_target",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "navTarget"
+    },
+    {
+      "name": "navTitle",
+      "value": "Dynamic Title",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "navTitle"
+    },
+    {
+      "type": "action",
+      "name": "goToDynamicTargetAction",
+      "rows": [
+        {
+          "type": "nav",
+          "name": "goToDynamicTargetNav",
+          "value": "@local.navTarget",
+          "rows": [
+            {
+              "name": "targetTitle",
+              "value": "@local.navTitle",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "goToDynamicTargetAction.goToDynamicTargetNav.targetTitle",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.navTitle",
+                    "matchedExpression": "@local.navTitle",
+                    "type": "local",
+                    "fieldName": "navTitle"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.navTitle": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "goToDynamicTargetAction.goToDynamicTargetNav",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.navTarget",
+                "matchedExpression": "@local.navTarget",
+                "type": "local",
+                "fieldName": "navTarget"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.navTarget": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "goToDynamicTargetAction"
     }
   ],
   "_source": {

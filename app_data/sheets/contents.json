@@ -101,6 +101,15 @@
         "url": "https://docs.google.com/spreadsheets/d/1YC7Ar0n99C978PA_-wPXxefHRAEGtyeT5aA3jTL9RMw"
       }
     },
+    "test_accordion": {
+      "flow_type": "template",
+      "flow_name": "test_accordion",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/accordion.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1dpoc7gcYWiDsElHZmZOwfP1ffI5drZ_IzhdSVGc76a8"
+      }
+    },
     "test_action": {
       "flow_type": "template",
       "flow_name": "test_action",
@@ -137,6 +146,15 @@
         "url": "https://docs.google.com/spreadsheets/d/1ZKvL9e38Tpi89cifX5DsKunMNxRvIn6WCDvcgo7b_TU"
       }
     },
+    "test_display_group": {
+      "flow_type": "template",
+      "flow_name": "test_display_group",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/display_group.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1nDJ2NER1W97ELRbm98PGMxp4Qku9hpvmu3lMiHEdTJE"
+      }
+    },
     "test_dropdown": {
       "flow_type": "template",
       "flow_name": "test_dropdown",
@@ -144,6 +162,15 @@
         "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
         "path": "components/dropdown.xlsx",
         "url": "https://docs.google.com/spreadsheets/d/1yDcml2qWeW9ULYEHW_aFWR61p2eNSct5BTDo-EarG1Y"
+      }
+    },
+    "test_expressions": {
+      "flow_type": "template",
+      "flow_name": "test_expressions",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "scenarios/expressions.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1k5Z_3KLp2aSVgsWgn3kOfAtF0gFAN3zeCkG3q9K523k"
       }
     },
     "test_external_actions": {
@@ -225,6 +252,33 @@
         "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
         "path": "components/query.xlsx",
         "url": "https://docs.google.com/spreadsheets/d/1cDndPmELXtmx65GfoBKVnp-JxD21wxMMVWGeJUryuL0"
+      }
+    },
+    "test_radio_list": {
+      "flow_type": "template",
+      "flow_name": "test_radio_list",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/radio-list.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1TACKnA_GL51sGG3gGINGkVGPDDcwO9sy8QjEjKOIy-c"
+      }
+    },
+    "test_row_names": {
+      "flow_type": "template",
+      "flow_name": "test_row_names",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "scenarios/nav_with_same_row_names.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1Wtbxbvy_ymyI3YhRPi2kRRoReC6klPi-7OLT8L7-Qf4"
+      }
+    },
+    "test_row_names_target": {
+      "flow_type": "template",
+      "flow_name": "test_row_names_target",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "scenarios/nav_with_same_row_names.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1Wtbxbvy_ymyI3YhRPi2kRRoReC6klPi-7OLT8L7-Qf4"
       }
     },
     "test_set_global": {

@@ -9,7 +9,8 @@
     },
     {
       "name": "var_2",
-      "value": "@local.var_1 + 1"
+      "value": "@local.var_1 + 1",
+      "parameter_list": "value_type: script"
     },
     {
       "type": "button",

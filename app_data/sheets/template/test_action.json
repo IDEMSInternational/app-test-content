@@ -249,6 +249,9 @@
     {
       "name": "clickCount",
       "value": 0,
+      "parameter_list": {
+        "value_type": "script"
+      },
       "type": "set_variable",
       "_nested_name": "clickCount"
     },
@@ -335,6 +338,9 @@
           "value": "@local.clickCount + 1",
           "_translations": {
             "value": {}
+          },
+          "parameter_list": {
+            "value_type": "script"
           },
           "_nested_name": "incrementClickCount.clickCount",
           "_dynamicFields": {

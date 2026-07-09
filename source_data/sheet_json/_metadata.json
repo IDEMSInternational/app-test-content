@@ -55,6 +55,15 @@
   },
   {
     "flow_type": "template",
+    "flow_name": "test_accordion",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/accordion.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1dpoc7gcYWiDsElHZmZOwfP1ffI5drZ_IzhdSVGc76a8"
+    }
+  },
+  {
+    "flow_type": "template",
     "flow_name": "test_action",
     "_source": {
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
@@ -91,11 +100,29 @@
   },
   {
     "flow_type": "template",
+    "flow_name": "test_display_group",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/display_group.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1nDJ2NER1W97ELRbm98PGMxp4Qku9hpvmu3lMiHEdTJE"
+    }
+  },
+  {
+    "flow_type": "template",
     "flow_name": "test_dropdown",
     "_source": {
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
       "path": "components/dropdown.xlsx",
       "url": "https://docs.google.com/spreadsheets/d/1yDcml2qWeW9ULYEHW_aFWR61p2eNSct5BTDo-EarG1Y"
+    }
+  },
+  {
+    "flow_type": "template",
+    "flow_name": "test_expressions",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "scenarios/expressions.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1k5Z_3KLp2aSVgsWgn3kOfAtF0gFAN3zeCkG3q9K523k"
     }
   },
   {
@@ -177,6 +204,33 @@
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
       "path": "components/query.xlsx",
       "url": "https://docs.google.com/spreadsheets/d/1cDndPmELXtmx65GfoBKVnp-JxD21wxMMVWGeJUryuL0"
+    }
+  },
+  {
+    "flow_type": "template",
+    "flow_name": "test_radio_list",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/radio-list.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1TACKnA_GL51sGG3gGINGkVGPDDcwO9sy8QjEjKOIy-c"
+    }
+  },
+  {
+    "flow_type": "template",
+    "flow_name": "test_row_names",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "scenarios/nav_with_same_row_names.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1Wtbxbvy_ymyI3YhRPi2kRRoReC6klPi-7OLT8L7-Qf4"
+    }
+  },
+  {
+    "flow_type": "template",
+    "flow_name": "test_row_names_target",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "scenarios/nav_with_same_row_names.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1Wtbxbvy_ymyI3YhRPi2kRRoReC6klPi-7OLT8L7-Qf4"
     }
   },
   {
