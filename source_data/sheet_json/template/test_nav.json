@@ -31,6 +31,43 @@
     },
     {
       "type": "end_action"
+    },
+    {
+      "type": "text",
+      "value": "# Dynamic Nav"
+    },
+    {
+      "type": "button",
+      "name": "dynamicNavButton",
+      "value": "Go to target",
+      "action_list": "click | action: @local.goToDynamicTargetAction"
+    },
+    {
+      "name": "navTarget",
+      "value": "test_nav_target"
+    },
+    {
+      "name": "navTitle",
+      "value": "Dynamic Title"
+    },
+    {
+      "type": "begin_action",
+      "name": "goToDynamicTargetAction"
+    },
+    {
+      "type": "begin_nav",
+      "name": "goToDynamicTargetNav",
+      "value": "@local.navTarget"
+    },
+    {
+      "name": "targetTitle",
+      "value": "@local.navTitle"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "end_action"
     }
   ]
 }

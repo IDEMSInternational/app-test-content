@@ -68,7 +68,8 @@
     },
     {
       "name": "clickCount",
-      "value": 0
+      "value": 0,
+      "parameter_list": "value_type: script"
     },
     {
       "type": "text",
@@ -88,7 +89,8 @@
     {
       "type": "set_variable",
       "name": "clickCount",
-      "value": "@local.clickCount + 1"
+      "value": "@local.clickCount + 1",
+      "parameter_list": "value_type: script"
     },
     {
       "type": "end_action"
@@ -148,6 +150,34 @@
     },
     {
       "type": "end_action"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "text",
+      "value": "# Disabled Action"
+    },
+    {
+      "type": "text",
+      "name": "disabledActionExecuted",
+      "value": "Disabled Action Not Executed"
+    },
+    {
+      "type": "button",
+      "name": "disabledActionExecuteButton",
+      "value": "Execute Disabled Action",
+      "action_list": "click | action: @local.disabledAction"
+    },
+    {
+      "type": "begin_action",
+      "name": "disabledAction",
+      "condition": false
+    },
+    {
+      "type": "set_variable",
+      "name": "disabledActionExecuted",
+      "value": "Disabled Action Executed"
     },
     {
       "type": "end_action"

@@ -1,0 +1,21 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_row_names_target",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "mainTitle",
+      "value": "# Target Title",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "mainTitle"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "scenarios/nav_with_same_row_names.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1Wtbxbvy_ymyI3YhRPi2kRRoReC6klPi-7OLT8L7-Qf4"
+  }
+}

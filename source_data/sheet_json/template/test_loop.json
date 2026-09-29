@@ -14,23 +14,24 @@
     {
       "type": "set_variable",
       "name": "listData",
-      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;"
+      "value": "[{key: \"key_1\", value: \"This is value 1\"}, \n{key: \"key_2\", value: \"This is value 2\"},  \n{key: \"key_3\", value: \"This is value 3\"}]",
+      "parameter_list": "value_type: script"
     },
     {
       "type": "begin_loop",
       "name": "listLoop",
-      "value": "@local.listData",
-      "parameter_list": "index: key"
+      "value": "local.listData",
+      "parameter_list": "index: key;"
     },
     {
       "type": "text",
       "name": "loopTitle",
-      "value": "**List item @index**"
+      "value": "**List item ${loop.index}**"
     },
     {
       "type": "text",
       "name": "loopText",
-      "value": "@item.value"
+      "value": "${loop.item.value}"
     },
     {
       "type": "text",
@@ -53,18 +54,18 @@
     {
       "type": "begin_loop",
       "name": "queryLoop",
-      "value": "@local.queriedData",
-      "parameter_list": "index: id"
+      "value": "local.queriedData",
+      "parameter_list": "index: id;"
     },
     {
       "type": "text",
       "name": "loopTitle",
-      "value": "**Query item @index**"
+      "value": "**Query item ${loop.index}**"
     },
     {
       "type": "text",
       "name": "loopText",
-      "value": "@item.value"
+      "value": "${loop.item.value}"
     },
     {
       "type": "text",
@@ -81,17 +82,18 @@
     {
       "type": "set_variable",
       "name": "nestedListData",
-      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;"
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "parameter_list": "value_type: list"
     },
     {
       "type": "begin_loop",
       "name": "nestedLoop",
-      "value": "@local.nestedListData"
+      "value": "local.nestedListData"
     },
     {
       "type": "text",
       "name": "loopKey",
-      "value": "key: @item.key"
+      "value": "key: ${item.key}"
     },
     {
       "type": "begin_template",
@@ -100,7 +102,7 @@
     },
     {
       "name": "templateText",
-      "value": "value: @item.value"
+      "value": "value: ${item.value}"
     },
     {
       "type": "end_template"
@@ -108,7 +110,7 @@
     {
       "type": "text",
       "name": "countText",
-      "value": "@index of @count"
+      "value": "${loop.index} of ${loop.count} item"
     },
     {
       "type": "end_loop"
@@ -120,13 +122,14 @@
     {
       "type": "set_variable",
       "name": "firstLastData",
-      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;"
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "parameter_list": "value_type: list"
     },
     {
       "type": "begin_loop",
       "name": "firstLastLoop",
       "value": "@local.firstLastData",
-      "parameter_list": "index: key"
+      "parameter_list": "index: key;"
     },
     {
       "type": "text",
@@ -168,13 +171,14 @@
     {
       "type": "set_variable",
       "name": "outerLoopData",
-      "value": "key: key_1 | value: This is value 1;\nkey: key_2 | value: This is value 2;\nkey: key_3 | value: This is value 3;"
+      "value": "key: key_1 | value: This is value 1;\nkey: key_2 | value: This is value 2;\nkey: key_3 | value: This is value 3;",
+      "parameter_list": "value_type: list"
     },
     {
       "type": "begin_loop",
       "name": "outerLoop",
       "value": "@local.outerLoopData",
-      "parameter_list": "index: key"
+      "parameter_list": "index: key;\nvalue_type: script"
     },
     {
       "type": "text",
@@ -188,13 +192,14 @@
     {
       "type": "set_variable",
       "name": "innerLoopData",
-      "value": "key: inner_key_1 | value: Inner this is value 1;\nkey: inner_key_2 | value: Inner this is value 2;"
+      "value": "key: inner_key_1 | value: Inner this is value 1;\nkey: inner_key_2 | value: Inner this is value 2;",
+      "parameter_list": "value_type: list"
     },
     {
       "type": "begin_loop",
       "name": "innerLoop",
       "value": "@local.innerLoopData",
-      "parameter_list": "index: key"
+      "parameter_list": "index: key;"
     },
     {
       "type": "text",
@@ -210,6 +215,103 @@
     },
     {
       "type": "end_loop"
+    },
+    {
+      "type": "text",
+      "value": "# Loop Action"
+    },
+    {
+      "type": "button",
+      "name": "executeLoopActionButton",
+      "value": "Execute Loop Action",
+      "action_list": "click | action: @local.loopAction"
+    },
+    {
+      "type": "begin_action",
+      "name": "loopAction"
+    },
+    {
+      "type": "begin_loop",
+      "name": "actionLoop",
+      "value": "local.listData",
+      "parameter_list": "index: key;"
+    },
+    {
+      "type": "set_variable",
+      "name": "loopAction1Executed",
+      "value": "Loop action ${loop.index} executed",
+      "condition": "loop.index === \"key_1\""
+    },
+    {
+      "type": "set_variable",
+      "name": "loopAction2Executed",
+      "value": "Loop action ${loop.index} executed",
+      "condition": "loop.index === \"key_2\""
+    },
+    {
+      "type": "set_variable",
+      "name": "loopAction3Executed",
+      "value": "Loop action ${loop.index} executed",
+      "condition": "loop.index === \"key_3\""
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "text",
+      "name": "loopAction1Text",
+      "value": "${local.actionLoop.key_1.loopAction1Executed}"
+    },
+    {
+      "type": "text",
+      "name": "loopAction2Text",
+      "value": "${local.actionLoop.key_2.loopAction2Executed}"
+    },
+    {
+      "type": "text",
+      "name": "loopAction3Text",
+      "value": "${local.actionLoop.key_3.loopAction3Executed}"
+    },
+    {
+      "type": "text",
+      "value": "# Disabled Loop Action"
+    },
+    {
+      "type": "button",
+      "name": "executeDisabledLoopActionButton",
+      "value": "Execute Loop Action",
+      "action_list": "click | action: @local.disabledLoopAction"
+    },
+    {
+      "type": "begin_action",
+      "name": "disabledLoopAction"
+    },
+    {
+      "type": "begin_loop",
+      "name": "actionLoop2",
+      "value": "local.listData",
+      "parameter_list": "index: key;",
+      "condition": false
+    },
+    {
+      "type": "set_variable",
+      "name": "actionLoop2Executed",
+      "value": "Loop action ${loop.index} executed",
+      "condition": "loop.index === \"key_1\""
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "text",
+      "name": "actionLoop2Text",
+      "value": "${local.actionLoop2.key_1.actionLoop2Executed}"
     }
   ]
 }

@@ -249,6 +249,9 @@
     {
       "name": "clickCount",
       "value": 0,
+      "parameter_list": {
+        "value_type": "script"
+      },
       "type": "set_variable",
       "_nested_name": "clickCount"
     },
@@ -335,6 +338,9 @@
           "value": "@local.clickCount + 1",
           "_translations": {
             "value": {}
+          },
+          "parameter_list": {
+            "value_type": "script"
           },
           "_nested_name": "incrementClickCount.clickCount",
           "_dynamicFields": {
@@ -580,6 +586,90 @@
         }
       ],
       "_nested_name": "action5"
+    },
+    {
+      "type": "text",
+      "value": "# Disabled Action",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_28",
+      "_nested_name": "text_28"
+    },
+    {
+      "type": "text",
+      "name": "disabledActionExecuted",
+      "value": "Disabled Action Not Executed",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "disabledActionExecuted"
+    },
+    {
+      "type": "button",
+      "name": "disabledActionExecuteButton",
+      "value": "Execute Disabled Action",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.disabledAction"
+          ],
+          "_raw": "click | action: @local.disabledAction"
+        }
+      ],
+      "_nested_name": "disabledActionExecuteButton",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.disabledAction",
+                  "matchedExpression": "@local.disabledAction",
+                  "type": "local",
+                  "fieldName": "disabledAction"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.disabledAction",
+                "matchedExpression": "@local.disabledAction",
+                "type": "local",
+                "fieldName": "disabledAction"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.disabledAction": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "disabledAction",
+      "condition": false,
+      "rows": [
+        {
+          "type": "set_variable",
+          "name": "disabledActionExecuted",
+          "value": "Disabled Action Executed",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "disabledAction.disabledActionExecuted"
+        }
+      ],
+      "_nested_name": "disabledAction"
     }
   ],
   "_source": {

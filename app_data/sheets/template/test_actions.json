@@ -15,6 +15,9 @@
       "_translations": {
         "value": {}
       },
+      "parameter_list": {
+        "value_type": "script"
+      },
       "type": "set_variable",
       "_nested_name": "var_2",
       "_dynamicFields": {

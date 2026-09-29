@@ -87,7 +87,7 @@
     {
       "type": "query",
       "name": "dynamicQueriedData",
-      "value": "selector: {category: '@local.categoryDropdown'},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+      "value": "selector: {category: @local.categoryDropdown},\nsort: [ {name: 'desc'} ],\nlimit: 3",
       "_translations": {
         "value": {}
       },
@@ -98,7 +98,7 @@
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "selector: {category: '@local.categoryDropdown'},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+            "fullExpression": "selector: {category: @local.categoryDropdown},\nsort: [ {name: 'desc'} ],\nlimit: 3",
             "matchedExpression": "@local.categoryDropdown",
             "type": "local",
             "fieldName": "categoryDropdown"
@@ -143,6 +143,9 @@
       "value": "key: A | value: A; \nkey: B | value: B;",
       "_translations": {
         "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
       },
       "type": "set_variable",
       "_nested_name": "categoryOptions"
@@ -216,6 +219,9 @@
       "value": "key: test_data | value: test_data; \nkey: test_data_alt | value: test_data_alt;",
       "_translations": {
         "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
       },
       "type": "set_variable",
       "_nested_name": "dataListOptions"
