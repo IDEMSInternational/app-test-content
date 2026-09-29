@@ -14,7 +14,8 @@
     {
       "type": "set_variable",
       "name": "loopData",
-      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;"
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "parameter_list": "value_type: list"
     },
     {
       "type": "text_box",

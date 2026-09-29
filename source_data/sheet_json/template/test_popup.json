@@ -1,0 +1,111 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_popup",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Popup "
+    },
+    {
+      "type": "button",
+      "name": "inlinePopupButton",
+      "value": "Show Popup",
+      "action_list": "click | action: @local.inlinePopup"
+    },
+    {
+      "type": "begin_popup",
+      "name": "inlinePopup"
+    },
+    {
+      "type": "text",
+      "value": "This is a dialog style popup"
+    },
+    {
+      "type": "button",
+      "name": "okButton1",
+      "value": "OK",
+      "action_list": "click | emit: completed;"
+    },
+    {
+      "type": "end_popup"
+    },
+    {
+      "type": "text",
+      "value": "# Popup (fullscreen)"
+    },
+    {
+      "type": "button",
+      "name": "fullscreenPopupButton",
+      "value": "Show Popup",
+      "action_list": "click | action: @local.fullscreenPopup"
+    },
+    {
+      "type": "begin_popup",
+      "name": "fullscreenPopup",
+      "parameter_list": "fullscreen: true;"
+    },
+    {
+      "type": "text",
+      "value": "This is a full screen popup"
+    },
+    {
+      "type": "button",
+      "name": "okButton2",
+      "value": "OK",
+      "action_list": "click | emit: completed;"
+    },
+    {
+      "type": "end_popup"
+    },
+    {
+      "type": "text",
+      "value": "# Popup (template)"
+    },
+    {
+      "type": "button",
+      "name": "templatePopupButton",
+      "value": "Show Popup",
+      "action_list": "click | action: @local.templatePopup"
+    },
+    {
+      "type": "begin_popup",
+      "name": "templatePopup",
+      "value": "test_popup_content"
+    },
+    {
+      "name": "parameter1",
+      "value": "Override Value"
+    },
+    {
+      "type": "end_popup"
+    },
+    {
+      "type": "text",
+      "value": "# Popup (template with dynamic value)"
+    },
+    {
+      "type": "text_box",
+      "name": "dynamicTemplatePopupValue",
+      "value": "Override Value"
+    },
+    {
+      "type": "button",
+      "name": "dynamicTemplatePopupButton",
+      "value": "Show Popup",
+      "action_list": "click | action: @local.dynamicTemplatePopup"
+    },
+    {
+      "type": "begin_popup",
+      "name": "dynamicTemplatePopup",
+      "value": "test_popup_content"
+    },
+    {
+      "name": "parameter1",
+      "value": "${local.dynamicTemplatePopupValue}"
+    },
+    {
+      "type": "end_popup"
+    }
+  ]
+}

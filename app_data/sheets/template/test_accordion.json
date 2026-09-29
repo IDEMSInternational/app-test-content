@@ -1,0 +1,440 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_accordion",
+  "status": "released",
+  "rows": [
+    {
+      "name": "defaultDropdownValue",
+      "value": "key_1",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "defaultDropdownValue"
+    },
+    {
+      "name": "dynamicDropdownValue",
+      "value": "This is a dynamic value",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "dynamicDropdownValue"
+    },
+    {
+      "name": "defaultOptions",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
+      },
+      "type": "set_variable",
+      "_nested_name": "defaultOptions"
+    },
+    {
+      "type": "text",
+      "value": "# Accordion",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_5",
+      "_nested_name": "text_5"
+    },
+    {
+      "type": "text",
+      "value": "## Basic",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_6",
+      "_nested_name": "text_6"
+    },
+    {
+      "type": "accordion",
+      "name": "basic_accordion",
+      "rows": [
+        {
+          "type": "accordion_section",
+          "name": "first_section",
+          "value": "Section title 1",
+          "rows": [
+            {
+              "type": "text",
+              "name": "first_section_text",
+              "value": "This text appears in the first accordion section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "basic_accordion.first_section.first_section_text"
+            }
+          ],
+          "_nested_name": "basic_accordion.first_section"
+        },
+        {
+          "type": "accordion_section",
+          "name": "second_section",
+          "value": "Section title 2",
+          "rows": [
+            {
+              "type": "text",
+              "name": "second_section_text",
+              "value": "This text appears in the second accordion section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "basic_accordion.second_section.second_section_text"
+            }
+          ],
+          "_nested_name": "basic_accordion.second_section"
+        }
+      ],
+      "_nested_name": "basic_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## With a loop",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_9",
+      "_nested_name": "text_9"
+    },
+    {
+      "type": "accordion",
+      "name": "loop_accordion",
+      "rows": [
+        {
+          "type": "loop",
+          "value": "local.defaultOptions",
+          "rows": [
+            {
+              "type": "accordion_section",
+              "name": "loop_section",
+              "value": "${item.key}",
+              "rows": [
+                {
+                  "type": "text",
+                  "value": "${item.value}",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "name": "text_1",
+                  "_nested_name": "loop_accordion.loop_1.loop_section.text_1"
+                }
+              ],
+              "_nested_name": "loop_accordion.loop_1.loop_section"
+            }
+          ],
+          "name": "loop_1",
+          "_nested_name": "loop_accordion.loop_1"
+        }
+      ],
+      "_nested_name": "loop_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## Custom Icon",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_12",
+      "_nested_name": "text_12"
+    },
+    {
+      "type": "accordion",
+      "name": "custom_icon_accordion",
+      "rows": [
+        {
+          "type": "accordion_section",
+          "name": "first_custom_icon_section",
+          "value": "Section title 1",
+          "parameter_list": {
+            "icon_name": "arrow-down-circle"
+          },
+          "rows": [
+            {
+              "type": "text",
+              "name": "first_custom_icon_section_text",
+              "value": "This text appears in the first accordion section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "custom_icon_accordion.first_custom_icon_section.first_custom_icon_section_text"
+            }
+          ],
+          "_nested_name": "custom_icon_accordion.first_custom_icon_section"
+        },
+        {
+          "type": "accordion_section",
+          "name": "second_custom_icon_section",
+          "value": "Section title 2",
+          "parameter_list": {
+            "icon_name": "chevron-expand-outline"
+          },
+          "rows": [
+            {
+              "type": "text",
+              "name": "second_custom_icon_section_text",
+              "value": "This text appears in the second accordion section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "custom_icon_accordion.second_custom_icon_section.second_custom_icon_section_text"
+            }
+          ],
+          "_nested_name": "custom_icon_accordion.second_custom_icon_section"
+        }
+      ],
+      "_nested_name": "custom_icon_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## With open sections",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_15",
+      "_nested_name": "text_15"
+    },
+    {
+      "type": "accordion",
+      "name": "open_accordion",
+      "rows": [
+        {
+          "type": "accordion_section",
+          "name": "open_first_section",
+          "value": "Section title 1",
+          "parameter_list": {
+            "state": "open"
+          },
+          "rows": [
+            {
+              "type": "text",
+              "name": "open_first_section_text",
+              "value": "This text appears in the first accordion section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "open_accordion.open_first_section.open_first_section_text"
+            }
+          ],
+          "_nested_name": "open_accordion.open_first_section"
+        },
+        {
+          "type": "accordion_section",
+          "name": "open_second_section",
+          "value": "Section title 2",
+          "rows": [
+            {
+              "type": "text",
+              "name": "open_second_section_text",
+              "value": "This text appears in the second accordion section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "open_accordion.open_second_section.open_second_section_text"
+            }
+          ],
+          "_nested_name": "open_accordion.open_second_section"
+        }
+      ],
+      "_nested_name": "open_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## Single open section",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_18",
+      "_nested_name": "text_18"
+    },
+    {
+      "type": "accordion",
+      "name": "single_accordion",
+      "parameter_list": {
+        "multiple": "false"
+      },
+      "rows": [
+        {
+          "type": "accordion_section",
+          "name": "single_first_section",
+          "value": "Section title 1",
+          "rows": [
+            {
+              "type": "text",
+              "name": "single_first_section_text",
+              "value": "This text appears in the first accordion section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "single_accordion.single_first_section.single_first_section_text"
+            }
+          ],
+          "_nested_name": "single_accordion.single_first_section"
+        },
+        {
+          "type": "accordion_section",
+          "name": "single_second_section",
+          "value": "Section title 2",
+          "rows": [
+            {
+              "type": "text",
+              "name": "single_second_section_text",
+              "value": "This text appears in the second accordion section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "single_accordion.single_second_section.single_second_section_text"
+            }
+          ],
+          "_nested_name": "single_accordion.single_second_section"
+        }
+      ],
+      "_nested_name": "single_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## Disabled",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_21",
+      "_nested_name": "text_21"
+    },
+    {
+      "type": "accordion",
+      "name": "disabled_accordion",
+      "parameter_list": {
+        "disabled": "true"
+      },
+      "rows": [
+        {
+          "type": "accordion_section",
+          "name": "disabled_accordion_section",
+          "value": "Disabled accordion",
+          "rows": [
+            {
+              "type": "text",
+              "name": "disabled_accordion_section_text",
+              "value": "This text is in a disabled accordion",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "disabled_accordion.disabled_accordion_section.disabled_accordion_section_text"
+            }
+          ],
+          "_nested_name": "disabled_accordion.disabled_accordion_section"
+        }
+      ],
+      "_nested_name": "disabled_accordion"
+    },
+    {
+      "type": "accordion",
+      "name": "disabled_section_accordion",
+      "rows": [
+        {
+          "type": "accordion_section",
+          "name": "disabled_section",
+          "value": "Disabled section",
+          "parameter_list": {
+            "disabled": "true"
+          },
+          "rows": [
+            {
+              "type": "text",
+              "name": "disabled_section_text",
+              "value": "This text is in a disabled section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "disabled_section_accordion.disabled_section.disabled_section_text"
+            }
+          ],
+          "_nested_name": "disabled_section_accordion.disabled_section"
+        },
+        {
+          "type": "accordion_section",
+          "name": "enabled_section",
+          "value": "Enabled section",
+          "rows": [
+            {
+              "type": "text",
+              "name": "enabled_section_text",
+              "value": "This text is in an enabled section",
+              "_translations": {
+                "value": {}
+              },
+              "_nested_name": "disabled_section_accordion.enabled_section.enabled_section_text"
+            }
+          ],
+          "_nested_name": "disabled_section_accordion.enabled_section"
+        }
+      ],
+      "_nested_name": "disabled_section_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## Loop with open section",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_26",
+      "_nested_name": "text_26"
+    },
+    {
+      "type": "set_variable",
+      "name": "loopStateOptions",
+      "value": "key: key_1 | state: closed; key: key_2 | state: open; key: key_3 | state: closed;",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
+      },
+      "_nested_name": "loopStateOptions"
+    },
+    {
+      "type": "accordion",
+      "name": "loop_state_accordion",
+      "rows": [
+        {
+          "type": "loop",
+          "name": "state_loop",
+          "value": "local.loopStateOptions",
+          "rows": [
+            {
+              "type": "accordion_section",
+              "name": "loop_state_section",
+              "value": "${item.key}",
+              "parameter_list": {
+                "state": "${item.state}"
+              },
+              "rows": [
+                {
+                  "type": "text",
+                  "name": "loop_state_section_text",
+                  "value": "This text appears in section ${item.key}",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "_nested_name": "loop_state_accordion.state_loop.loop_state_section.loop_state_section_text"
+                }
+              ],
+              "_nested_name": "loop_state_accordion.state_loop.loop_state_section"
+            }
+          ],
+          "_nested_name": "loop_state_accordion.state_loop"
+        }
+      ],
+      "_nested_name": "loop_state_accordion"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/accordion.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1dpoc7gcYWiDsElHZmZOwfP1ffI5drZ_IzhdSVGc76a8"
+  }
+}

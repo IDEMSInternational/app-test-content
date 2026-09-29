@@ -97,36 +97,37 @@
         {
           "type": "update",
           "name": "insertRow",
-          "value": "id: '@local.recordId',\nname:'@local.recordName',\nvalue: '@local.recordValue',\nquantity:@local.recordQuantity",
+          "value": "id: @local.recordId,\nname:@local.recordName,\nvalue: @local.recordValue,\nquantity:@local.recordQuantity",
           "_translations": {
             "value": {}
           },
           "parameter_list": {
-            "data_list": "test_update_data"
+            "data_list": "test_update_data",
+            "value_type": "script"
           },
           "_nested_name": "insertAction.insertRow",
           "_dynamicFields": {
             "value": [
               {
-                "fullExpression": "id: '@local.recordId',\nname:'@local.recordName',\nvalue: '@local.recordValue',\nquantity:@local.recordQuantity",
+                "fullExpression": "id: @local.recordId,\nname:@local.recordName,\nvalue: @local.recordValue,\nquantity:@local.recordQuantity",
                 "matchedExpression": "@local.recordId",
                 "type": "local",
                 "fieldName": "recordId"
               },
               {
-                "fullExpression": "id: '@local.recordId',\nname:'@local.recordName',\nvalue: '@local.recordValue',\nquantity:@local.recordQuantity",
+                "fullExpression": "id: @local.recordId,\nname:@local.recordName,\nvalue: @local.recordValue,\nquantity:@local.recordQuantity",
                 "matchedExpression": "@local.recordName",
                 "type": "local",
                 "fieldName": "recordName"
               },
               {
-                "fullExpression": "id: '@local.recordId',\nname:'@local.recordName',\nvalue: '@local.recordValue',\nquantity:@local.recordQuantity",
+                "fullExpression": "id: @local.recordId,\nname:@local.recordName,\nvalue: @local.recordValue,\nquantity:@local.recordQuantity",
                 "matchedExpression": "@local.recordValue",
                 "type": "local",
                 "fieldName": "recordValue"
               },
               {
-                "fullExpression": "id: '@local.recordId',\nname:'@local.recordName',\nvalue: '@local.recordValue',\nquantity:@local.recordQuantity",
+                "fullExpression": "id: @local.recordId,\nname:@local.recordName,\nvalue: @local.recordValue,\nquantity:@local.recordQuantity",
                 "matchedExpression": "@local.recordQuantity",
                 "type": "local",
                 "fieldName": "recordQuantity"
@@ -261,7 +262,8 @@
             "value": {}
           },
           "parameter_list": {
-            "data_list": "test_update_data"
+            "data_list": "test_update_data",
+            "value_type": "script"
           },
           "_nested_name": "refreshAction.insertResults"
         }
@@ -273,7 +275,8 @@
       "name": "itemLoop",
       "value": "@local.refreshAction.insertResults",
       "parameter_list": {
-        "index": "id"
+        "index": "id",
+        "value_type": "script"
       },
       "rows": [
         {

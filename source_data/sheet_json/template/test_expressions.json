@@ -1,0 +1,55 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_expressions",
+  "status": "released",
+  "rows": [
+    {
+      "name": "stringVariable1",
+      "value": "My 1st String",
+      "comments": "default expresion_type: string"
+    },
+    {
+      "type": "text",
+      "value": "## this is \\${local.stringVariable1}",
+      "parameter_list": "value_type: string"
+    },
+    {
+      "type": "text",
+      "name": "expression1",
+      "value": "this is ${local.stringVariable1}",
+      "parameter_list": "value_type: string"
+    },
+    {
+      "name": "scriptVariable1",
+      "value": "\"My 2nd String\"",
+      "parameter_list": "value_type: script"
+    },
+    {
+      "type": "text",
+      "value": "## \"this is\" + local.scriptVariable1",
+      "parameter_list": "value_type: string"
+    },
+    {
+      "type": "text",
+      "name": "expression2",
+      "value": "\"this is \" + local.scriptVariable1",
+      "parameter_list": "value_type: script"
+    },
+    {
+      "name": "variable3",
+      "value": 4,
+      "parameter_list": "value_type: script"
+    },
+    {
+      "type": "text",
+      "value": "## there are + (local.variable3 + 1) + things",
+      "parameter_list": "value_type: string"
+    },
+    {
+      "type": "text",
+      "name": "expression3",
+      "value": "\"there are \" + (local.variable3 + 1) + \" things\"",
+      "parameter_list": "value_type: script"
+    }
+  ]
+}
