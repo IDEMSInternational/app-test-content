@@ -1,0 +1,30 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_on_leave_nav_target",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "name": "targetTitle",
+      "value": "Default Title",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "targetTitle"
+    },
+    {
+      "type": "text",
+      "value": "Navigation successful",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/on_leave.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1Op_bnhqsuh-tf1Vmkg0ri65OxmT3VqC7sEvYax84GSA"
+  }
+}

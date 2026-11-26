@@ -30,7 +30,7 @@
     {
       "type": "query",
       "name": "dynamicQueriedData",
-      "value": "selector: {category: '@local.categoryDropdown'},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+      "value": "selector: {category: @local.categoryDropdown},\nsort: [ {name: 'desc'} ],\nlimit: 3",
       "parameter_list": "data_list: test_data"
     },
     {
@@ -40,7 +40,8 @@
     },
     {
       "name": "categoryOptions",
-      "value": "key: A | value: A; \nkey: B | value: B;  "
+      "value": "key: A | value: A; \nkey: B | value: B;  ",
+      "parameter_list": "value_type: list"
     },
     {
       "type": "dropdown",
@@ -59,7 +60,8 @@
     },
     {
       "name": "dataListOptions",
-      "value": "key: test_data | value: test_data; \nkey: test_data_alt | value: test_data_alt;  "
+      "value": "key: test_data | value: test_data; \nkey: test_data_alt | value: test_data_alt;  ",
+      "parameter_list": "value_type: list"
     },
     {
       "type": "dropdown",
@@ -81,6 +83,31 @@
       "type": "text",
       "name": "dynamicListQueriedOption",
       "value": "@local.dynamicListQueriedDataDropdown"
+    },
+    {
+      "type": "title",
+      "value": "Dynamic String Query"
+    },
+    {
+      "type": "query",
+      "name": "dynamicStringQueriedData",
+      "value": "selector: {category: ${local.categoryDropdown}},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+      "parameter_list": "data_list: test_data;\nvalue_type: string"
+    },
+    {
+      "type": "dropdown",
+      "name": "dynamicStringQueriedDataDropdown",
+      "parameter_list": "options: @local.dynamicQueriedData;\noptions_key: id;\noptions_value: name;"
+    },
+    {
+      "name": "categoryOptions",
+      "value": "key: A | value: A; \nkey: B | value: B;  ",
+      "parameter_list": "value_type: list"
+    },
+    {
+      "type": "text",
+      "name": "dynamicStringQueriedOption",
+      "value": "@local.dynamicStringQueriedDataDropdown"
     }
   ]
 }

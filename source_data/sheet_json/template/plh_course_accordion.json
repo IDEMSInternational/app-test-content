@@ -1,0 +1,169 @@
+{
+  "flow_type": "template",
+  "flow_name": "plh_course_accordion",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Course accordion"
+    },
+    {
+      "type": "text",
+      "value": "## Basic"
+    },
+    {
+      "type": "begin_plh_course_accordion",
+      "name": "basic_course",
+      "value": "Course 1",
+      "parameter_list": "sub_items_name: lessons;"
+    },
+    {
+      "type": "plh_course_sub_item",
+      "name": "lesson_1",
+      "value": "Lesson 1",
+      "parameter_list": "completed: true;",
+      "action_list": "click | set_local: clicked_lesson: Lesson 1"
+    },
+    {
+      "type": "plh_course_sub_item",
+      "name": "lesson_2",
+      "value": "Lesson 2",
+      "parameter_list": "highlighted: true;",
+      "action_list": "click | set_local: clicked_lesson: Lesson 2"
+    },
+    {
+      "type": "plh_course_sub_item",
+      "name": "lesson_3",
+      "value": "Lesson 3",
+      "parameter_list": "locked: true;",
+      "action_list": "click | set_local: clicked_lesson: Lesson 3"
+    },
+    {
+      "type": "end_plh_course_accordion"
+    },
+    {
+      "type": "text",
+      "name": "clicked_lesson",
+      "value": "No lesson clicked"
+    },
+    {
+      "type": "text",
+      "value": "## Open"
+    },
+    {
+      "type": "begin_plh_course_accordion",
+      "name": "open_course",
+      "value": "Course 2",
+      "parameter_list": "open: true; sub_items_name: lessons;"
+    },
+    {
+      "type": "plh_course_sub_item",
+      "name": "open_lesson_1",
+      "value": "Lesson 1"
+    },
+    {
+      "type": "end_plh_course_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## Locked"
+    },
+    {
+      "type": "begin_plh_course_accordion",
+      "name": "locked_course",
+      "value": "Course 3",
+      "parameter_list": "locked: true; sub_items_name: lessons;"
+    },
+    {
+      "type": "plh_course_sub_item",
+      "name": "locked_lesson_1",
+      "value": "Lesson 1"
+    },
+    {
+      "type": "end_plh_course_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## Completed"
+    },
+    {
+      "type": "begin_plh_course_accordion",
+      "name": "completed_course",
+      "value": "Course 4",
+      "parameter_list": "completed: true; open: true; sub_items_name: lessons;"
+    },
+    {
+      "type": "plh_course_sub_item",
+      "name": "completed_lesson_1",
+      "value": "Lesson 1",
+      "parameter_list": "completed: true; completed_text: Done;"
+    },
+    {
+      "type": "end_plh_course_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## Dynamic open"
+    },
+    {
+      "type": "set_variable",
+      "name": "open_toggle",
+      "value": false,
+      "parameter_list": "value_type: script;"
+    },
+    {
+      "type": "button",
+      "name": "open_button",
+      "value": "Toggle open",
+      "action_list": "click | set_local: open_toggle: !@local.open_toggle"
+    },
+    {
+      "type": "begin_plh_course_accordion",
+      "name": "dynamic_course",
+      "value": "Course 5",
+      "parameter_list": "open: @local.open_toggle; sub_items_name: lessons;"
+    },
+    {
+      "type": "plh_course_sub_item",
+      "name": "dynamic_lesson_1",
+      "value": "Lesson 1"
+    },
+    {
+      "type": "end_plh_course_accordion"
+    },
+    {
+      "type": "text",
+      "value": "## With a loop"
+    },
+    {
+      "type": "set_variable",
+      "name": "lessons",
+      "value": "key: lesson_1 | title: Lesson 1 | completed: true; key: lesson_2 | title: Lesson 2 | completed: true; key: lesson_3 | title: Lesson 3 | highlighted: true; key: lesson_4 | title: Lesson 4 | locked: true;",
+      "parameter_list": "value_type: list;"
+    },
+    {
+      "type": "begin_plh_course_accordion",
+      "name": "loop_course",
+      "value": "Course 6",
+      "parameter_list": "open: true; sub_items_name: lessons;"
+    },
+    {
+      "type": "begin_loop",
+      "name": "lesson_loop",
+      "value": "local.lessons",
+      "parameter_list": "index: key;"
+    },
+    {
+      "type": "plh_course_sub_item",
+      "name": "lesson",
+      "value": "@item.title",
+      "parameter_list": "completed: @item.completed; highlighted: @item.highlighted; locked: @item.locked;"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "end_plh_course_accordion"
+    }
+  ]
+}

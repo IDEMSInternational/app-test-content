@@ -13,11 +13,13 @@
     },
     {
       "name": "defaultOptions",
-      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;"
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "parameter_list": "value_type: list;"
     },
     {
       "name": "dynamicOptions",
-      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: @local.dynamicDropdownValue;"
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: @local.dynamicDropdownValue;",
+      "parameter_list": "value_type: list;"
     },
     {
       "type": "text",
@@ -91,7 +93,7 @@
       "type": "dropdown",
       "name": "searchTitleDropdown",
       "value": "@local.searchDropdownValue",
-      "action_list": "changed | set_local:searchDropdownValue: @local.searchDropdown;",
+      "action_list": "changed | set_local:searchDropdownValue: @local.searchTitleDropdown;",
       "parameter_list": "options: @local.defaultOptions;\noptions_key: key;\noptions_value: value;\nshow_search: true;\ntitle: This is the title;"
     },
     {

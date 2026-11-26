@@ -1,0 +1,53 @@
+{
+  "flow_type": "template",
+  "flow_name": "clash_menu",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Paging Nested Templates"
+    },
+    {
+      "type": "set_variable",
+      "name": "pagesData",
+      "value": "[{key: \"id_1\", name: \"Item 1\"}, \n{key: \"id_2\", name: \"Item 2\"},  \n{key: \"id_3\", name: \"Item 3\"}]",
+      "parameter_list": "value_type: script;"
+    },
+    {
+      "type": "begin_loop",
+      "name": "pagesLoop",
+      "value": "local.pagesData"
+    },
+    {
+      "type": "button",
+      "value": "@item.name",
+      "action_list": "click | action: navigate"
+    },
+    {
+      "type": "begin_action",
+      "name": "navigate"
+    },
+    {
+      "type": "begin_nav",
+      "name": "goToTargetNav",
+      "value": "clash_paging"
+    },
+    {
+      "name": "id",
+      "value": "@item.key"
+    },
+    {
+      "name": "name",
+      "value": "@item.name"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "end_loop"
+    }
+  ]
+}

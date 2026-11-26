@@ -1,0 +1,155 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_on_leave",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Nav",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "button",
+      "name": "navButton",
+      "value": "Go to target",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.goToTargetAction"
+          ],
+          "_raw": "click | action: @local.goToTargetAction"
+        }
+      ],
+      "_nested_name": "navButton",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.goToTargetAction",
+                  "matchedExpression": "@local.goToTargetAction",
+                  "type": "local",
+                  "fieldName": "goToTargetAction"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.goToTargetAction",
+                "matchedExpression": "@local.goToTargetAction",
+                "type": "local",
+                "fieldName": "goToTargetAction"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.goToTargetAction": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "name": "goToTargetAction",
+      "rows": [
+        {
+          "type": "nav",
+          "name": "goToTargetNav",
+          "value": "test_nav_target",
+          "rows": [
+            {
+              "name": "targetTitle",
+              "value": "New Title",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "goToTargetAction.goToTargetNav.targetTitle"
+            }
+          ],
+          "_nested_name": "goToTargetAction.goToTargetNav"
+        }
+      ],
+      "_nested_name": "goToTargetAction"
+    },
+    {
+      "type": "on_leave",
+      "rows": [
+        {
+          "type": "popup",
+          "name": "inlinePopup",
+          "rows": [
+            {
+              "type": "text",
+              "value": "Are you sure that you want to leave",
+              "_translations": {
+                "value": {}
+              },
+              "name": "text_1",
+              "_nested_name": "on_leave_6.inlinePopup.text_1"
+            },
+            {
+              "type": "button",
+              "name": "okButton1",
+              "value": "Yes",
+              "_translations": {
+                "value": {}
+              },
+              "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "emit",
+                  "args": [
+                    "completed"
+                  ],
+                  "_raw": "click | emit: completed"
+                }
+              ],
+              "_nested_name": "on_leave_6.inlinePopup.okButton1"
+            },
+            {
+              "type": "button",
+              "name": "cancel",
+              "value": "No",
+              "_translations": {
+                "value": {}
+              },
+              "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "emit",
+                  "args": [
+                    "cancelled"
+                  ],
+                  "_raw": "click | emit: cancelled"
+                }
+              ],
+              "_nested_name": "on_leave_6.inlinePopup.cancel"
+            }
+          ],
+          "_nested_name": "on_leave_6.inlinePopup"
+        }
+      ],
+      "name": "on_leave_6",
+      "_nested_name": "on_leave_6"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/on_leave.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1Op_bnhqsuh-tf1Vmkg0ri65OxmT3VqC7sEvYax84GSA"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_radio_list",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "value": "# Radio List",
+      "_translations": {
+        "value": {}
+      },
+      "name": "title_2",
+      "_nested_name": "title_2"
+    },
+    {
+      "name": "defaultValue",
+      "value": "key_1",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "defaultValue"
+    },
+    {
+      "name": "dynamicValue",
+      "value": "This is a dynamic value",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "dynamicValue"
+    },
+    {
+      "name": "defaultOptions",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: This is value 3;",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
+      },
+      "type": "set_variable",
+      "_nested_name": "defaultOptions"
+    },
+    {
+      "name": "dynamicOptions",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: local.dynamicValue;",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
+      },
+      "type": "set_variable",
+      "_nested_name": "dynamicOptions"
+    },
+    {
+      "type": "radio_list",
+      "name": "radioList1",
+      "value": "${local.defaultValue}",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "options": "local.defaultOptions",
+        "options_key": "key",
+        "options_value": "value"
+      },
+      "_nested_name": "radioList1"
+    },
+    {
+      "type": "text",
+      "name": "radioList1SelectedValue",
+      "value": "${local.radioList1}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "radioList1SelectedValue"
+    },
+    {
+      "type": "text",
+      "value": "## With dynamic option text",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_9",
+      "_nested_name": "text_9"
+    },
+    {
+      "type": "text_box",
+      "name": "newDynamicValue",
+      "value": "${local.dynamicValue}",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "changed",
+          "action_id": "set_local",
+          "args": [
+            "dynamicValue",
+            "this.value"
+          ],
+          "_raw": "changed | set_local:dynamicValue: @local.newDynamicValue"
+        }
+      ],
+      "_nested_name": "newDynamicValue",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "_raw": [
+              {
+                "fullExpression": "changed | set_local:dynamicValue: @local.newDynamicValue",
+                "matchedExpression": "@local.newDynamicValue",
+                "type": "local",
+                "fieldName": "newDynamicValue"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.newDynamicValue": [
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "radio_list",
+      "name": "radioList2",
+      "value": "${local.defaultValue}",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "options": "local.dynamicOptions",
+        "options_key": "key",
+        "options_value": "value"
+      },
+      "_nested_name": "radioList2"
+    },
+    {
+      "type": "text",
+      "name": "radioList2SelectedValue",
+      "value": "${local.radioList2}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "radioList2SelectedValue"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/radio-list.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1TACKnA_GL51sGG3gGINGkVGPDDcwO9sy8QjEjKOIy-c"
+  }
+}

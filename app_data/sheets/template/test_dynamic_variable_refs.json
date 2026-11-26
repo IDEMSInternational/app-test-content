@@ -1,0 +1,96 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_dynamic_variable_refs",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Dynamic Variable References",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "set_variable",
+      "name": "questions",
+      "value": "[{key: \"key_1\", value: \"Question 1\"}, \n{key: \"key_2\", value: \"Question 2\"},  \n{key: \"key_3\", value: \"Question 3\"}]",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
+      },
+      "_nested_name": "questions"
+    },
+    {
+      "type": "loop",
+      "name": "question_loop",
+      "value": "local.questions",
+      "parameter_list": {
+        "index": "key"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "name": "question",
+          "value": "${item.value}",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "question_loop.question"
+        },
+        {
+          "type": "text_box",
+          "name": "answer",
+          "parameter_list": {
+            "placeholder": "Answer"
+          },
+          "_nested_name": "question_loop.answer"
+        }
+      ],
+      "_nested_name": "question_loop"
+    },
+    {
+      "type": "loop",
+      "name": "answer_loop",
+      "value": "local.questions",
+      "parameter_list": {
+        "index": "key"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "name": "the_question",
+          "value": "local.question_loop[item.key].question",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "value_type": "script"
+          },
+          "_nested_name": "answer_loop.the_question"
+        },
+        {
+          "type": "text",
+          "name": "the_answer",
+          "value": "local.question_loop[item.key].answer",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "value_type": "script"
+          },
+          "_nested_name": "answer_loop.the_answer"
+        }
+      ],
+      "_nested_name": "answer_loop"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "scenarios/dynamic_variable_references.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1rKXgcQOPAVlZZIPjfcAxKB9AvTB4X4h_7jmery6Wndc"
+  }
+}

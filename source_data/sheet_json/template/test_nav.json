@@ -31,6 +31,95 @@
     },
     {
       "type": "end_action"
+    },
+    {
+      "type": "text",
+      "value": "# Dynamic Nav"
+    },
+    {
+      "type": "button",
+      "name": "dynamicNavButton",
+      "value": "Go to target",
+      "action_list": "click | action: @local.goToDynamicTargetAction"
+    },
+    {
+      "name": "navTarget",
+      "value": "test_nav_target"
+    },
+    {
+      "name": "navTitle",
+      "value": "Dynamic Title"
+    },
+    {
+      "type": "begin_action",
+      "name": "goToDynamicTargetAction"
+    },
+    {
+      "type": "begin_nav",
+      "name": "goToDynamicTargetNav",
+      "value": "@local.navTarget"
+    },
+    {
+      "name": "targetTitle",
+      "value": "@local.navTitle"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "text",
+      "value": "# Nested in a loop"
+    },
+    {
+      "name": "nestedNavTarget",
+      "value": "test_nav_target"
+    },
+    {
+      "type": "set_variable",
+      "name": "nestedListData",
+      "value": "key: key_1 | value: Nested Title 1; \nkey: key_2 | value: Nested Title 2;  \nkey: key_3 | value: Nested Title 3;",
+      "parameter_list": "value_type: list"
+    },
+    {
+      "type": "begin_loop",
+      "name": "nestedLoop",
+      "value": "local.nestedListData"
+    },
+    {
+      "type": "button",
+      "name": "nestedNavButton",
+      "value": "Go to target",
+      "action_list": "click | action: @local.goToNestedTargetAction"
+    },
+    {
+      "type": "text",
+      "name": "nestedNavTitle",
+      "value": "Title: ${item.value}"
+    },
+    {
+      "type": "begin_action",
+      "name": "goToNestedTargetAction"
+    },
+    {
+      "type": "begin_nav",
+      "name": "goToNestedTargetNav",
+      "value": "@local.nestedNavTarget"
+    },
+    {
+      "name": "targetTitle",
+      "value": "${item.value}"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "end_loop"
     }
   ]
 }

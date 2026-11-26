@@ -1,0 +1,166 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_display_group",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Display Groups"
+    },
+    {
+      "type": "text",
+      "value": "## Row"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "group1",
+      "parameter_list": "direction: row"
+    },
+    {
+      "type": "text",
+      "name": "group1text1",
+      "value": "Text A",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "text",
+      "name": "group1text2",
+      "value": "Text B",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "text",
+      "value": "## Row with equal columns"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "group2",
+      "parameter_list": "direction: row;\nchild_sizing: equal;"
+    },
+    {
+      "type": "text",
+      "name": "group2text1",
+      "value": "Text A",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "text",
+      "name": "group2text2",
+      "value": "Text B",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "text",
+      "value": "## Column"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "group3",
+      "parameter_list": "direction: column;"
+    },
+    {
+      "type": "text",
+      "name": "group3text1",
+      "value": "Text A",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "text",
+      "name": "group3text2",
+      "value": "Text B",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "text",
+      "value": "## Nested Column in a Row"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "group4",
+      "parameter_list": "direction: row;\ngap: 16px;\nalign: center;\npadding: 1px;\njustify: space-around"
+    },
+    {
+      "type": "text",
+      "name": "group4text1",
+      "value": "Text A",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "group4Inner",
+      "parameter_list": "direction: column;\ngap: 16px;\nalign: center;\npadding: 1px;\njustify: space-around"
+    },
+    {
+      "type": "text",
+      "name": "group4text2",
+      "value": "Text B",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "text",
+      "name": "group4text3",
+      "value": "Text C",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "text",
+      "value": "## Nested Row in a Column"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "group5",
+      "parameter_list": "direction: column;\ngap: 16px;\nalign: center;\npadding: 1px;\njustify: space-around",
+      "style_list": "border: 1px solid black;\npadding: 12px;\nborder-radius: 4px;\nbackground-color: #888;"
+    },
+    {
+      "type": "text",
+      "name": "group5text1",
+      "value": "Text A",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "begin_display_group",
+      "name": "group5Inner",
+      "parameter_list": "direction: row;\ngap: 16px;\nalign: center;\npadding: 1px;\njustify: space-between"
+    },
+    {
+      "type": "text",
+      "name": "group5InnerText1",
+      "value": "Text B",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "text",
+      "name": "group5InnerText2",
+      "value": "Text C",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "end_display_group"
+    },
+    {
+      "type": "text",
+      "name": "group5text2",
+      "value": "Text D",
+      "style_list": "border: 1px solid black;\npadding: 0px 12px;\nborder-radius: 4px;"
+    },
+    {
+      "type": "end_display_group"
+    }
+  ]
+}

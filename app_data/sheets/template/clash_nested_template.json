@@ -1,0 +1,38 @@
+{
+  "flow_type": "template",
+  "flow_name": "clash_nested_template",
+  "status": "released",
+  "rows": [
+    {
+      "name": "page_details",
+      "parameter_list": {
+        "value_type": "script"
+      },
+      "type": "set_variable",
+      "_nested_name": "page_details"
+    },
+    {
+      "name": "display_text",
+      "value": "${local.page_details.value}",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "display_text"
+    },
+    {
+      "type": "text",
+      "name": "nestedTitle",
+      "value": "# Title: ${local.display_text}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "nestedTitle"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "scenarios/variable_store_name_clash.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/13N3L5NtBYX2zitDYzbRhj-eC4HybgBNLV_WGVJDTxBc"
+  }
+}

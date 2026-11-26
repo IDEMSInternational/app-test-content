@@ -1,0 +1,88 @@
+{
+  "flow_type": "template",
+  "flow_name": "paging_nested_templates",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Paging Nested Templates"
+    },
+    {
+      "type": "set_variable",
+      "name": "pagesData",
+      "value": "[{key: \"key_1\", value: \"This is value 1\"}, \n{key: \"key_2\", value: \"This is value 2\"},  \n{key: \"key_3\", value: \"This is value 3\"}]",
+      "parameter_list": "value_type: script;"
+    },
+    {
+      "type": "set_variable",
+      "name": "currentIndex",
+      "value": "key_1",
+      "parameter_list": "value_type: string;"
+    },
+    {
+      "type": "begin_loop",
+      "name": "pagesLoop",
+      "value": "local.pagesData"
+    },
+    {
+      "type": "begin_template",
+      "value": "nested_page_template",
+      "condition": "loop.index == local.currentIndex"
+    },
+    {
+      "name": "page_details",
+      "value": "loop.item",
+      "parameter_list": "value_type: script"
+    },
+    {
+      "type": "end_template"
+    },
+    {
+      "type": "end_loop"
+    },
+    {
+      "type": "set_variable",
+      "name": "currentIndex",
+      "value": 0,
+      "parameter_list": "value_type: script;"
+    },
+    {
+      "type": "button",
+      "name": "previousButton",
+      "value": "previous",
+      "action_list": "click | action: decrementIndex"
+    },
+    {
+      "type": "button",
+      "name": "nextButton",
+      "value": "next",
+      "action_list": "click | action: incrementIndex"
+    },
+    {
+      "type": "begin_action",
+      "name": "incrementIndex"
+    },
+    {
+      "type": "set_variable",
+      "name": "currentIndex",
+      "value": "local.currentIndex + 1",
+      "parameter_list": "value_type: script;"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "begin_action",
+      "name": "decrementIndex"
+    },
+    {
+      "type": "set_variable",
+      "name": "currentIndex",
+      "value": "local.currentIndex - 1",
+      "parameter_list": "value_type: script;"
+    },
+    {
+      "type": "end_action"
+    }
+  ]
+}

@@ -27,6 +27,9 @@
       "_translations": {
         "value": {}
       },
+      "parameter_list": {
+        "value_type": "list"
+      },
       "type": "set_variable",
       "_nested_name": "defaultOptions"
     },
@@ -35,6 +38,9 @@
       "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;  \nkey: key_3 | value: @local.dynamicDropdownValue;",
       "_translations": {
         "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
       },
       "type": "set_variable",
       "_nested_name": "dynamicOptions",
@@ -414,9 +420,9 @@
           "action_id": "set_local",
           "args": [
             "searchDropdownValue",
-            "@local.searchDropdown"
+            "this.value"
           ],
-          "_raw": "changed | set_local:searchDropdownValue: @local.searchDropdown"
+          "_raw": "changed | set_local:searchDropdownValue: @local.searchTitleDropdown"
         }
       ],
       "parameter_list": {
@@ -438,22 +444,12 @@
         ],
         "action_list": {
           "0": {
-            "args": {
-              "1": [
-                {
-                  "fullExpression": "@local.searchDropdown",
-                  "matchedExpression": "@local.searchDropdown",
-                  "type": "local",
-                  "fieldName": "searchDropdown"
-                }
-              ]
-            },
             "_raw": [
               {
-                "fullExpression": "changed | set_local:searchDropdownValue: @local.searchDropdown",
-                "matchedExpression": "@local.searchDropdown",
+                "fullExpression": "changed | set_local:searchDropdownValue: @local.searchTitleDropdown",
+                "matchedExpression": "@local.searchTitleDropdown",
                 "type": "local",
-                "fieldName": "searchDropdown"
+                "fieldName": "searchTitleDropdown"
               }
             ]
           }
@@ -473,8 +469,7 @@
         "@local.searchDropdownValue": [
           "value"
         ],
-        "@local.searchDropdown": [
-          "action_list.0.args.1",
+        "@local.searchTitleDropdown": [
           "action_list.0._raw"
         ],
         "@local.defaultOptions": [

@@ -1,0 +1,30 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_popup_content",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Popup content template"
+    },
+    {
+      "type": "text",
+      "value": "* This content is from a template\n* This is some markdown\n* These are bullet points"
+    },
+    {
+      "type": "text",
+      "value": "## Parameters"
+    },
+    {
+      "type": "text",
+      "name": "parameter1",
+      "value": "Default Template Value"
+    },
+    {
+      "type": "button",
+      "name": "okButton",
+      "value": "OK",
+      "action_list": "click | emit: completed;"
+    }
+  ]
+}

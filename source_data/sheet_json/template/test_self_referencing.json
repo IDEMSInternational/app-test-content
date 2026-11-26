@@ -1,0 +1,19 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_self_referencing",
+  "status": "released",
+  "rows": [
+    {
+      "name": "variable1",
+      "value": "Original Value"
+    },
+    {
+      "name": "variable1",
+      "value": "${local.variable1} plus this"
+    },
+    {
+      "type": "text",
+      "value": "${local.variable1}"
+    }
+  ]
+}

@@ -97,36 +97,37 @@
         {
           "type": "update",
           "name": "insertRow",
-          "value": "id: '@local.recordId',\nname:'@local.recordName',\nvalue: '@local.recordValue',\nquantity:@local.recordQuantity",
+          "value": "id: @local.recordId,\nname:@local.recordName,\nvalue: @local.recordValue,\nquantity:@local.recordQuantity",
           "_translations": {
             "value": {}
           },
           "parameter_list": {
-            "data_list": "test_update_data"
+            "data_list": "test_update_data",
+            "value_type": "script"
           },
           "_nested_name": "insertAction.insertRow",
           "_dynamicFields": {
             "value": [
               {
-                "fullExpression": "id: '@local.recordId',\nname:'@local.recordName',\nvalue: '@local.recordValue',\nquantity:@local.recordQuantity",
+                "fullExpression": "id: @local.recordId,\nname:@local.recordName,\nvalue: @local.recordValue,\nquantity:@local.recordQuantity",
                 "matchedExpression": "@local.recordId",
                 "type": "local",
                 "fieldName": "recordId"
               },
               {
-                "fullExpression": "id: '@local.recordId',\nname:'@local.recordName',\nvalue: '@local.recordValue',\nquantity:@local.recordQuantity",
+                "fullExpression": "id: @local.recordId,\nname:@local.recordName,\nvalue: @local.recordValue,\nquantity:@local.recordQuantity",
                 "matchedExpression": "@local.recordName",
                 "type": "local",
                 "fieldName": "recordName"
               },
               {
-                "fullExpression": "id: '@local.recordId',\nname:'@local.recordName',\nvalue: '@local.recordValue',\nquantity:@local.recordQuantity",
+                "fullExpression": "id: @local.recordId,\nname:@local.recordName,\nvalue: @local.recordValue,\nquantity:@local.recordQuantity",
                 "matchedExpression": "@local.recordValue",
                 "type": "local",
                 "fieldName": "recordValue"
               },
               {
-                "fullExpression": "id: '@local.recordId',\nname:'@local.recordName',\nvalue: '@local.recordValue',\nquantity:@local.recordQuantity",
+                "fullExpression": "id: @local.recordId,\nname:@local.recordName,\nvalue: @local.recordValue,\nquantity:@local.recordQuantity",
                 "matchedExpression": "@local.recordQuantity",
                 "type": "local",
                 "fieldName": "recordQuantity"
@@ -150,6 +151,26 @@
         }
       ],
       "_nested_name": "insertAction"
+    },
+    {
+      "type": "action",
+      "name": "insertActionString",
+      "rows": [
+        {
+          "type": "update",
+          "name": "insertRowString",
+          "value": "id: \"${local.recordId}\",\nname: \"${local.recordName}\",\nvalue: \"${local.recordValue}\",\nquantity:${local.recordQuantity}",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "data_list": "test_update_data",
+            "value_type": "string"
+          },
+          "_nested_name": "insertActionString.insertRowString"
+        }
+      ],
+      "_nested_name": "insertActionString"
     },
     {
       "type": "button",
@@ -195,6 +216,55 @@
       },
       "_dynamicDependencies": {
         "@local.insertAction": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "name": "insertButtonString",
+      "value": "Add Record from string",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.insertActionString"
+          ],
+          "_raw": "click | action: @local.insertActionString"
+        }
+      ],
+      "_nested_name": "insertButtonString",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.insertActionString",
+                  "matchedExpression": "@local.insertActionString",
+                  "type": "local",
+                  "fieldName": "insertActionString"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.insertActionString",
+                "matchedExpression": "@local.insertActionString",
+                "type": "local",
+                "fieldName": "insertActionString"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.insertActionString": [
           "action_list.0.args.0",
           "action_list.0._raw"
         ]
@@ -261,7 +331,8 @@
             "value": {}
           },
           "parameter_list": {
-            "data_list": "test_update_data"
+            "data_list": "test_update_data",
+            "value_type": "script"
           },
           "_nested_name": "refreshAction.insertResults"
         }
@@ -273,7 +344,8 @@
       "name": "itemLoop",
       "value": "@local.refreshAction.insertResults",
       "parameter_list": {
-        "index": "id"
+        "index": "id",
+        "value_type": "script"
       },
       "rows": [
         {

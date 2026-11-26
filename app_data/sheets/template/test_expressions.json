@@ -1,0 +1,114 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_expressions",
+  "status": "released",
+  "rows": [
+    {
+      "name": "stringVariable1",
+      "value": "My 1st String",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "stringVariable1"
+    },
+    {
+      "type": "text",
+      "value": "## this is \\${local.stringVariable1}",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "string"
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "text",
+      "name": "expression1",
+      "value": "this is ${local.stringVariable1}",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "string"
+      },
+      "_nested_name": "expression1"
+    },
+    {
+      "name": "scriptVariable1",
+      "value": "\"My 2nd String\"",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "script"
+      },
+      "type": "set_variable",
+      "_nested_name": "scriptVariable1"
+    },
+    {
+      "type": "text",
+      "value": "## \"this is\" + local.scriptVariable1",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "string"
+      },
+      "name": "text_6",
+      "_nested_name": "text_6"
+    },
+    {
+      "type": "text",
+      "name": "expression2",
+      "value": "\"this is \" + local.scriptVariable1",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "script"
+      },
+      "_nested_name": "expression2"
+    },
+    {
+      "name": "variable3",
+      "value": 4,
+      "parameter_list": {
+        "value_type": "script"
+      },
+      "type": "set_variable",
+      "_nested_name": "variable3"
+    },
+    {
+      "type": "text",
+      "value": "## there are + (local.variable3 + 1) + things",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "string"
+      },
+      "name": "text_9",
+      "_nested_name": "text_9"
+    },
+    {
+      "type": "text",
+      "name": "expression3",
+      "value": "\"there are \" + (local.variable3 + 1) + \" things\"",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "script"
+      },
+      "_nested_name": "expression3"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "scenarios/expressions.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1k5Z_3KLp2aSVgsWgn3kOfAtF0gFAN3zeCkG3q9K523k"
+  }
+}
