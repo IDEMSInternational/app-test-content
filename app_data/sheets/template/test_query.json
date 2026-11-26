@@ -87,7 +87,7 @@
     {
       "type": "query",
       "name": "dynamicQueriedData",
-      "value": "selector: {category: '@local.categoryDropdown'},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+      "value": "selector: {category: @local.categoryDropdown},\nsort: [ {name: 'desc'} ],\nlimit: 3",
       "_translations": {
         "value": {}
       },
@@ -98,7 +98,7 @@
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "selector: {category: '@local.categoryDropdown'},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+            "fullExpression": "selector: {category: @local.categoryDropdown},\nsort: [ {name: 'desc'} ],\nlimit: 3",
             "matchedExpression": "@local.categoryDropdown",
             "type": "local",
             "fieldName": "categoryDropdown"
@@ -143,6 +143,9 @@
       "value": "key: A | value: A; \nkey: B | value: B;",
       "_translations": {
         "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
       },
       "type": "set_variable",
       "_nested_name": "categoryOptions"
@@ -216,6 +219,9 @@
       "value": "key: test_data | value: test_data; \nkey: test_data_alt | value: test_data_alt;",
       "_translations": {
         "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
       },
       "type": "set_variable",
       "_nested_name": "dataListOptions"
@@ -323,6 +329,91 @@
       },
       "_dynamicDependencies": {
         "@local.dynamicListQueriedDataDropdown": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "value": "Dynamic String Query",
+      "_translations": {
+        "value": {}
+      },
+      "name": "title_18",
+      "_nested_name": "title_18"
+    },
+    {
+      "type": "query",
+      "name": "dynamicStringQueriedData",
+      "value": "selector: {category: ${local.categoryDropdown}},\nsort: [ {name: 'desc'} ],\nlimit: 3",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "data_list": "test_data",
+        "value_type": "string"
+      },
+      "_nested_name": "dynamicStringQueriedData"
+    },
+    {
+      "type": "dropdown",
+      "name": "dynamicStringQueriedDataDropdown",
+      "parameter_list": {
+        "options": "@local.dynamicQueriedData",
+        "options_key": "id",
+        "options_value": "name"
+      },
+      "_nested_name": "dynamicStringQueriedDataDropdown",
+      "_dynamicFields": {
+        "parameter_list": {
+          "options": [
+            {
+              "fullExpression": "@local.dynamicQueriedData",
+              "matchedExpression": "@local.dynamicQueriedData",
+              "type": "local",
+              "fieldName": "dynamicQueriedData"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.dynamicQueriedData": [
+          "parameter_list.options"
+        ]
+      }
+    },
+    {
+      "name": "categoryOptions",
+      "value": "key: A | value: A; \nkey: B | value: B;",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
+      },
+      "type": "set_variable",
+      "_nested_name": "categoryOptions"
+    },
+    {
+      "type": "text",
+      "name": "dynamicStringQueriedOption",
+      "value": "@local.dynamicStringQueriedDataDropdown",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "dynamicStringQueriedOption",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.dynamicStringQueriedDataDropdown",
+            "matchedExpression": "@local.dynamicStringQueriedDataDropdown",
+            "type": "local",
+            "fieldName": "dynamicStringQueriedDataDropdown"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.dynamicStringQueriedDataDropdown": [
           "value"
         ]
       }

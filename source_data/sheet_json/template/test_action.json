@@ -16,7 +16,7 @@
       "type": "button",
       "name": "executeButton",
       "value": "Execute Action 1",
-      "action_list": "click | action: @local.action1"
+      "action_list": "click | action: action1"
     },
     {
       "type": "begin_action",
@@ -38,7 +38,7 @@
       "type": "button",
       "name": "executeButton2",
       "value": "Execute Action 2",
-      "action_list": "click | action: @local.action2"
+      "action_list": "click | action: action2"
     },
     {
       "type": "begin_action",
@@ -56,7 +56,7 @@
       "type": "button",
       "name": "executeButton3",
       "value": "Execute Action 1 From Action 3",
-      "action_list": "click | action: @local.action3"
+      "action_list": "click | action: action3"
     },
     {
       "type": "begin_action",
@@ -68,7 +68,8 @@
     },
     {
       "name": "clickCount",
-      "value": 0
+      "value": 0,
+      "parameter_list": "value_type: script"
     },
     {
       "type": "text",
@@ -79,7 +80,7 @@
       "type": "button",
       "name": "clickButton",
       "value": "Click Count ++",
-      "action_list": "click | action: @local.incrementClickCount"
+      "action_list": "click | action: incrementClickCount"
     },
     {
       "type": "begin_action",
@@ -88,7 +89,8 @@
     {
       "type": "set_variable",
       "name": "clickCount",
-      "value": "@local.clickCount + 1"
+      "value": "@local.clickCount + 1",
+      "parameter_list": "value_type: script"
     },
     {
       "type": "end_action"
@@ -105,13 +107,13 @@
       "type": "button",
       "name": "callExternalAction",
       "value": "Execute External Action",
-      "action_list": "click | action: @local.externalActions.action1"
+      "action_list": "click | action: externalActions.action1"
     },
     {
       "type": "button",
       "name": "callExternalActionWithParams",
       "value": "Execute External Action (with params)",
-      "action_list": "click | action: @local.action4"
+      "action_list": "click | action: action4"
     },
     {
       "type": "begin_action",
@@ -130,7 +132,7 @@
       "type": "button",
       "name": "callExternalActionWithParams2",
       "value": "Execute External Action (with params via sub action)",
-      "action_list": "click | action: @local.action5"
+      "action_list": "click | action: action5"
     },
     {
       "type": "begin_action",
@@ -151,6 +153,76 @@
     },
     {
       "type": "end_action"
+    },
+    {
+      "type": "text",
+      "value": "# Disabled Action"
+    },
+    {
+      "type": "text",
+      "name": "disabledActionExecuted",
+      "value": "Disabled Action Not Executed"
+    },
+    {
+      "type": "button",
+      "name": "disabledActionExecuteButton",
+      "value": "Execute Disabled Action",
+      "action_list": "click | action: disabledAction"
+    },
+    {
+      "type": "begin_action",
+      "name": "disabledAction",
+      "condition": false
+    },
+    {
+      "type": "set_variable",
+      "name": "disabledActionExecuted",
+      "value": "Disabled Action Executed"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "text",
+      "value": "# Namespaced Action"
+    },
+    {
+      "type": "set_variable",
+      "name": "loopData",
+      "value": "key: key_1 | value: This is value 1; \nkey: key_2 | value: This is value 2;",
+      "parameter_list": "value_type: list"
+    },
+    {
+      "type": "begin_loop",
+      "name": "actionLoop",
+      "value": "local.loopData",
+      "parameter_list": "index: key"
+    },
+    {
+      "type": "text",
+      "name": "namespacedActionExecuted",
+      "value": "Namespaced Action Not Executed"
+    },
+    {
+      "type": "button",
+      "name": "namespacedExecuteButton",
+      "value": "Execute Namespaced Action",
+      "action_list": "click | action: namespacedAction"
+    },
+    {
+      "type": "begin_action",
+      "name": "namespacedAction"
+    },
+    {
+      "type": "set_variable",
+      "name": "namespacedActionExecuted",
+      "value": "Namespaced Action Executed"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "end_loop"
     }
   ]
 }

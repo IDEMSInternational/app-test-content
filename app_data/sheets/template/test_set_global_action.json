@@ -16,6 +16,9 @@
       "type": "set_global",
       "name": "var_1",
       "value": 0,
+      "parameter_list": {
+        "value_type": "script"
+      },
       "_nested_name": "var_1"
     },
     {
@@ -24,6 +27,9 @@
       "value": "@global.var_1 + 1",
       "_translations": {
         "value": {}
+      },
+      "parameter_list": {
+        "value_type": "script"
       },
       "_nested_name": "var_2",
       "_dynamicFields": {

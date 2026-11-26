@@ -84,6 +84,271 @@
         }
       ],
       "_nested_name": "goToTargetAction"
+    },
+    {
+      "type": "text",
+      "value": "# Dynamic Nav",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_6",
+      "_nested_name": "text_6"
+    },
+    {
+      "type": "button",
+      "name": "dynamicNavButton",
+      "value": "Go to target",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "@local.goToDynamicTargetAction"
+          ],
+          "_raw": "click | action: @local.goToDynamicTargetAction"
+        }
+      ],
+      "_nested_name": "dynamicNavButton",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "0": [
+                {
+                  "fullExpression": "@local.goToDynamicTargetAction",
+                  "matchedExpression": "@local.goToDynamicTargetAction",
+                  "type": "local",
+                  "fieldName": "goToDynamicTargetAction"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | action: @local.goToDynamicTargetAction",
+                "matchedExpression": "@local.goToDynamicTargetAction",
+                "type": "local",
+                "fieldName": "goToDynamicTargetAction"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.goToDynamicTargetAction": [
+          "action_list.0.args.0",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "name": "navTarget",
+      "value": "test_nav_target",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "navTarget"
+    },
+    {
+      "name": "navTitle",
+      "value": "Dynamic Title",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "navTitle"
+    },
+    {
+      "type": "action",
+      "name": "goToDynamicTargetAction",
+      "rows": [
+        {
+          "type": "nav",
+          "name": "goToDynamicTargetNav",
+          "value": "@local.navTarget",
+          "rows": [
+            {
+              "name": "targetTitle",
+              "value": "@local.navTitle",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "goToDynamicTargetAction.goToDynamicTargetNav.targetTitle",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.navTitle",
+                    "matchedExpression": "@local.navTitle",
+                    "type": "local",
+                    "fieldName": "navTitle"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.navTitle": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "goToDynamicTargetAction.goToDynamicTargetNav",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.navTarget",
+                "matchedExpression": "@local.navTarget",
+                "type": "local",
+                "fieldName": "navTarget"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.navTarget": [
+              "value"
+            ]
+          }
+        }
+      ],
+      "_nested_name": "goToDynamicTargetAction"
+    },
+    {
+      "type": "text",
+      "value": "# Nested in a loop",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_12",
+      "_nested_name": "text_12"
+    },
+    {
+      "name": "nestedNavTarget",
+      "value": "test_nav_target",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "nestedNavTarget"
+    },
+    {
+      "type": "set_variable",
+      "name": "nestedListData",
+      "value": "key: key_1 | value: Nested Title 1; \nkey: key_2 | value: Nested Title 2;  \nkey: key_3 | value: Nested Title 3;",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
+      },
+      "_nested_name": "nestedListData"
+    },
+    {
+      "type": "loop",
+      "name": "nestedLoop",
+      "value": "local.nestedListData",
+      "rows": [
+        {
+          "type": "button",
+          "name": "nestedNavButton",
+          "value": "Go to target",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "action",
+              "args": [
+                "@local.goToNestedTargetAction"
+              ],
+              "_raw": "click | action: @local.goToNestedTargetAction"
+            }
+          ],
+          "_nested_name": "nestedLoop.nestedNavButton",
+          "_dynamicFields": {
+            "action_list": {
+              "0": {
+                "args": {
+                  "0": [
+                    {
+                      "fullExpression": "@local.goToNestedTargetAction",
+                      "matchedExpression": "@local.goToNestedTargetAction",
+                      "type": "local",
+                      "fieldName": "goToNestedTargetAction"
+                    }
+                  ]
+                },
+                "_raw": [
+                  {
+                    "fullExpression": "click | action: @local.goToNestedTargetAction",
+                    "matchedExpression": "@local.goToNestedTargetAction",
+                    "type": "local",
+                    "fieldName": "goToNestedTargetAction"
+                  }
+                ]
+              }
+            }
+          },
+          "_dynamicDependencies": {
+            "@local.goToNestedTargetAction": [
+              "action_list.0.args.0",
+              "action_list.0._raw"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "nestedNavTitle",
+          "value": "Title: ${item.value}",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "nestedLoop.nestedNavTitle"
+        },
+        {
+          "type": "action",
+          "name": "goToNestedTargetAction",
+          "rows": [
+            {
+              "type": "nav",
+              "name": "goToNestedTargetNav",
+              "value": "@local.nestedNavTarget",
+              "rows": [
+                {
+                  "name": "targetTitle",
+                  "value": "${item.value}",
+                  "_translations": {
+                    "value": {}
+                  },
+                  "type": "set_variable",
+                  "_nested_name": "nestedLoop.goToNestedTargetAction.goToNestedTargetNav.targetTitle"
+                }
+              ],
+              "_nested_name": "nestedLoop.goToNestedTargetAction.goToNestedTargetNav",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@local.nestedNavTarget",
+                    "matchedExpression": "@local.nestedNavTarget",
+                    "type": "local",
+                    "fieldName": "nestedNavTarget"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@local.nestedNavTarget": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "nestedLoop.goToNestedTargetAction"
+        }
+      ],
+      "_nested_name": "nestedLoop"
     }
   ],
   "_source": {

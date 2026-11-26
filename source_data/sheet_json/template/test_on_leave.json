@@ -1,0 +1,65 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_on_leave",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Nav"
+    },
+    {
+      "type": "button",
+      "name": "navButton",
+      "value": "Go to target",
+      "action_list": "click | action: @local.goToTargetAction"
+    },
+    {
+      "type": "begin_action",
+      "name": "goToTargetAction"
+    },
+    {
+      "type": "begin_nav",
+      "name": "goToTargetNav",
+      "value": "test_nav_target"
+    },
+    {
+      "name": "targetTitle",
+      "value": "New Title"
+    },
+    {
+      "type": "end_nav"
+    },
+    {
+      "type": "end_action"
+    },
+    {
+      "type": "begin_on_leave"
+    },
+    {
+      "type": "begin_popup",
+      "name": "inlinePopup"
+    },
+    {
+      "type": "text",
+      "value": "Are you sure that you want to leave"
+    },
+    {
+      "type": "button",
+      "name": "okButton1",
+      "value": "Yes",
+      "action_list": "click | emit: completed;"
+    },
+    {
+      "type": "button",
+      "name": "cancel",
+      "value": "No",
+      "action_list": "click | emit: cancelled;"
+    },
+    {
+      "type": "end_popup"
+    },
+    {
+      "type": "end_on_leave"
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_expression_builder",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Expression Builder",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "set_variable",
+      "name": "listData",
+      "value": "[{key: \"key_1\", value: \"This is value 1\"}, \n{key: \"key_2\", value: \"This is value 2\"},  \n{key: \"key_3\", value: \"This is value 3\"}]",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "script"
+      },
+      "_nested_name": "listData"
+    },
+    {
+      "type": "text",
+      "value": "## String Concat",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_4",
+      "_nested_name": "text_4"
+    },
+    {
+      "type": "expression_builder",
+      "name": "builder1",
+      "value": "index: ${loop.index} value:${item.value} <br>",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "loop": "@local.listData",
+        "initial_value": "\"\""
+      },
+      "_nested_name": "builder1",
+      "_dynamicFields": {
+        "parameter_list": {
+          "loop": [
+            {
+              "fullExpression": "@local.listData",
+              "matchedExpression": "@local.listData",
+              "type": "local",
+              "fieldName": "listData"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.listData": [
+          "parameter_list.loop"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "builderText",
+      "value": "${local.builder1}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "builderText"
+    },
+    {
+      "type": "text",
+      "value": "## Add",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_7",
+      "_nested_name": "text_7"
+    },
+    {
+      "type": "expression_builder",
+      "name": "builder2",
+      "value": 1,
+      "parameter_list": {
+        "loop": "@local.listData",
+        "initial_value": "0",
+        "value_type": "script"
+      },
+      "_nested_name": "builder2",
+      "_dynamicFields": {
+        "parameter_list": {
+          "loop": [
+            {
+              "fullExpression": "@local.listData",
+              "matchedExpression": "@local.listData",
+              "type": "local",
+              "fieldName": "listData"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.listData": [
+          "parameter_list.loop"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "builder2Text",
+      "value": "${local.builder2}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "builder2Text"
+    },
+    {
+      "type": "text",
+      "value": "## Subtract",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_10",
+      "_nested_name": "text_10"
+    },
+    {
+      "type": "expression_builder",
+      "name": "builder3",
+      "value": 1,
+      "parameter_list": {
+        "loop": "@local.listData",
+        "initial_value": "10",
+        "value_type": "script",
+        "operator": "-"
+      },
+      "_nested_name": "builder3",
+      "_dynamicFields": {
+        "parameter_list": {
+          "loop": [
+            {
+              "fullExpression": "@local.listData",
+              "matchedExpression": "@local.listData",
+              "type": "local",
+              "fieldName": "listData"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.listData": [
+          "parameter_list.loop"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "builder3Text",
+      "value": "${local.builder3}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "builder3Text"
+    },
+    {
+      "type": "text",
+      "value": "## Multiply",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_13",
+      "_nested_name": "text_13"
+    },
+    {
+      "type": "expression_builder",
+      "name": "builder4",
+      "value": "loop.index + 1",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "loop": "@local.listData",
+        "initial_value": "1",
+        "value_type": "script",
+        "operator": "*"
+      },
+      "_nested_name": "builder4",
+      "_dynamicFields": {
+        "parameter_list": {
+          "loop": [
+            {
+              "fullExpression": "@local.listData",
+              "matchedExpression": "@local.listData",
+              "type": "local",
+              "fieldName": "listData"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.listData": [
+          "parameter_list.loop"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "builder4Text",
+      "value": "${local.builder4}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "builder4Text"
+    },
+    {
+      "type": "text",
+      "value": "## Divide",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_16",
+      "_nested_name": "text_16"
+    },
+    {
+      "type": "expression_builder",
+      "name": "builder5",
+      "value": "loop.index + 1",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "loop": "@local.listData",
+        "initial_value": "60",
+        "value_type": "script",
+        "operator": "/"
+      },
+      "_nested_name": "builder5",
+      "_dynamicFields": {
+        "parameter_list": {
+          "loop": [
+            {
+              "fullExpression": "@local.listData",
+              "matchedExpression": "@local.listData",
+              "type": "local",
+              "fieldName": "listData"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.listData": [
+          "parameter_list.loop"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "builder5Text",
+      "value": "${local.builder5}",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "builder5Text"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/expression_builder.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1my8Qzw3ZcNQRG2BfAOe5EMR2RqZ7YZH2TlboakoByQU"
+  }
+}

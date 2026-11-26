@@ -1,0 +1,39 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_self_referencing",
+  "status": "released",
+  "rows": [
+    {
+      "name": "variable1",
+      "value": "Original Value",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "variable1"
+    },
+    {
+      "name": "variable1",
+      "value": "${local.variable1} plus this",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "variable1"
+    },
+    {
+      "type": "text",
+      "value": "${local.variable1}",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_4",
+      "_nested_name": "text_4"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "scenarios/self-referencing.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/10RH9UtZXanhuTPJ7nHRIG8UHKV6q-cPc9H6twFGo5dE"
+  }
+}

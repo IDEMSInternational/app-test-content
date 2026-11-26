@@ -1,0 +1,67 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_popup_content",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Popup content template",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text",
+      "value": "* This content is from a template\n* This is some markdown\n* These are bullet points",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "text",
+      "value": "## Parameters",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_4",
+      "_nested_name": "text_4"
+    },
+    {
+      "type": "text",
+      "name": "parameter1",
+      "value": "Default Template Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "parameter1"
+    },
+    {
+      "type": "button",
+      "name": "okButton",
+      "value": "OK",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "emit",
+          "args": [
+            "completed"
+          ],
+          "_raw": "click | emit: completed"
+        }
+      ],
+      "_nested_name": "okButton"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/popup.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1Umq42m3Wm7QYRaDTrMWf-SJ-mmLqQQS7Zz3TfS2InH8"
+  }
+}

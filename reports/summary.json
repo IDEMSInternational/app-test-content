@@ -2,12 +2,20 @@
   "template_components": {
     "data": [
       {
+        "type": "accordion",
+        "count": 8
+      },
+      {
+        "type": "accordion_section",
+        "count": 13
+      },
+      {
         "type": "action",
-        "count": 16
+        "count": 30
       },
       {
         "type": "button",
-        "count": 28
+        "count": 50
       },
       {
         "type": "debug_toggle",
@@ -15,11 +23,15 @@
       },
       {
         "type": "display_group",
-        "count": 1
+        "count": 7
       },
       {
         "type": "dropdown",
-        "count": 12
+        "count": 13
+      },
+      {
+        "type": "expression_builder",
+        "count": 5
       },
       {
         "type": "go_to",
@@ -27,19 +39,39 @@
       },
       {
         "type": "loop",
-        "count": 12
+        "count": 24
       },
       {
         "type": "nav",
-        "count": 4
+        "count": 9
+      },
+      {
+        "type": "on_leave",
+        "count": 1
+      },
+      {
+        "type": "plh_course_accordion",
+        "count": 6
+      },
+      {
+        "type": "plh_course_sub_item",
+        "count": 8
       },
       {
         "type": "pop_up",
         "count": 1
       },
       {
-        "type": "query",
+        "type": "popup",
         "count": 5
+      },
+      {
+        "type": "query",
+        "count": 6
+      },
+      {
+        "type": "radio_list",
+        "count": 2
       },
       {
         "type": "render_template",
@@ -51,23 +83,23 @@
       },
       {
         "type": "set_variable",
-        "count": 42
+        "count": 96
       },
       {
         "type": "template",
-        "count": 4
+        "count": 6
       },
       {
         "type": "text",
-        "count": 125
+        "count": 231
       },
       {
         "type": "text_box",
-        "count": 18
+        "count": 21
       },
       {
         "type": "title",
-        "count": 10
+        "count": 13
       },
       {
         "type": "toggle_bar",
@@ -75,7 +107,7 @@
       },
       {
         "type": "update",
-        "count": 1
+        "count": 2
       }
     ]
   },
@@ -83,7 +115,15 @@
     "data": [
       {
         "type": "action",
-        "count": 11
+        "count": 29
+      },
+      {
+        "type": "emit: cancelled",
+        "count": 1
+      },
+      {
+        "type": "emit: completed",
+        "count": 4
       },
       {
         "type": "go_to",
@@ -99,7 +139,7 @@
       },
       {
         "type": "set_local",
-        "count": 11
+        "count": 14
       }
     ]
   },
@@ -141,7 +181,7 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 26
+        "total": 45
       }
     ]
   }

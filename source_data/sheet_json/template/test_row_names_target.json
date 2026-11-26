@@ -1,0 +1,12 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_row_names_target",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "name": "mainTitle",
+      "value": "# Target Title"
+    }
+  ]
+}

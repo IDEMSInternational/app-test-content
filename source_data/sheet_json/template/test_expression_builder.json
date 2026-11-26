@@ -1,0 +1,92 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_expression_builder",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Expression Builder"
+    },
+    {
+      "type": "set_variable",
+      "name": "listData",
+      "value": "[{key: \"key_1\", value: \"This is value 1\"}, \n{key: \"key_2\", value: \"This is value 2\"},  \n{key: \"key_3\", value: \"This is value 3\"}]",
+      "parameter_list": "value_type: script"
+    },
+    {
+      "type": "text",
+      "value": "## String Concat"
+    },
+    {
+      "type": "expression_builder",
+      "name": "builder1",
+      "value": "index: ${loop.index} value:${item.value} <br>",
+      "parameter_list": "loop: @local.listData;\ninitial_value: \"\""
+    },
+    {
+      "type": "text",
+      "name": "builderText",
+      "value": "${local.builder1}"
+    },
+    {
+      "type": "text",
+      "value": "## Add"
+    },
+    {
+      "type": "expression_builder",
+      "name": "builder2",
+      "value": 1,
+      "parameter_list": "loop: @local.listData;\ninitial_value: 0;\nvalue_type: script;"
+    },
+    {
+      "type": "text",
+      "name": "builder2Text",
+      "value": "${local.builder2}"
+    },
+    {
+      "type": "text",
+      "value": "## Subtract"
+    },
+    {
+      "type": "expression_builder",
+      "name": "builder3",
+      "value": 1,
+      "parameter_list": "loop: @local.listData;\ninitial_value: 10;\nvalue_type: script;\noperator: -;"
+    },
+    {
+      "type": "text",
+      "name": "builder3Text",
+      "value": "${local.builder3}"
+    },
+    {
+      "type": "text",
+      "value": "## Multiply"
+    },
+    {
+      "type": "expression_builder",
+      "name": "builder4",
+      "value": "loop.index + 1",
+      "parameter_list": "loop: @local.listData;\ninitial_value: 1;\nvalue_type: script;\noperator: *;"
+    },
+    {
+      "type": "text",
+      "name": "builder4Text",
+      "value": "${local.builder4}"
+    },
+    {
+      "type": "text",
+      "value": "## Divide"
+    },
+    {
+      "type": "expression_builder",
+      "name": "builder5",
+      "value": "loop.index + 1",
+      "parameter_list": "loop: @local.listData;\ninitial_value: 60;\nvalue_type: script;\noperator: /;"
+    },
+    {
+      "type": "text",
+      "name": "builder5Text",
+      "value": "${local.builder5}"
+    }
+  ]
+}

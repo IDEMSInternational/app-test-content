@@ -1,0 +1,186 @@
+{
+  "flow_type": "template",
+  "flow_name": "clash_paging",
+  "status": "released",
+  "rows": [
+    {
+      "name": "id",
+      "value": "default_id",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "id"
+    },
+    {
+      "name": "name",
+      "value": "default_name",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "name"
+    },
+    {
+      "type": "text",
+      "value": "# Clash Paging",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_4",
+      "_nested_name": "text_4"
+    },
+    {
+      "type": "text",
+      "value": "id :${local.id}, name: ${local.name}",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_5",
+      "_nested_name": "text_5"
+    },
+    {
+      "type": "set_variable",
+      "name": "pagesData",
+      "value": "[{key: \"key_1\", value: \"This is value 1\"}, \n{key: \"key_2\", value: \"This is value 2\"},  \n{key: \"key_3\", value: \"This is value 3\"}]",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "script"
+      },
+      "_nested_name": "pagesData"
+    },
+    {
+      "type": "set_variable",
+      "name": "currentIndex",
+      "value": "key_1",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "string"
+      },
+      "_nested_name": "currentIndex"
+    },
+    {
+      "type": "loop",
+      "name": "pagesLoop",
+      "value": "local.pagesData",
+      "rows": [
+        {
+          "type": "template",
+          "value": "nested_page_template",
+          "condition": "loop.index == local.currentIndex",
+          "rows": [
+            {
+              "name": "page_details",
+              "value": "loop.item",
+              "_translations": {
+                "value": {}
+              },
+              "parameter_list": {
+                "value_type": "script"
+              },
+              "type": "set_variable",
+              "_nested_name": "pagesLoop.nested_page_template.page_details"
+            }
+          ],
+          "name": "nested_page_template",
+          "_nested_name": "pagesLoop.nested_page_template"
+        }
+      ],
+      "_nested_name": "pagesLoop"
+    },
+    {
+      "type": "set_variable",
+      "name": "currentIndex",
+      "value": 0,
+      "parameter_list": {
+        "value_type": "script"
+      },
+      "_nested_name": "currentIndex"
+    },
+    {
+      "type": "button",
+      "name": "previousButton",
+      "value": "previous",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "decrementIndex"
+          ],
+          "_raw": "click | action: decrementIndex"
+        }
+      ],
+      "_nested_name": "previousButton"
+    },
+    {
+      "type": "button",
+      "name": "nextButton",
+      "value": "next",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "incrementIndex"
+          ],
+          "_raw": "click | action: incrementIndex"
+        }
+      ],
+      "_nested_name": "nextButton"
+    },
+    {
+      "type": "action",
+      "name": "incrementIndex",
+      "rows": [
+        {
+          "type": "set_variable",
+          "name": "currentIndex",
+          "value": "local.currentIndex + 1",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "value_type": "script"
+          },
+          "_nested_name": "incrementIndex.currentIndex"
+        }
+      ],
+      "_nested_name": "incrementIndex"
+    },
+    {
+      "type": "action",
+      "name": "decrementIndex",
+      "rows": [
+        {
+          "type": "set_variable",
+          "name": "currentIndex",
+          "value": "local.currentIndex - 1",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "value_type": "script"
+          },
+          "_nested_name": "decrementIndex.currentIndex"
+        }
+      ],
+      "_nested_name": "decrementIndex"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "scenarios/variable_store_name_clash.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/13N3L5NtBYX2zitDYzbRhj-eC4HybgBNLV_WGVJDTxBc"
+  }
+}

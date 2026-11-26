@@ -1,0 +1,428 @@
+{
+  "flow_type": "template",
+  "flow_name": "plh_course_accordion",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Course accordion",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text",
+      "value": "## Basic",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_3",
+      "_nested_name": "text_3"
+    },
+    {
+      "type": "plh_course_accordion",
+      "name": "basic_course",
+      "value": "Course 1",
+      "parameter_list": {
+        "sub_items_name": "lessons"
+      },
+      "rows": [
+        {
+          "type": "plh_course_sub_item",
+          "name": "lesson_1",
+          "value": "Lesson 1",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "completed": "true"
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_local",
+              "args": [
+                "clicked_lesson",
+                "Lesson 1"
+              ],
+              "_raw": "click | set_local: clicked_lesson: Lesson 1"
+            }
+          ],
+          "_nested_name": "basic_course.lesson_1"
+        },
+        {
+          "type": "plh_course_sub_item",
+          "name": "lesson_2",
+          "value": "Lesson 2",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "highlighted": "true"
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_local",
+              "args": [
+                "clicked_lesson",
+                "Lesson 2"
+              ],
+              "_raw": "click | set_local: clicked_lesson: Lesson 2"
+            }
+          ],
+          "_nested_name": "basic_course.lesson_2"
+        },
+        {
+          "type": "plh_course_sub_item",
+          "name": "lesson_3",
+          "value": "Lesson 3",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "locked": "true"
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "set_local",
+              "args": [
+                "clicked_lesson",
+                "Lesson 3"
+              ],
+              "_raw": "click | set_local: clicked_lesson: Lesson 3"
+            }
+          ],
+          "_nested_name": "basic_course.lesson_3"
+        }
+      ],
+      "_nested_name": "basic_course"
+    },
+    {
+      "type": "text",
+      "name": "clicked_lesson",
+      "value": "No lesson clicked",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "clicked_lesson"
+    },
+    {
+      "type": "text",
+      "value": "## Open",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_7",
+      "_nested_name": "text_7"
+    },
+    {
+      "type": "plh_course_accordion",
+      "name": "open_course",
+      "value": "Course 2",
+      "parameter_list": {
+        "open": "true",
+        "sub_items_name": "lessons"
+      },
+      "rows": [
+        {
+          "type": "plh_course_sub_item",
+          "name": "open_lesson_1",
+          "value": "Lesson 1",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "open_course.open_lesson_1"
+        }
+      ],
+      "_nested_name": "open_course"
+    },
+    {
+      "type": "text",
+      "value": "## Locked",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_10",
+      "_nested_name": "text_10"
+    },
+    {
+      "type": "plh_course_accordion",
+      "name": "locked_course",
+      "value": "Course 3",
+      "parameter_list": {
+        "locked": "true",
+        "sub_items_name": "lessons"
+      },
+      "rows": [
+        {
+          "type": "plh_course_sub_item",
+          "name": "locked_lesson_1",
+          "value": "Lesson 1",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "locked_course.locked_lesson_1"
+        }
+      ],
+      "_nested_name": "locked_course"
+    },
+    {
+      "type": "text",
+      "value": "## Completed",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_13",
+      "_nested_name": "text_13"
+    },
+    {
+      "type": "plh_course_accordion",
+      "name": "completed_course",
+      "value": "Course 4",
+      "parameter_list": {
+        "completed": "true",
+        "open": "true",
+        "sub_items_name": "lessons"
+      },
+      "rows": [
+        {
+          "type": "plh_course_sub_item",
+          "name": "completed_lesson_1",
+          "value": "Lesson 1",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "completed": "true",
+            "completed_text": "Done"
+          },
+          "_nested_name": "completed_course.completed_lesson_1"
+        }
+      ],
+      "_nested_name": "completed_course"
+    },
+    {
+      "type": "text",
+      "value": "## Dynamic open",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_16",
+      "_nested_name": "text_16"
+    },
+    {
+      "type": "set_variable",
+      "name": "open_toggle",
+      "value": false,
+      "parameter_list": {
+        "value_type": "script"
+      },
+      "_nested_name": "open_toggle"
+    },
+    {
+      "type": "button",
+      "name": "open_button",
+      "value": "Toggle open",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "set_local",
+          "args": [
+            "open_toggle",
+            "!@local.open_toggle"
+          ],
+          "_raw": "click | set_local: open_toggle: !@local.open_toggle"
+        }
+      ],
+      "_nested_name": "open_button",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "1": [
+                {
+                  "fullExpression": "!@local.open_toggle",
+                  "matchedExpression": "!@local.open_toggle",
+                  "type": "local",
+                  "fieldName": "open_toggle"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "click | set_local: open_toggle: !@local.open_toggle",
+                "matchedExpression": "!@local.open_toggle",
+                "type": "local",
+                "fieldName": "open_toggle"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "!@local.open_toggle": [
+          "action_list.0.args.1",
+          "action_list.0._raw"
+        ]
+      }
+    },
+    {
+      "type": "plh_course_accordion",
+      "name": "dynamic_course",
+      "value": "Course 5",
+      "parameter_list": {
+        "open": "@local.open_toggle",
+        "sub_items_name": "lessons"
+      },
+      "rows": [
+        {
+          "type": "plh_course_sub_item",
+          "name": "dynamic_lesson_1",
+          "value": "Lesson 1",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "dynamic_course.dynamic_lesson_1"
+        }
+      ],
+      "_nested_name": "dynamic_course",
+      "_dynamicFields": {
+        "parameter_list": {
+          "open": [
+            {
+              "fullExpression": "@local.open_toggle",
+              "matchedExpression": "@local.open_toggle",
+              "type": "local",
+              "fieldName": "open_toggle"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.open_toggle": [
+          "parameter_list.open"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "value": "## With a loop",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_21",
+      "_nested_name": "text_21"
+    },
+    {
+      "type": "set_variable",
+      "name": "lessons",
+      "value": "key: lesson_1 | title: Lesson 1 | completed: true; key: lesson_2 | title: Lesson 2 | completed: true; key: lesson_3 | title: Lesson 3 | highlighted: true; key: lesson_4 | title: Lesson 4 | locked: true;",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
+      },
+      "_nested_name": "lessons"
+    },
+    {
+      "type": "plh_course_accordion",
+      "name": "loop_course",
+      "value": "Course 6",
+      "parameter_list": {
+        "open": "true",
+        "sub_items_name": "lessons"
+      },
+      "rows": [
+        {
+          "type": "loop",
+          "name": "lesson_loop",
+          "value": "local.lessons",
+          "parameter_list": {
+            "index": "key"
+          },
+          "rows": [
+            {
+              "type": "plh_course_sub_item",
+              "name": "lesson",
+              "value": "@item.title",
+              "_translations": {
+                "value": {}
+              },
+              "parameter_list": {
+                "completed": "@item.completed",
+                "highlighted": "@item.highlighted",
+                "locked": "@item.locked"
+              },
+              "_nested_name": "loop_course.lesson_loop.lesson",
+              "_dynamicFields": {
+                "value": [
+                  {
+                    "fullExpression": "@item.title",
+                    "matchedExpression": "@item.title",
+                    "type": "item",
+                    "fieldName": "title"
+                  }
+                ],
+                "parameter_list": {
+                  "completed": [
+                    {
+                      "fullExpression": "@item.completed",
+                      "matchedExpression": "@item.completed",
+                      "type": "item",
+                      "fieldName": "completed"
+                    }
+                  ],
+                  "highlighted": [
+                    {
+                      "fullExpression": "@item.highlighted",
+                      "matchedExpression": "@item.highlighted",
+                      "type": "item",
+                      "fieldName": "highlighted"
+                    }
+                  ],
+                  "locked": [
+                    {
+                      "fullExpression": "@item.locked",
+                      "matchedExpression": "@item.locked",
+                      "type": "item",
+                      "fieldName": "locked"
+                    }
+                  ]
+                }
+              },
+              "_dynamicDependencies": {
+                "@item.title": [
+                  "value"
+                ],
+                "@item.completed": [
+                  "parameter_list.completed"
+                ],
+                "@item.highlighted": [
+                  "parameter_list.highlighted"
+                ],
+                "@item.locked": [
+                  "parameter_list.locked"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "loop_course.lesson_loop"
+        }
+      ],
+      "_nested_name": "loop_course"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/plh_course_accordion.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1uuLoVRXAtLj3qkFDLft6nGqCuW4uyrkvzEHomGAtoeQ"
+  }
+}

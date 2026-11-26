@@ -1,0 +1,20 @@
+{
+  "flow_type": "template",
+  "flow_name": "clash_nested_template",
+  "status": "released",
+  "rows": [
+    {
+      "name": "page_details",
+      "parameter_list": "value_type: script;"
+    },
+    {
+      "name": "display_text",
+      "value": "${local.page_details.value}"
+    },
+    {
+      "type": "text",
+      "name": "nestedTitle",
+      "value": "# Title: ${local.display_text}"
+    }
+  ]
+}

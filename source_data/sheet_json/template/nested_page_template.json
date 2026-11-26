@@ -1,0 +1,32 @@
+{
+  "flow_type": "template",
+  "flow_name": "nested_page_template",
+  "status": "released",
+  "rows": [
+    {
+      "name": "page_details",
+      "parameter_list": "value_type: script;"
+    },
+    {
+      "name": "display_text",
+      "value": "${local.page_details.value}"
+    },
+    {
+      "type": "text",
+      "name": "nestedTitle",
+      "value": "# Title: ${local.display_text}"
+    },
+    {
+      "__EMPTY_1": "set_variable",
+      "__EMPTY_2": "index",
+      "__EMPTY_3": "@local.index+ 1",
+      "__EMPTY_5": "value_type: script"
+    },
+    {
+      "__EMPTY_1": "set_variable",
+      "__EMPTY_2": "index",
+      "__EMPTY_3": "@local.index - 1",
+      "__EMPTY_5": "value_type: script"
+    }
+  ]
+}

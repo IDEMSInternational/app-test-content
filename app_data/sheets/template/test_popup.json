@@ -1,0 +1,240 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_popup",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Popup",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "button",
+      "name": "inlinePopupButton",
+      "value": "Show Popup",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "inlinePopup"
+          ],
+          "_raw": "click | action: inlinePopup"
+        }
+      ],
+      "_nested_name": "inlinePopupButton"
+    },
+    {
+      "type": "popup",
+      "name": "inlinePopup",
+      "rows": [
+        {
+          "type": "text",
+          "value": "This is a dialog style popup",
+          "_translations": {
+            "value": {}
+          },
+          "name": "text_1",
+          "_nested_name": "inlinePopup.text_1"
+        },
+        {
+          "type": "button",
+          "name": "okButton1",
+          "value": "OK",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "click | emit: completed"
+            }
+          ],
+          "_nested_name": "inlinePopup.okButton1"
+        }
+      ],
+      "_nested_name": "inlinePopup"
+    },
+    {
+      "type": "text",
+      "value": "# Popup (fullscreen)",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_6",
+      "_nested_name": "text_6"
+    },
+    {
+      "type": "button",
+      "name": "fullscreenPopupButton",
+      "value": "Show Popup",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "fullscreenPopup"
+          ],
+          "_raw": "click | action: fullscreenPopup"
+        }
+      ],
+      "_nested_name": "fullscreenPopupButton"
+    },
+    {
+      "type": "popup",
+      "name": "fullscreenPopup",
+      "parameter_list": {
+        "fullscreen": "true"
+      },
+      "rows": [
+        {
+          "type": "text",
+          "value": "This is a full screen popup",
+          "_translations": {
+            "value": {}
+          },
+          "name": "text_1",
+          "_nested_name": "fullscreenPopup.text_1"
+        },
+        {
+          "type": "button",
+          "name": "okButton2",
+          "value": "OK",
+          "_translations": {
+            "value": {}
+          },
+          "action_list": [
+            {
+              "trigger": "click",
+              "action_id": "emit",
+              "args": [
+                "completed"
+              ],
+              "_raw": "click | emit: completed"
+            }
+          ],
+          "_nested_name": "fullscreenPopup.okButton2"
+        }
+      ],
+      "_nested_name": "fullscreenPopup"
+    },
+    {
+      "type": "text",
+      "value": "# Popup (template)",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_10",
+      "_nested_name": "text_10"
+    },
+    {
+      "type": "button",
+      "name": "templatePopupButton",
+      "value": "Show Popup",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "templatePopup"
+          ],
+          "_raw": "click | action: templatePopup"
+        }
+      ],
+      "_nested_name": "templatePopupButton"
+    },
+    {
+      "type": "popup",
+      "name": "templatePopup",
+      "value": "test_popup_content",
+      "rows": [
+        {
+          "name": "parameter1",
+          "value": "Override Value",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "templatePopup.parameter1"
+        }
+      ],
+      "_nested_name": "templatePopup"
+    },
+    {
+      "type": "text",
+      "value": "# Popup (template with dynamic value)",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_14",
+      "_nested_name": "text_14"
+    },
+    {
+      "type": "text_box",
+      "name": "dynamicTemplatePopupValue",
+      "value": "Override Value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "dynamicTemplatePopupValue"
+    },
+    {
+      "type": "button",
+      "name": "dynamicTemplatePopupButton",
+      "value": "Show Popup",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "action",
+          "args": [
+            "dynamicTemplatePopup"
+          ],
+          "_raw": "click | action: dynamicTemplatePopup"
+        }
+      ],
+      "_nested_name": "dynamicTemplatePopupButton"
+    },
+    {
+      "type": "popup",
+      "name": "dynamicTemplatePopup",
+      "value": "test_popup_content",
+      "rows": [
+        {
+          "name": "parameter1",
+          "value": "${local.dynamicTemplatePopupValue}",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "dynamicTemplatePopup.parameter1"
+        }
+      ],
+      "_nested_name": "dynamicTemplatePopup"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/popup.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1Umq42m3Wm7QYRaDTrMWf-SJ-mmLqQQS7Zz3TfS2InH8"
+  }
+}
