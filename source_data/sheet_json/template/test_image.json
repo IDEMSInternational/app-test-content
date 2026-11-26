@@ -1,0 +1,33 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_image",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Image"
+    },
+    {
+      "type": "image",
+      "name": "image_basic",
+      "value": "images/jasper_1.jpg"
+    },
+    {
+      "type": "image",
+      "name": "image_max_width",
+      "value": "images/jasper_1.jpg",
+      "style_list": "max-width: 120px"
+    },
+    {
+      "type": "image",
+      "name": "image_unset",
+      "value": "@local.not_set"
+    },
+    {
+      "type": "image",
+      "name": "image_hidden",
+      "value": "images/jasper_1.jpg",
+      "condition": false
+    }
+  ]
+}

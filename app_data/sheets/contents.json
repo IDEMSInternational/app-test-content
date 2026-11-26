@@ -254,6 +254,15 @@
         "url": "https://docs.google.com/spreadsheets/d/1mcWf5ab95aTj7L8bIfvAak28ELCgd4g9u2jFhZklk80"
       }
     },
+    "test_image": {
+      "flow_type": "template",
+      "flow_name": "test_image",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/image.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1jWxngljHTf4fohPBRyYIS-IEDacYZaC2SNFTVERLdzM"
+      }
+    },
     "test_loop": {
       "flow_type": "template",
       "flow_name": "test_loop",
@@ -362,6 +371,15 @@
         "url": "https://docs.google.com/spreadsheets/d/1cDndPmELXtmx65GfoBKVnp-JxD21wxMMVWGeJUryuL0"
       }
     },
+    "test_radio_button_grid": {
+      "flow_type": "template",
+      "flow_name": "test_radio_button_grid",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/radio_button_grid.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1FL62vpSf-kCG4eI2BkaC0vv-RPVqJFiFJQUdz9GjsbY"
+      }
+    },
     "test_radio_list": {
       "flow_type": "template",
       "flow_name": "test_radio_list",
@@ -452,6 +470,15 @@
         "url": "https://docs.google.com/spreadsheets/d/1nJZRfIYFnZBCfDhCVLsALHcr5lR0eWPUqBjhKzK1bPI"
       }
     },
+    "test_text_bubble": {
+      "flow_type": "template",
+      "flow_name": "test_text_bubble",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/text_bubble.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1K3d3Zuz7V60hrA4JEvlHF7GnjlpSuydspN1b5futFJo"
+      }
+    },
     "test_title": {
       "flow_type": "template",
       "flow_name": "test_title",
@@ -486,6 +513,24 @@
         "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
         "path": "scenarios/variable_scope.xlsx",
         "url": "https://docs.google.com/spreadsheets/d/1osihb1-v_yOkPbjvRCEaHGHoEtiIaCUmanJhFtywE3s"
+      }
+    },
+    "test_video": {
+      "flow_type": "template",
+      "flow_name": "test_video",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/video.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/1lIFdDGvMjkzoeWj3JadxM1c7vB3sbgZpoLCi4th1ziE"
+      }
+    },
+    "test_youtube": {
+      "flow_type": "template",
+      "flow_name": "test_youtube",
+      "_source": {
+        "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+        "path": "components/youtube.xlsx",
+        "url": "https://docs.google.com/spreadsheets/d/16mYqEmoS4VlmzUyE-9KAMVXnOW7VhWTT5nME_vz9jvI"
       }
     }
   },

@@ -208,6 +208,15 @@
   },
   {
     "flow_type": "template",
+    "flow_name": "test_image",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/image.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1jWxngljHTf4fohPBRyYIS-IEDacYZaC2SNFTVERLdzM"
+    }
+  },
+  {
+    "flow_type": "template",
     "flow_name": "test_loop",
     "_source": {
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
@@ -316,6 +325,15 @@
   },
   {
     "flow_type": "template",
+    "flow_name": "test_radio_button_grid",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/radio_button_grid.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1FL62vpSf-kCG4eI2BkaC0vv-RPVqJFiFJQUdz9GjsbY"
+    }
+  },
+  {
+    "flow_type": "template",
     "flow_name": "test_radio_list",
     "_source": {
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
@@ -406,6 +424,15 @@
   },
   {
     "flow_type": "template",
+    "flow_name": "test_text_bubble",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/text_bubble.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1K3d3Zuz7V60hrA4JEvlHF7GnjlpSuydspN1b5futFJo"
+    }
+  },
+  {
+    "flow_type": "template",
     "flow_name": "test_title",
     "_source": {
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
@@ -438,6 +465,24 @@
       "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
       "path": "scenarios/variable_scope.xlsx",
       "url": "https://docs.google.com/spreadsheets/d/1osihb1-v_yOkPbjvRCEaHGHoEtiIaCUmanJhFtywE3s"
+    }
+  },
+  {
+    "flow_type": "template",
+    "flow_name": "test_video",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/video.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/1lIFdDGvMjkzoeWj3JadxM1c7vB3sbgZpoLCi4th1ziE"
+    }
+  },
+  {
+    "flow_type": "template",
+    "flow_name": "test_youtube",
+    "_source": {
+      "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+      "path": "components/youtube.xlsx",
+      "url": "https://docs.google.com/spreadsheets/d/16mYqEmoS4VlmzUyE-9KAMVXnOW7VhWTT5nME_vz9jvI"
     }
   }
 ]

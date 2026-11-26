@@ -2,5 +2,13 @@
   "images/jasper_1.jpg": {
     "md5Checksum": "8ed1f2802b37a7a11382ebabcdd9dfd0",
     "size_kb": 527.3
+  },
+  "video/test_video.mp4": {
+    "md5Checksum": "a4dee075545ecb4e250dc3152c4df921",
+    "size_kb": 26
+  },
+  "video/test_video.vtt": {
+    "md5Checksum": "ce8e242d301be7eb6708631912ed4be1",
+    "size_kb": 0.1
   }
 }

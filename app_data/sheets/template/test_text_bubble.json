@@ -1,0 +1,137 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_text_bubble",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Text bubble",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_basic",
+      "value": "Hello from a **text bubble**",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "bubble_basic"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_speaker",
+      "value": "A bubble with a speaker on the left",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "speaker_name": "Jasper",
+        "speaker_image_asset": "images/jasper_1.jpg"
+      },
+      "_nested_name": "bubble_speaker"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_right",
+      "value": "A gray bubble on the right",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "speaker_name": "Jasper",
+        "speaker_image_asset": "images/jasper_1.jpg",
+        "speaker_position": "right",
+        "variant": "gray"
+      },
+      "_nested_name": "bubble_right"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_no_border",
+      "value": "A secondary bubble with no border",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "variant": "secondary, no_border"
+      },
+      "_nested_name": "bubble_no_border"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_invalid_position",
+      "value": "A bubble with an invalid speaker position",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "speaker_position": "middle"
+      },
+      "_nested_name": "bubble_invalid_position"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_children",
+      "value": "A bubble with rows inside",
+      "rows": [
+        {
+          "type": "text",
+          "name": "bubble_children_text",
+          "value": "Text row inside the bubble",
+          "_translations": {
+            "value": {}
+          },
+          "_nested_name": "bubble_children.bubble_children_text"
+        }
+      ],
+      "_nested_name": "bubble_children"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_unset",
+      "value": "@local.not_set",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "speaker_name": "@local.not_set"
+      },
+      "_nested_name": "bubble_unset",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.not_set",
+            "matchedExpression": "@local.not_set",
+            "type": "local",
+            "fieldName": "not_set"
+          }
+        ],
+        "parameter_list": {
+          "speaker_name": [
+            {
+              "fullExpression": "@local.not_set",
+              "matchedExpression": "@local.not_set",
+              "type": "local",
+              "fieldName": "not_set"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.not_set": [
+          "value",
+          "parameter_list.speaker_name"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/text_bubble.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1K3d3Zuz7V60hrA4JEvlHF7GnjlpSuydspN1b5futFJo"
+  }
+}

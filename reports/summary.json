@@ -91,11 +91,15 @@
       },
       {
         "type": "text",
-        "count": 231
+        "count": 233
       },
       {
         "type": "text_box",
         "count": 21
+      },
+      {
+        "type": "text_bubble",
+        "count": 7
       },
       {
         "type": "title",
@@ -143,33 +147,58 @@
       }
     ]
   },
+  "app_size_on_device": {
+    "data": [
+      {
+        "item": "App code (estimate)",
+        "download": "-",
+        "on_device": "16.2 MB"
+      },
+      {
+        "item": "App content (sheets and translations)",
+        "download": "-",
+        "on_device": "0.2 MB"
+      },
+      {
+        "item": "Bundled assets",
+        "download": "-",
+        "on_device": "0.5 MB"
+      },
+      {
+        "item": "Total",
+        "download": "-",
+        "on_device": "16.9 MB"
+      }
+    ]
+  },
   "assets_size": {
     "data": [
       {
         "assets": "total",
-        "KB": "0 KB",
-        "MB": "0 MB"
+        "KB": "527 KB",
+        "MB": "0.5 MB"
       },
       {
         "assets": "unused",
-        "KB": "527 KB",
-        "MB": "0.5 MB"
+        "KB": "0 KB",
+        "MB": "0 MB"
       }
     ]
   },
   "assets_unused": {
-    "data": [
-      {
-        "path": "images/jasper_1.jpg",
-        "size_kb": 527.3
-      }
-    ]
+    "data": []
   },
   "assets_missing": {
     "data": []
   },
   "asset_summary": {
-    "data": []
+    "data": [
+      {
+        "path": "images/jasper_1.jpg",
+        "count": 2,
+        "size_kb": 527.3
+      }
+    ]
   },
   "flows_by_type": {
     "data": [
@@ -181,7 +210,7 @@
       {
         "type": "template",
         "subtype": null,
-        "total": 45
+        "total": 46
       }
     ]
   }

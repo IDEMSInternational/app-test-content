@@ -1,0 +1,45 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_youtube",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# YouTube"
+    },
+    {
+      "type": "youtube",
+      "name": "youtube_basic",
+      "value": "https://www.youtube.com/watch?v=YE7VzlLtp-4"
+    },
+    {
+      "type": "youtube",
+      "name": "youtube_portrait",
+      "value": "https://www.youtube.com/watch?v=YE7VzlLtp-4",
+      "parameter_list": "orientation: portrait"
+    },
+    {
+      "type": "youtube",
+      "name": "youtube_invalid_orientation",
+      "value": "https://www.youtube.com/watch?v=YE7VzlLtp-4",
+      "parameter_list": "orientation: vertical"
+    },
+    {
+      "type": "youtube",
+      "name": "youtube_no_fullscreen",
+      "value": "https://www.youtube.com/watch?v=YE7VzlLtp-4",
+      "parameter_list": "allow_fullscreen: false"
+    },
+    {
+      "type": "youtube",
+      "name": "youtube_fullscreen_uppercase",
+      "value": "https://www.youtube.com/watch?v=YE7VzlLtp-4",
+      "parameter_list": "allow_fullscreen: TRUE"
+    },
+    {
+      "type": "youtube",
+      "name": "youtube_invalid",
+      "value": "not a youtube link"
+    }
+  ]
+}
