@@ -1,0 +1,64 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_video",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Video",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "video",
+      "name": "video_basic",
+      "value": "video/test_video.mp4",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "video_basic"
+    },
+    {
+      "type": "video",
+      "name": "video_subtitles",
+      "value": "video/test_video.mp4",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "subtitles_src": "video/test_video.vtt"
+      },
+      "_nested_name": "video_subtitles"
+    },
+    {
+      "type": "video",
+      "name": "video_left",
+      "value": "video/test_video.mp4",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "style": "left"
+      },
+      "_nested_name": "video_left"
+    },
+    {
+      "type": "video",
+      "name": "video_hidden",
+      "value": "video/test_video.mp4",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "_nested_name": "video_hidden"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/video.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1lIFdDGvMjkzoeWj3JadxM1c7vB3sbgZpoLCi4th1ziE"
+  }
+}

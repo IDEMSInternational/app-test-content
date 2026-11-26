@@ -1,0 +1,59 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_text_bubble",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Text bubble"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_basic",
+      "value": "Hello from a **text bubble**"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_speaker",
+      "value": "A bubble with a speaker on the left",
+      "parameter_list": "speaker_name: Jasper; speaker_image_asset: images/jasper_1.jpg"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_right",
+      "value": "A gray bubble on the right",
+      "parameter_list": "speaker_name: Jasper; speaker_image_asset: images/jasper_1.jpg; speaker_position: right; variant: gray"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_no_border",
+      "value": "A secondary bubble with no border",
+      "parameter_list": "variant: secondary, no_border"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_invalid_position",
+      "value": "A bubble with an invalid speaker position",
+      "parameter_list": "speaker_position: middle"
+    },
+    {
+      "type": "begin_text_bubble",
+      "name": "bubble_children",
+      "value": "A bubble with rows inside"
+    },
+    {
+      "type": "text",
+      "name": "bubble_children_text",
+      "value": "Text row inside the bubble"
+    },
+    {
+      "type": "end_text_bubble"
+    },
+    {
+      "type": "text_bubble",
+      "name": "bubble_unset",
+      "value": "@local.not_set",
+      "parameter_list": "speaker_name: @local.not_set"
+    }
+  ]
+}

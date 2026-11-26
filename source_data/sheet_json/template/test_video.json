@@ -1,0 +1,34 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_video",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Video"
+    },
+    {
+      "type": "video",
+      "name": "video_basic",
+      "value": "video/test_video.mp4"
+    },
+    {
+      "type": "video",
+      "name": "video_subtitles",
+      "value": "video/test_video.mp4",
+      "parameter_list": "subtitles_src: video/test_video.vtt"
+    },
+    {
+      "type": "video",
+      "name": "video_left",
+      "value": "video/test_video.mp4",
+      "parameter_list": "style: left"
+    },
+    {
+      "type": "video",
+      "name": "video_hidden",
+      "value": "video/test_video.mp4",
+      "condition": false
+    }
+  ]
+}

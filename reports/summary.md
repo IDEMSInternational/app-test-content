@@ -25,8 +25,9 @@
 | set_global | 5 |
 | set_variable | 96 |
 | template | 6 |
-| text | 231 |
+| text | 233 |
 | text_box | 21 |
+| text_bubble | 7 |
 | title | 13 |
 | toggle_bar | 2 |
 | update | 2 |
@@ -47,12 +48,27 @@
 </details>
 
 <details open>
+<summary><h2>Estimated App Size on Device</h2></summary>
+
+Estimated space the app takes up on an Android or iOS device.
+
+| item | download | on_device |
+| --- | --- | --- |
+| App code (estimate) | - | 16.2 MB |
+| App content (sheets and translations) | - | 0.2 MB |
+| Bundled assets | - | 0.5 MB |
+| Total | - | 16.9 MB |
+
+App code is a fixed estimate and excludes native Android and iOS code.
+</details>
+
+<details open>
 <summary><h2>Asset Size</h2></summary>
 
 | assets | KB | MB |
 | --- | --- | --- |
-| total | 0 KB | 0 MB |
-| unused | 527 KB | 0.5 MB |
+| total | 527 KB | 0.5 MB |
+| unused | 0 KB | 0 MB |
 </details>
 
 <details open>
@@ -62,7 +78,6 @@ Assets that appear in app-data but do not have references within sheets
 
 | path | size_kb |
 | --- | --- |
-| images/jasper_1.jpg | 527.3 |
 </details>
 
 <details open>
@@ -81,6 +96,7 @@ Assets that are used within sheets and also can be found in the synced asset dat
 
 | path | size_kb | count |
 | --- | --- | --- |
+| images/jasper_1.jpg | 527.3 | 2 |
 </details>
 
 <details >
@@ -89,5 +105,5 @@ Assets that are used within sheets and also can be found in the synced asset dat
 | type | subtype | total |
 | --- | --- | --- |
 | data_list |  | 4 |
-| template |  | 45 |
+| template |  | 46 |
 </details>

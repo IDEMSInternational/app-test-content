@@ -1,0 +1,76 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_image",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Image",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "image",
+      "name": "image_basic",
+      "value": "images/jasper_1.jpg",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "image_basic"
+    },
+    {
+      "type": "image",
+      "name": "image_max_width",
+      "value": "images/jasper_1.jpg",
+      "_translations": {
+        "value": {}
+      },
+      "style_list": [
+        "max-width: 120px"
+      ],
+      "_nested_name": "image_max_width"
+    },
+    {
+      "type": "image",
+      "name": "image_unset",
+      "value": "@local.not_set",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "image_unset",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@local.not_set",
+            "matchedExpression": "@local.not_set",
+            "type": "local",
+            "fieldName": "not_set"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.not_set": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "image",
+      "name": "image_hidden",
+      "value": "images/jasper_1.jpg",
+      "_translations": {
+        "value": {}
+      },
+      "condition": false,
+      "_nested_name": "image_hidden"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/image.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1jWxngljHTf4fohPBRyYIS-IEDacYZaC2SNFTVERLdzM"
+  }
+}

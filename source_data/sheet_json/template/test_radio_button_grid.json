@@ -1,0 +1,80 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_radio_button_grid",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Radio button grid"
+    },
+    {
+      "name": "gridOptions",
+      "value": "name: option_1 | text: Option 1; name: option_2 | text: Option 2; name: option_3 | text: Option 3",
+      "parameter_list": "value_type: list"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_default",
+      "parameter_list": "answer_list: @local.gridOptions"
+    },
+    {
+      "type": "text",
+      "name": "grid_default_selected",
+      "value": "Selected: @local.grid_default"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_initial",
+      "parameter_list": "answer_list: @local.gridOptions; initial_selected_option_key: option_2"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_object",
+      "parameter_list": "answer_list: @local.gridOptions; value_as_object: TRUE"
+    },
+    {
+      "type": "text",
+      "name": "grid_object_selected",
+      "value": "Selected: @local.grid_object.value"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_card",
+      "parameter_list": "answer_list: @local.gridOptions; variant: card"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_invalid_variant",
+      "parameter_list": "answer_list: @local.gridOptions; variant: Card"
+    },
+    {
+      "name": "gridNumberOptions",
+      "value": "name: 1 | text: One; name: 2 | text: Two",
+      "parameter_list": "value_type: list"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_numbers",
+      "parameter_list": "answer_list: @local.gridNumberOptions"
+    },
+    {
+      "name": "gridTextOptions",
+      "value": "name: a | text: A; name: b | text: B"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_text_options",
+      "parameter_list": "answer_list: @local.gridTextOptions"
+    },
+    {
+      "name": "gridImageOptions",
+      "value": "name: jasper | text: Jasper | image: images/jasper_1.jpg; name: no_image | text: No image",
+      "parameter_list": "value_type: list"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_circle",
+      "parameter_list": "answer_list: @local.gridImageOptions; variant: circle-icon"
+    }
+  ]
+}

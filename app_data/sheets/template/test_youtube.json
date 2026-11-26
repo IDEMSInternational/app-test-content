@@ -1,0 +1,87 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_youtube",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# YouTube",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "type": "youtube",
+      "name": "youtube_basic",
+      "value": "https://www.youtube.com/watch?v=YE7VzlLtp-4",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "youtube_basic"
+    },
+    {
+      "type": "youtube",
+      "name": "youtube_portrait",
+      "value": "https://www.youtube.com/watch?v=YE7VzlLtp-4",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "orientation": "portrait"
+      },
+      "_nested_name": "youtube_portrait"
+    },
+    {
+      "type": "youtube",
+      "name": "youtube_invalid_orientation",
+      "value": "https://www.youtube.com/watch?v=YE7VzlLtp-4",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "orientation": "vertical"
+      },
+      "_nested_name": "youtube_invalid_orientation"
+    },
+    {
+      "type": "youtube",
+      "name": "youtube_no_fullscreen",
+      "value": "https://www.youtube.com/watch?v=YE7VzlLtp-4",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "allow_fullscreen": "false"
+      },
+      "_nested_name": "youtube_no_fullscreen"
+    },
+    {
+      "type": "youtube",
+      "name": "youtube_fullscreen_uppercase",
+      "value": "https://www.youtube.com/watch?v=YE7VzlLtp-4",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "allow_fullscreen": "TRUE"
+      },
+      "_nested_name": "youtube_fullscreen_uppercase"
+    },
+    {
+      "type": "youtube",
+      "name": "youtube_invalid",
+      "value": "not a youtube link",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "youtube_invalid"
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/youtube.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/16mYqEmoS4VlmzUyE-9KAMVXnOW7VhWTT5nME_vz9jvI"
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "flow_type": "template",
+  "flow_name": "test_radio_button_grid",
+  "status": "released",
+  "rows": [
+    {
+      "type": "text",
+      "value": "# Radio button grid",
+      "_translations": {
+        "value": {}
+      },
+      "name": "text_2",
+      "_nested_name": "text_2"
+    },
+    {
+      "name": "gridOptions",
+      "value": "name: option_1 | text: Option 1; name: option_2 | text: Option 2; name: option_3 | text: Option 3",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
+      },
+      "type": "set_variable",
+      "_nested_name": "gridOptions"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_default",
+      "parameter_list": {
+        "answer_list": "@local.gridOptions"
+      },
+      "_nested_name": "grid_default",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@local.gridOptions",
+              "matchedExpression": "@local.gridOptions",
+              "type": "local",
+              "fieldName": "gridOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.gridOptions": [
+          "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "grid_default_selected",
+      "value": "Selected: @local.grid_default",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "grid_default_selected",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "Selected: @local.grid_default",
+            "matchedExpression": "@local.grid_default",
+            "type": "local",
+            "fieldName": "grid_default"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.grid_default": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_initial",
+      "parameter_list": {
+        "answer_list": "@local.gridOptions",
+        "initial_selected_option_key": "option_2"
+      },
+      "_nested_name": "grid_initial",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@local.gridOptions",
+              "matchedExpression": "@local.gridOptions",
+              "type": "local",
+              "fieldName": "gridOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.gridOptions": [
+          "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_object",
+      "parameter_list": {
+        "answer_list": "@local.gridOptions",
+        "value_as_object": "TRUE"
+      },
+      "_nested_name": "grid_object",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@local.gridOptions",
+              "matchedExpression": "@local.gridOptions",
+              "type": "local",
+              "fieldName": "gridOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.gridOptions": [
+          "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "grid_object_selected",
+      "value": "Selected: @local.grid_object.value",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "grid_object_selected",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "Selected: @local.grid_object.value",
+            "matchedExpression": "@local.grid_object.value",
+            "type": "local",
+            "fieldName": "grid_object"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.grid_object.value": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_card",
+      "parameter_list": {
+        "answer_list": "@local.gridOptions",
+        "variant": "card"
+      },
+      "_nested_name": "grid_card",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@local.gridOptions",
+              "matchedExpression": "@local.gridOptions",
+              "type": "local",
+              "fieldName": "gridOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.gridOptions": [
+          "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_invalid_variant",
+      "parameter_list": {
+        "answer_list": "@local.gridOptions",
+        "variant": "Card"
+      },
+      "_nested_name": "grid_invalid_variant",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@local.gridOptions",
+              "matchedExpression": "@local.gridOptions",
+              "type": "local",
+              "fieldName": "gridOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.gridOptions": [
+          "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
+      "name": "gridNumberOptions",
+      "value": "name: 1 | text: One; name: 2 | text: Two",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
+      },
+      "type": "set_variable",
+      "_nested_name": "gridNumberOptions"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_numbers",
+      "parameter_list": {
+        "answer_list": "@local.gridNumberOptions"
+      },
+      "_nested_name": "grid_numbers",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@local.gridNumberOptions",
+              "matchedExpression": "@local.gridNumberOptions",
+              "type": "local",
+              "fieldName": "gridNumberOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.gridNumberOptions": [
+          "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
+      "name": "gridTextOptions",
+      "value": "name: a | text: A; name: b | text: B",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "gridTextOptions"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_text_options",
+      "parameter_list": {
+        "answer_list": "@local.gridTextOptions"
+      },
+      "_nested_name": "grid_text_options",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@local.gridTextOptions",
+              "matchedExpression": "@local.gridTextOptions",
+              "type": "local",
+              "fieldName": "gridTextOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.gridTextOptions": [
+          "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
+      "name": "gridImageOptions",
+      "value": "name: jasper | text: Jasper | image: images/jasper_1.jpg; name: no_image | text: No image",
+      "_translations": {
+        "value": {}
+      },
+      "parameter_list": {
+        "value_type": "list"
+      },
+      "type": "set_variable",
+      "_nested_name": "gridImageOptions"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "grid_circle",
+      "parameter_list": {
+        "answer_list": "@local.gridImageOptions",
+        "variant": "circle-icon"
+      },
+      "_nested_name": "grid_circle",
+      "_dynamicFields": {
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@local.gridImageOptions",
+              "matchedExpression": "@local.gridImageOptions",
+              "type": "local",
+              "fieldName": "gridImageOptions"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.gridImageOptions": [
+          "parameter_list.answer_list"
+        ]
+      }
+    }
+  ],
+  "_source": {
+    "name": "15StZK4ejasGm2ce5c2aULwROnOP_zBsQ",
+    "path": "components/radio_button_grid.xlsx",
+    "url": "https://docs.google.com/spreadsheets/d/1FL62vpSf-kCG4eI2BkaC0vv-RPVqJFiFJQUdz9GjsbY"
+  }
+}
